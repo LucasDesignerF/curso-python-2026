@@ -1,7 +1,7 @@
 <div align="center">
 
 <a href="https://github.com/LucsDesignerF/curso-python-2026">
-  <img src="https://imgur.com/ROh1BWg.png" alt="Discord Bots Mastery 2026 Logo" width="180" style="border-radius: 24px; box-shadow: 0 8px 32px rgba(59, 130, 246, 0.3);">
+  <img src="https://imgur.com/OQ9Qhpc.png" alt="Discord Bots Mastery 2026 Logo" width="180" style="border-radius: 30px; box-shadow: 0 8px 32px rgba(59, 130, 246, 0.3);">
 </a>
 
 # 🚀 Discord Bots Mastery 2026

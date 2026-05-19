@@ -1,274 +1,557 @@
 // ================================================================
 // DISCORD BOTS MASTERY 2026 - NEXUS PLATAFORMS
-// JavaScript Principal - SPA Router, Curso, Ferramentas
+// JavaScript Principal COMPLETO - SPA Router, Curso Detalhado, Ferramentas
 // ================================================================
 
 (function() {
   'use strict';
 
-  // ========== DADOS DO CURSO ==========
+  // ========== DADOS DO CURSO - CONTEÚDO EXPANDIDO E PROFISSIONAL ==========
   const courseData = [
     {
       id: 'mod1',
       icon: '📘',
-      title: 'Módulo 1 — Fundamentos da Programação',
-      description: 'Aprenda os fundamentos essenciais de programação com Python',
+      title: 'Módulo 1 — Fundamentos da Programação com Python',
+      description: 'Aprenda os fundamentos essenciais de programação com Python do zero absoluto',
       difficulty: 'Iniciante',
-      duration: '4h',
+      duration: '6h',
       lessons: [
         {
           id: 'm1l1',
           title: '1.1 O que é programação e por que Python?',
-          content: `Programação é a arte de instruir computadores a executar tarefas específicas através de código. Python se destaca por sua sintaxe limpa, legibilidade e vasto ecossistema de bibliotecas. É a linguagem ideal para bots Discord por seu suporte nativo a programação assíncrona e pela biblioteca discord.py, uma das mais maduras do ecossistema.`,
-          code: `# Seu primeiro programa Python
+          content: `<p><strong>Programação</strong> é o processo de escrever instruções que um computador pode executar para realizar tarefas específicas. Pense em programação como dar ordens precisas para uma máquina — cada linha de código é um comando que o computador segue exatamente.</p>
+<p><strong>Por que Python?</strong></p>
+<ul>
+<li>✅ <strong>Sintaxe limpa e legível</strong> — Código Python parece quase com inglês, facilitando o aprendizado</li>
+<li>✅ <strong>Tipagem dinâmica</strong> — Você não precisa declarar tipos de variáveis, o Python infere automaticamente</li>
+<li>✅ <strong>Multi-paradigma</strong> — Suporta programação procedural, orientada a objetos e funcional</li>
+<li>✅ <strong>Ecossistema gigante</strong> — +400.000 pacotes no PyPI para qualquer necessidade</li>
+<li>✅ <strong>Comunidade ativa</strong> — Milhões de desenvolvedores, documentação farta e suporte constante</li>
+<li>✅ <strong>Ideal para bots Discord</strong> — A biblioteca discord.py é madura, bem documentada e suporta todos os recursos modernos do Discord</li>
+</ul>
+<p><strong>O que você vai construir:</strong> Ao final deste curso, você será capaz de criar bots completos como sistemas de moderação, economia, tickets, música e muito mais — tudo com código profissional e escalável.</p>
+<p><strong>Referências:</strong></p>
+<ul>
+<li><a href="https://www.python.org/doc/" target="_blank" style="color:var(--accent-cyan);">Documentação oficial do Python</a></li>
+<li><a href="https://docs.python.org/3/tutorial/" target="_blank" style="color:var(--accent-cyan);">Tutorial oficial Python</a></li>
+</ul>`,
+          code: `# Este é o seu primeiro programa Python!
+# Os comentários começam com # e são ignorados pelo computador
+
+# A função print() exibe mensagens no terminal/console
 print("Olá, mundo dos bots!")
-print("Bem-vindo ao Discord Bots Mastery 2026")`,
-          tags: ['python', 'introdução', 'fundamentos']
+print("Bem-vindo ao Discord Bots Mastery 2026")
+
+# Você também pode usar aspas simples
+print('Python é incrível para criar bots!')
+
+# E pode imprimir números diretamente
+print(2026)
+
+# Dica: Execute este código no Playground para ver o resultado!
+# Atalho: Use o Terminal Python na barra lateral`,
+          tags: ['python', 'introdução', 'fundamentos', 'print']
         },
         {
           id: 'm1l2',
-          title: '1.2 Variáveis e tipos de dados em Python',
-          content: `Variáveis são espaços na memória que armazenam dados. Python possui tipagem dinâmica, ou seja, você não precisa declarar o tipo da variável. Os principais tipos são: int (números inteiros), float (números decimais), str (texto/cadeias de caracteres), bool (True/False - booleanos) e NoneType (None - valor nulo).`,
-          code: `# Tipos de dados em Python
-nome = "NexusBot"          # str
-versao = 2.6               # float
-porta = 8080               # int
-ativo = True               # bool
-token = None               # NoneType
+          title: '1.2 Variáveis, Tipos de Dados e Tipagem em Python',
+          content: `<p><strong>Variáveis</strong> são espaços na memória do computador que armazenam dados que seu programa pode manipular. Em Python, você cria uma variável simplesmente atribuindo um valor a um nome usando o sinal <code>=</code>.</p>
+<p><strong>Regras para nomes de variáveis:</strong></p>
+<ul>
+<li>Devem começar com letra (a-z, A-Z) ou underscore (_)</li>
+<li>Podem conter letras, números e underscores</li>
+<li>São case-sensitive: <code>nome</code> e <code>Nome</code> são variáveis diferentes</li>
+<li>Não podem ser palavras reservadas (if, for, while, class, etc.)</li>
+<li>Convenção Python: use <code>snake_case</code> (minúsculas com underscore)</li>
+</ul>
+<p><strong>Tipos de dados principais em Python:</strong></p>
+<table style="width:100%; border-collapse:collapse; margin:1rem 0;">
+<tr style="border-bottom:1px solid var(--border-subtle);"><th style="text-align:left;padding:0.5rem;">Tipo</th><th style="text-align:left;padding:0.5rem;">Descrição</th><th style="text-align:left;padding:0.5rem;">Exemplo</th></tr>
+<tr style="border-bottom:1px solid var(--border-subtle);"><td style="padding:0.5rem;"><code>str</code></td><td style="padding:0.5rem;">Texto (string)</td><td style="padding:0.5rem;"><code>"NexusBot"</code></td></tr>
+<tr style="border-bottom:1px solid var(--border-subtle);"><td style="padding:0.5rem;"><code>int</code></td><td style="padding:0.5rem;">Número inteiro</td><td style="padding:0.5rem;"><code>42</code></td></tr>
+<tr style="border-bottom:1px solid var(--border-subtle);"><td style="padding:0.5rem;"><code>float</code></td><td style="padding:0.5rem;">Número decimal</td><td style="padding:0.5rem;"><code>3.14</code></td></tr>
+<tr style="border-bottom:1px solid var(--border-subtle);"><td style="padding:0.5rem;"><code>bool</code></td><td style="padding:0.5rem;">Booleano (verdadeiro/falso)</td><td style="padding:0.5rem;"><code>True</code></td></tr>
+<tr><td style="padding:0.5rem;"><code>NoneType</code></td><td style="padding:0.5rem;">Valor nulo/vazio</td><td style="padding:0.5rem;"><code>None</code></td></tr>
+</table>
+<p><strong>Tipagem dinâmica:</strong> Python determina o tipo da variável automaticamente com base no valor atribuído. Use <code>type()</code> para verificar o tipo.</p>
+<p><strong>f-strings:</strong> Forma moderna de formatar strings desde Python 3.6. Use <code>f"texto {variavel}"</code> para inserir variáveis diretamente no texto.</p>`,
+          code: `# === VARIÁVEIS E TIPOS DE DADOS EM PYTHON ===
 
-print(f"Bot: {nome} v{versao}")
-print(f"Status: {'Online' if ativo else 'Offline'}")`,
-          tags: ['python', 'variáveis', 'tipos']
+# Strings (texto) - usam aspas simples ou duplas
+nome_bot = "NexusBot"          # str
+versao = "2.6"                 # str (texto, não número!)
+prefixo = '/'                  # str (um caractere também é string)
+
+# Números
+porta = 8080                   # int (inteiro)
+latencia = 0.042               # float (decimal)
+contagem = 1_000_000           # int (underscore para legibilidade)
+
+# Booleanos (True/False - case sensitive!)
+bot_online = True              # bool
+modo_dev = False               # bool
+
+# None (valor nulo - útil para inicializar variáveis)
+token = None                   # NoneType
+
+# === VERIFICANDO TIPOS COM type() ===
+print(f"Tipo de nome_bot: {type(nome_bot)}")
+print(f"Tipo de porta: {type(porta)}")
+print(f"Tipo de latencia: {type(latencia)}")
+
+# === f-strings (formatação moderna) ===
+print(f"Bot: {nome_bot} v{versao}")
+print(f"Status: {'🟢 Online' if bot_online else '🔴 Offline'}")
+print(f"Latência: {latencia * 1000:.0f}ms")  # :.0f = sem casas decimais
+
+# === CONVERSÃO DE TIPOS (CASTING) ===
+numero_str = "123"
+numero_int = int(numero_str)   # Converte string para inteiro
+print(f"Convertido: {numero_int} + 1 = {numero_int + 1}")`,
+          tags: ['python', 'variáveis', 'tipos', 'f-strings', 'casting']
         },
         {
           id: 'm1l3',
-          title: '1.3 Operadores e expressões',
-          content: `Python suporta operadores aritméticos (+, -, *, /, //, %, **), operadores de comparação (==, !=, >, <, >=, <=), operadores lógicos (and, or, not) e operadores de atribuição (=, +=, -=, etc.). Expressões combinam valores e operadores para produzir novos valores.`,
-          code: `# Operadores em Python
+          title: '1.3 Operadores Aritméticos, Comparação e Lógicos',
+          content: `<p><strong>Operadores aritméticos</strong> realizam operações matemáticas:</p>
+<table style="width:100%; border-collapse:collapse; margin:1rem 0;">
+<tr style="border-bottom:1px solid var(--border-subtle);"><th style="text-align:left;padding:0.5rem;">Operador</th><th style="text-align:left;padding:0.5rem;">Nome</th><th style="text-align:left;padding:0.5rem;">Exemplo</th></tr>
+<tr style="border-bottom:1px solid var(--border-subtle);"><td style="padding:0.5rem;"><code>+</code></td><td style="padding:0.5rem;">Adição</td><td style="padding:0.5rem;"><code>5 + 3 = 8</code></td></tr>
+<tr style="border-bottom:1px solid var(--border-subtle);"><td style="padding:0.5rem;"><code>-</code></td><td style="padding:0.5rem;">Subtração</td><td style="padding:0.5rem;"><code>5 - 3 = 2</code></td></tr>
+<tr style="border-bottom:1px solid var(--border-subtle);"><td style="padding:0.5rem;"><code>*</code></td><td style="padding:0.5rem;">Multiplicação</td><td style="padding:0.5rem;"><code>5 * 3 = 15</code></td></tr>
+<tr style="border-bottom:1px solid var(--border-subtle);"><td style="padding:0.5rem;"><code>/</code></td><td style="padding:0.5rem;">Divisão (float)</td><td style="padding:0.5rem;"><code>5 / 2 = 2.5</code></td></tr>
+<tr style="border-bottom:1px solid var(--border-subtle);"><td style="padding:0.5rem;"><code>//</code></td><td style="padding:0.5rem;">Divisão inteira</td><td style="padding:0.5rem;"><code>5 // 2 = 2</code></td></tr>
+<tr style="border-bottom:1px solid var(--border-subtle);"><td style="padding:0.5rem;"><code>%</code></td><td style="padding:0.5rem;">Módulo (resto)</td><td style="padding:0.5rem;"><code>5 % 2 = 1</code></td></tr>
+<tr><td style="padding:0.5rem;"><code>**</code></td><td style="padding:0.5rem;">Exponenciação</td><td style="padding:0.5rem;"><code>2 ** 3 = 8</code></td></tr>
+</table>
+<p><strong>Operadores de comparação</strong> retornam <code>True</code> ou <code>False</code>: <code>==</code>, <code>!=</code>, <code>></code>, <code><</code>, <code>>=</code>, <code><=</code></p>
+<p><strong>Operadores lógicos</strong> combinam condições:</p>
+<ul>
+<li><code>and</code> — Verdadeiro se AMBAS as condições forem verdadeiras</li>
+<li><code>or</code> — Verdadeiro se PELO MENOS UMA condição for verdadeira</li>
+<li><code>not</code> — Inverte o valor booleano</li>
+</ul>
+<p><strong>Precedência de operadores:</strong> <code>**</code> → <code>* / // %</code> → <code>+ -</code> → <code>== != > < >= <=</code> → <code>not</code> → <code>and</code> → <code>or</code>. Use parênteses para controlar a ordem.</p>`,
+          code: `# === OPERADORES EM PYTHON ===
+
 a = 15
 b = 4
 
-# Aritméticos
-print(f"Soma: {a + b}")
-print(f"Divisão inteira: {a // b}")
-print(f"Resto: {a % b}")
-print(f"Potência: {a ** b}")
+# --- Aritméticos ---
+print(f"Soma: {a} + {b} = {a + b}")
+print(f"Subtração: {a} - {b} = {a - b}")
+print(f"Multiplicação: {a} * {b} = {a * b}")
+print(f"Divisão: {a} / {b} = {a / b}")        # Sempre retorna float
+print(f"Divisão inteira: {a} // {b} = {a // b}")  # Descarta decimais
+print(f"Resto (módulo): {a} % {b} = {a % b}")    # Útil para verificar par/ímpar
+print(f"Potência: {a} ** {b} = {a ** b}")
 
-# Lógicos
+# --- Comparação ---
+print(f"a é igual a b? {a == b}")
+print(f"a é maior que b? {a > b}")
+print(f"a é diferente de b? {a != b}")
+
+# --- Lógicos ---
 x = True
 y = False
-print(f"AND: {x and y}")
-print(f"OR: {x or y}")
-print(f"NOT: {not x}")`,
-          tags: ['python', 'operadores', 'expressões']
+print(f"x AND y: {x and y}")  # False (ambos precisam ser True)
+print(f"x OR y: {x or y}")    # True (basta um ser True)
+print(f"NOT x: {not x}")      # False (inverte o valor)
+
+# --- Exemplo prático para bots ---
+comando_valido = True
+usuario_tem_permissao = False
+pode_executar = comando_valido and usuario_tem_permissao
+print(f"Pode executar comando? {pode_executar}")
+
+# Verificando se um número é par (útil para paginação)
+numero = 42
+eh_par = (numero % 2 == 0)
+print(f"{numero} é par? {eh_par}")`,
+          tags: ['python', 'operadores', 'aritméticos', 'comparação', 'lógicos']
         },
         {
           id: 'm1l4',
-          title: '1.4 Estruturas condicionais (if/elif/else)',
-          content: `Condicionais permitem que seu programa tome decisões com base em condições. Use if para testar uma condição, elif para testar condições alternativas, e else para capturar todos os outros casos. A indentação (espaços no início da linha) é obrigatória em Python para definir blocos de código.`,
-          code: `# Estruturas condicionais
+          title: '1.4 Estruturas Condicionais (if, elif, else)',
+          content: `<p><strong>Estruturas condicionais</strong> permitem que seu programa tome decisões baseadas em condições. É como dar ao seu código a capacidade de "pensar" e escolher diferentes caminhos.</p>
+<p><strong>Sintaxe:</strong></p>
+<ul>
+<li><code>if condição:</code> — Executa o bloco se a condição for True</li>
+<li><code>elif condição:</code> — Testa uma condição alternativa (pode ter vários)</li>
+<li><code>else:</code> — Executa se nenhuma condição anterior for True</li>
+</ul>
+<p><strong>⚠️ INDENTAÇÃO É OBRIGATÓRIA!</strong> Em Python, a indentação (espaços no início da linha) define quais linhas pertencem a cada bloco. Use 4 espaços (padrão PEP 8). Código sem indentação correta gera <code>IndentationError</code>.</p>
+<p><strong>Operador ternário:</strong> Forma compacta de if/else em uma linha: <code>valor = X if condição else Y</code></p>
+<p><strong>Truthy e Falsy:</strong> Em Python, valores como <code>0</code>, <code>""</code>, <code>[]</code>, <code>{}</code>, <code>None</code> são considerados False em contexto booleano.</p>`,
+          code: `# === ESTRUTURAS CONDICIONAIS ===
+
+# Exemplo básico: verificando idade
 idade = 16
 
 if idade >= 18:
-    print("Acesso total liberado")
+    print("✅ Acesso total liberado")
+    print("Você pode usar todos os comandos do bot")
 elif idade >= 13:
-    print("Acesso permitido com supervisão")
+    print("⚠️ Acesso permitido com supervisão")
+    print("Alguns comandos podem estar restritos")
 else:
-    print("Acesso negado - idade insuficiente")
+    print("❌ Acesso negado - idade insuficiente")
+    print("Volte quando tiver 13 anos ou mais")
 
-# Operador ternário
+# --- Operador ternário (if/else em uma linha) ---
 status = "online" if idade >= 13 else "offline"
-print(f"Status: {status}")`,
-          tags: ['python', 'condicionais', 'if']
+print(f"Status do usuário: {status}")
+
+# --- Truthy/Falsy ---
+nome = ""  # String vazia é Falsy
+if nome:
+    print(f"Bem-vindo, {nome}!")
+else:
+    print("Nome não informado - usando 'Convidado'")
+    nome = "Convidado"
+
+# --- Exemplo prático: verificando permissões de comando ---
+comando = "ban"
+cargo_usuario = "Moderador"
+
+comandos_mod = ["ban", "kick", "mute"]
+comandos_admin = ["shutdown", "reload"]
+
+if comando in comandos_admin and cargo_usuario == "Admin":
+    print(f"🔧 Executando comando admin: {comando}")
+elif comando in comandos_mod and cargo_usuario in ["Moderador", "Admin"]:
+    print(f"🛡️ Executando comando mod: {comando}")
+else:
+    print(f"❌ Você não tem permissão para usar /{comando}")`,
+          tags: ['python', 'condicionais', 'if', 'elif', 'else', 'operador-ternário']
         },
         {
           id: 'm1l5',
-          title: '1.5 Laços de repetição (for e while)',
-          content: `Loops permitem executar blocos de código repetidamente. O loop for itera sobre sequências (listas, strings, ranges). O loop while repete enquanto uma condição for verdadeira. Use break para sair do loop e continue para pular para a próxima iteração.`,
-          code: `# Loop for
+          title: '1.5 Laços de Repetição (for, while)',
+          content: `<p><strong>Laços de repetição (loops)</strong> permitem executar um bloco de código múltiplas vezes sem precisar reescrevê-lo. São essenciais para processar listas, iterar sobre dados e automatizar tarefas repetitivas.</p>
+<p><strong>Loop for:</strong> Itera sobre uma sequência (lista, string, range, dicionário, etc.).</p>
+<p><strong>range():</strong> Gera uma sequência de números: <code>range(n)</code> (0 a n-1), <code>range(início, fim)</code>, <code>range(início, fim, passo)</code>.</p>
+<p><strong>Loop while:</strong> Repete enquanto uma condição for True. Cuidado com loops infinitos!</p>
+<p><strong>Comandos de controle:</strong> <code>break</code> (sai do loop), <code>continue</code> (pula iteração), <code>else</code> no loop (executa se terminou sem break).</p>`,
+          code: `# === LAÇOS DE REPETIÇÃO ===
+
+# --- FOR LOOP ---
+print("=== For Loop ===")
+
+# range(n): 0 até n-1
 for i in range(5):
     print(f"Iteração {i}")
 
-# Iterando lista
-comandos = ["ping", "kick", "ban", "mute"]
+# Iterando sobre listas
+comandos = ["ping", "kick", "ban", "mute", "help"]
 for cmd in comandos:
     print(f"Carregando comando: /{cmd}")
 
-# Loop while
+# enumerate() - obtém índice e valor
+for indice, comando in enumerate(comandos, start=1):
+    print(f"{indice}. /{comando}")
+
+# --- WHILE LOOP ---
+print("\\n=== While Loop ===")
+
 contador = 0
-while contador < 3:
-    print(f"Tentativa {contador + 1}")
-    contador += 1`,
-          tags: ['python', 'loops', 'for', 'while']
+while contador < 5:
+    print(f"Tentativa {contador + 1}/5")
+    contador += 1  # IMPORTANTE: incrementar para evitar loop infinito!
+
+# --- BREAK e CONTINUE ---
+print("\\n=== Break e Continue ===")
+
+for cmd in comandos:
+    if cmd == "ban":
+        print(f"Comando sensível encontrado: /{cmd}")
+        break
+    print(f"Verificando /{cmd}...")
+
+for i in range(10):
+    if i % 2 == 0:
+        continue
+    print(f"Número ímpar: {i}")`,
+          tags: ['python', 'loops', 'for', 'while', 'break', 'continue', 'range']
         },
         {
           id: 'm1l6',
-          title: '1.6 Listas e seus métodos',
-          content: `Listas são coleções ordenadas e mutáveis. Elas podem armazenar qualquer tipo de dado e são indexadas a partir de 0. Métodos importantes: append() adiciona item, remove() remove item específico, pop() remove por índice, sort() ordena, reverse() inverte.`,
-          code: `# Trabalhando com listas
+          title: '1.6 Listas: Criação, Métodos e Operações',
+          content: `<p><strong>Listas</strong> são coleções ordenadas, mutáveis e que permitem elementos duplicados. São a estrutura de dados mais versátil do Python.</p>
+<p><strong>Características:</strong> Ordenadas, mutáveis, indexadas (índice começa em 0), permitem duplicatas, aceitam qualquer tipo.</p>
+<p><strong>Índices negativos:</strong> -1 é o último elemento, -2 é o penúltimo, etc.</p>
+<p><strong>Slicing:</strong> <code>lista[início:fim:passo]</code> extrai uma sublista.</p>`,
+          code: `# === LISTAS EM PYTHON ===
+
 permissoes = ["kick", "ban", "mute"]
 
-# Adicionar
+# Acessando elementos
+print(f"Primeiro: {permissoes[0]}")
+print(f"Último: {permissoes[-1]}")
+
+# Slicing
+print(f"Primeiros 2: {permissoes[0:2]}")
+
+# Métodos
 permissoes.append("warn")
 permissoes.insert(1, "timeout")
+print(f"Após adicionar: {permissoes}")
 
-# Remover
 permissoes.remove("mute")
+banido = permissoes.pop()
+print(f"Removido: {banido}")
 
-# Acessar
-print(f"Primeira: {permissoes[0]}")
-print(f"Última: {permissoes[-1]}")
-print(f"Total: {len(permissoes)}")
+permissoes.sort()
+print(f"Ordenado: {permissoes}")
+print(f"Tamanho: {len(permissoes)}")
+print(f"'admin' está na lista? {'admin' in permissoes}")
 
-# Fatiamento (slice)
-print(permissoes[1:3])`,
-          tags: ['python', 'listas', 'coleções']
+# List Comprehension
+quadrados = [x**2 for x in range(10)]
+print(f"Quadrados: {quadrados}")
+
+# Exemplo prático: IDs de canais permitidos
+canais_permitidos = [123456, 789012, 345678]
+canal_usuario = 789012
+if canal_usuario in canais_permitidos:
+    print(f"✅ Canal {canal_usuario} autorizado!")
+else:
+    print(f"❌ Canal {canal_usuario} não autorizado!")`,
+          tags: ['python', 'listas', 'coleções', 'slicing', 'list-comprehension']
         },
         {
           id: 'm1l7',
-          title: '1.7 Dicionários (dict)',
-          content: `Dicionários são estruturas que mapeiam chaves a valores. São ideais para configurações e dados estruturados. Acesse valores com dict["chave"] ou dict.get("chave", valor_padrao). São extremamente úteis para armazenar configurações de bots e dados de servidores.`,
-          code: `# Dicionários
+          title: '1.7 Dicionários (dict): Chave-Valor',
+          content: `<p><strong>Dicionários</strong> são estruturas que armazenam pares de chave-valor. Pense neles como um "banco de dados em memória".</p>
+<p><strong>Características:</strong> Chaves imutáveis, valores de qualquer tipo, acesso rápido (O(1)), mutáveis, mantêm ordem de inserção (Python 3.7+).</p>
+<p><strong>Quando usar em bots:</strong> Configurações por servidor, dados de usuários, cache, respostas de APIs.</p>`,
+          code: `# === DICIONÁRIOS EM PYTHON ===
+
 config = {
     "prefix": "!",
     "owner_id": 123456789,
-    "mod_roles": ["Mod", "Admin"],
+    "language": "pt-BR",
+    "mod_roles": ["Moderador", "Admin"],
     "channels": {
         "logs": 987654321,
         "welcome": 987654322
     }
 }
 
-print(config["prefix"])
-print(config.get("language", "pt-BR"))  # valor padrão
+print(f"Prefixo: {config['prefix']}")
+print(f"Idioma: {config.get('language')}")
+print(f"Tema: {config.get('theme', 'dark')}")  # Com valor padrão
 
-# Iterar
-for key, value in config.items():
-    print(f"{key}: {value}")`,
-          tags: ['python', 'dicionários', 'dict']
+config['version'] = '2.6'
+config['prefix'] = '/'
+
+if 'owner_id' in config:
+    print(f"Owner ID: {config['owner_id']}")
+
+for chave, valor in config.items():
+    print(f"  {chave}: {valor}")
+
+# Exemplo: Config por servidor
+servidores = {}
+servidores[123456] = {"prefix": "!", "lang": "pt"}
+servidores[789012] = {"prefix": "/", "lang": "en"}
+
+servidor_id = 789012
+if servidor_id in servidores:
+    cfg = servidores[servidor_id]
+    print(f"Servidor {servidor_id} usa prefixo '{cfg['prefix']}'")`,
+          tags: ['python', 'dicionários', 'dict', 'chave-valor']
         },
         {
           id: 'm1l8',
-          title: '1.8 Funções: definição e parâmetros',
-          content: `Funções encapsulam blocos de código reutilizáveis. Use def para definir uma função. Parâmetros podem ter valores padrão. Funções podem retornar valores com return. São essenciais para organizar código e evitar repetição.`,
-          code: `# Funções em Python
-def criar_embed(titulo, descricao, cor=0x3b82f6):
-    """Cria um embed simples do Discord"""
-    return {
-        "title": titulo,
-        "description": descricao,
-        "color": cor
-    }
+          title: '1.8 Funções: Definição, Parâmetros e Escopo',
+          content: `<p><strong>Funções</strong> são blocos de código reutilizáveis. Vantagens: reutilização, modularidade, testabilidade, legibilidade.</p>
+<p><strong>Parâmetros:</strong> Obrigatórios, com valor padrão, *args (múltiplos posicionais), **kwargs (múltiplos nomeados).</p>
+<p><strong>Escopo:</strong> Variáveis dentro da função são locais. Use <code>global</code> para modificar globais (evite).</p>`,
+          code: `# === FUNÇÕES EM PYTHON ===
 
-# Chamando a função
+def saudacao(nome):
+    """Retorna uma saudação personalizada."""
+    return f"Olá, {nome}!"
+
+print(saudacao("Admin"))
+
+def criar_embed(titulo, descricao="Sem descrição", cor=0x3b82f6):
+    """Cria um dicionário representando um embed do Discord."""
+    return {"title": titulo, "description": descricao, "color": cor}
+
 embed = criar_embed("Boas-vindas", "Bem-vindo ao servidor!")
 print(embed)
 
-# Função com *args
-def listar_comandos(*comandos):
+def listar_comandos(bot_nome, *comandos):
+    """Lista comandos disponíveis no bot."""
+    print(f"\\n=== Comandos do {bot_nome} ===")
     for cmd in comandos:
-        print(f"/{cmd}")
+        print(f"  /{cmd}")
 
-listar_comandos("ping", "info", "help")`,
-          tags: ['python', 'funções', 'def']
+listar_comandos("NexusBot", "ping", "info", "help", "ban")
+
+def configurar_bot(**opcoes):
+    """Configura o bot com opções personalizadas."""
+    config = {"prefix": "!", "language": "pt-BR", "debug": False}
+    config.update(opcoes)
+    return config
+
+minha_config = configurar_bot(prefix="/", debug=True)
+print(f"Config final: {minha_config}")
+
+def calcular_xp(mensagens: int, minutos_voice: float) -> int:
+    """Calcula XP baseado em atividade."""
+    return mensagens * 5 + int(minutos_voice * 2)
+
+xp_total = calcular_xp(50, 120.5)
+print(f"XP total ganho: {xp_total}")
+
+dobro = lambda x: x * 2
+print(f"Dobro de 5: {dobro(5)}")`,
+          tags: ['python', 'funções', 'def', 'args', 'kwargs', 'lambda', 'type-hints']
         }
       ]
     },
     {
       id: 'mod2',
       icon: '🧠',
-      title: 'Módulo 2 — Lógica de Programação Avançada',
-      description: 'Domine orientação a objetos, tratamento de erros e manipulação de arquivos',
+      title: 'Módulo 2 — Orientação a Objetos e Tratamento de Erros',
+      description: 'Domine classes, herança, polimorfismo e tratamento profissional de exceções',
       difficulty: 'Iniciante-Intermediário',
-      duration: '3h',
+      duration: '4h',
       lessons: [
         {
           id: 'm2l1',
-          title: '2.1 Orientação a Objetos (Classes e Objetos)',
-          content: `OOP é um paradigma que organiza código em classes (moldes) e objetos (instâncias). Atributos armazenam estado; métodos definem comportamento. O construtor __init__ inicializa objetos. Self refere-se à própria instância.`,
-          code: `# Orientação a Objetos
+          title: '2.1 Orientação a Objetos: Classes, Objetos e o __init__',
+          content: `<p><strong>Orientação a Objetos (OOP)</strong> organiza código em "objetos" com dados (atributos) e comportamentos (métodos). É a base do discord.py.</p>
+<p><strong>Conceitos:</strong> Classe (molde), Objeto (instância), Atributos (dados), Métodos (comportamentos), self (referência à instância).</p>
+<p><strong>__init__:</strong> Construtor chamado ao criar um objeto. Inicializa atributos.</p>`,
+          code: `# === ORIENTAÇÃO A OBJETOS ===
+
 class Bot:
-    def __init__(self, nome, prefixo="!"):
+    """Classe que representa um bot Discord."""
+    
+    def __init__(self, nome: str, prefixo: str = "!"):
+        self.nome = nome
+        self.prefixo = prefixo
+        self.comandos = []
+        self.online = False
+        print(f"🤖 Bot '{self.nome}' criado com prefixo '{self.prefixo}'")
+    
+    def ligar(self):
+        if not self.online:
+            self.online = True
+            print(f"🟢 {self.nome} está online!")
+    
+    def adicionar_comando(self, nome: str, descricao: str = ""):
+        self.comandos.append({"nome": nome, "descricao": descricao})
+        print(f"✅ Comando '{self.prefixo}{nome}' adicionado!")
+    
+    def listar_comandos(self):
+        if not self.comandos:
+            return "Nenhum comando registrado."
+        resultado = f"Comandos do {self.nome}:\\n"
+        for cmd in self.comandos:
+            resultado += f"  {self.prefixo}{cmd['nome']}\\n"
+        return resultado
+
+nexus = Bot("NexusBot", prefixo="/")
+nexus.ligar()
+nexus.adicionar_comando("ping", "Verifica latência")
+nexus.adicionar_comando("help", "Lista comandos")
+print(nexus.listar_comandos())`,
+          tags: ['python', 'oop', 'classes', 'objetos', '__init__']
+        },
+        {
+          id: 'm2l2',
+          title: '2.2 Herança, Polimorfismo e super()',
+          content: `<p><strong>Herança</strong> permite que uma classe herde atributos/métodos de outra. <strong>super()</strong> chama métodos da classe pai. <strong>Polimorfismo</strong> permite redefinir comportamentos em subclasses.</p>`,
+          code: `# === HERANÇA E POLIMORFISMO ===
+
+class Bot:
+    def __init__(self, nome: str, prefixo: str = "!"):
         self.nome = nome
         self.prefixo = prefixo
         self.comandos = []
     
-    def adicionar_comando(self, comando):
-        self.comandos.append(comando)
-        print(f"Comando /{comando} adicionado ao {self.nome}")
-    
-    def listar_comandos(self):
-        return self.comandos
+    def adicionar_comando(self, nome: str):
+        self.comandos.append(nome)
 
-# Criando instâncias
-nexus = Bot("NexusBot", prefixo="/")
-nexus.adicionar_comando("ping")
-nexus.adicionar_comando("info")
-print(nexus.listar_comandos())`,
-          tags: ['python', 'oop', 'classes']
-        },
-        {
-          id: 'm2l2',
-          title: '2.2 Herança e Polimorfismo',
-          content: `Herança permite que uma classe (subclasse) herde atributos e métodos de outra (superclasse). Use super() para chamar métodos da classe pai. Polimorfismo permite que subclasses redefinam comportamentos. Essencial para criar bots modulares com Cogs.`,
-          code: `# Herança e Polimorfismo
 class ModeradorBot(Bot):
-    def __init__(self, nome, prefixo="!"):
+    def __init__(self, nome: str, prefixo: str = "!"):
         super().__init__(nome, prefixo)
         self.bans = 0
+        print(f"🛡️ Recursos de moderação ativados")
     
-    def banir(self, usuario):
+    def banir(self, usuario: str, motivo: str = "Sem motivo"):
         self.bans += 1
-        print(f"{usuario} foi banido por {self.nome}")
-        print(f"Total de bans: {self.bans}")
+        print(f"🔨 {usuario} foi BANIDO por {self.nome}")
+        print(f"   Total de bans: {self.bans}")
 
-mod_bot = ModeradorBot("Guardian")
-mod_bot.adicionar_comando("ban")
-mod_bot.banir("spammer123")`,
-          tags: ['python', 'herança', 'polimorfismo']
+guardian = ModeradorBot("Guardian")
+guardian.adicionar_comando("ban")
+guardian.banir("spammer", "Spam em chat")`,
+          tags: ['python', 'herança', 'polimorfismo', 'super']
         },
         {
           id: 'm2l3',
-          title: '2.3 Tratamento de erros (try/except)',
-          content: `Erros são inevitáveis em programação. Use try/except para capturar exceções e evitar que seu bot pare de funcionar. finally sempre executa, ideal para limpeza. Levante exceções com raise quando necessário.`,
-          code: `# Tratamento de exceções
+          title: '2.3 Tratamento de Erros (try/except/finally)',
+          content: `<p><strong>Exceções</strong> são erros que ocorrem durante a execução. Use <code>try/except</code> para capturá-los e evitar que o programa quebre.</p>
+<p><strong>finally:</strong> Bloco que sempre executa, ideal para limpeza (fechar arquivos, conexões).</p>
+<p><strong>raise:</strong> Levanta uma exceção manualmente.</p>`,
+          code: `# === TRATAMENTO DE EXCEÇÕES ===
+
 def executar_comando(comando, args):
     try:
         if comando == "ban":
-            resultado = banir_usuario(args[0])
+            if not args:
+                raise ValueError("Argumentos insuficientes")
+            print(f"Banindo {args[0]}...")
         elif comando == "div":
             resultado = 10 / int(args[0])
+            print(f"Resultado: {resultado}")
         else:
             raise ValueError(f"Comando desconhecido: {comando}")
     except ZeroDivisionError:
-        print("Erro: Divisão por zero!")
+        print("❌ Erro: Divisão por zero!")
     except IndexError:
-        print("Erro: Argumentos insuficientes!")
+        print("❌ Erro: Argumentos insuficientes!")
+    except ValueError as e:
+        print(f"❌ Erro: {e}")
     except Exception as e:
-        print(f"Erro inesperado: {e}")
+        print(f"❌ Erro inesperado: {e}")
     finally:
-        print("Execução do comando finalizada")`,
-          tags: ['python', 'exceções', 'try-except']
+        print("✅ Execução do comando finalizada")
+
+executar_comando("ban", ["spammer"])
+executar_comando("div", ["0"])
+executar_comando("div", ["2"])
+executar_comando("unknown", [])`,
+          tags: ['python', 'exceções', 'try-except', 'finally', 'raise']
         },
         {
           id: 'm2l4',
-          title: '2.4 Manipulação de arquivos',
-          content: `Leia e escreva arquivos com open(). Modos: 'r' (leitura), 'w' (escrita, sobrescreve), 'a' (anexar), 'r+' (leitura e escrita). Sempre use with para garantir que o arquivo seja fechado corretamente. Útil para logs e configurações persistentes.`,
-          code: `# Manipulação de arquivos
+          title: '2.4 Manipulação de Arquivos (open, with)',
+          content: `<p>Leia e escreva arquivos com <code>open()</code>. Modos: 'r' (leitura), 'w' (escrita), 'a' (anexar). Use <code>with</code> para garantir fechamento automático.</p>`,
+          code: `# === MANIPULAÇÃO DE ARQUIVOS ===
+
 # Escrita
-with open("config.txt", "w") as f:
+with open("config.txt", "w", encoding="utf-8") as f:
     f.write("prefix=!\\n")
     f.write("language=pt-BR\\n")
+print("✅ Arquivo config.txt criado!")
 
 # Leitura
-with open("config.txt", "r") as f:
+with open("config.txt", "r", encoding="utf-8") as f:
     conteudo = f.read()
-    print(conteudo)
+    print(f"Conteúdo:\\n{conteudo}")
 
 # Anexar (append)
-with open("bot.log", "a") as f:
-    f.write("[INFO] Bot iniciado\\n")`,
-          tags: ['python', 'arquivos', 'io']
+with open("bot.log", "a", encoding="utf-8") as f:
+    f.write("[INFO] Bot iniciado\\n")
+print("✅ Log adicionado!")`,
+          tags: ['python', 'arquivos', 'open', 'with']
         }
       ]
     },
@@ -278,39 +561,40 @@ with open("bot.log", "a") as f:
       title: 'Módulo 3 — Python Moderno para Bots',
       description: 'Async/await, tipagem, ambientes virtuais e arquitetura de projetos',
       difficulty: 'Intermediário',
-      duration: '3h',
+      duration: '4h',
       lessons: [
         {
           id: 'm3l1',
           title: '3.1 Programação Assíncrona (async/await)',
-          content: `Bots Discord precisam ser assíncronos para lidar com múltiplos eventos simultaneamente sem travar. async def define uma corrotina; await pausa a execução até que a tarefa seja concluída. O event loop gerencia todas as tarefas.`,
+          content: `<p>Bots Discord precisam ser <strong>assíncronos</strong> para lidar com múltiplos eventos simultaneamente. <code>async def</code> define uma corrotina; <code>await</code> pausa até a tarefa concluir. O <strong>event loop</strong> gerencia todas as tarefas.</p>
+<p><strong>asyncio.gather():</strong> Executa múltiplas corrotinas concorrentemente.</p>`,
           code: `import asyncio
 
 async def buscar_dados_api():
-    print("Buscando dados...")
+    print("🔍 Buscando dados...")
     await asyncio.sleep(2)  # Simula requisição
     return {"status": "ok", "data": [1, 2, 3]}
 
 async def processar_comando():
-    print("Processando comando...")
+    print("⚙️ Processando comando...")
     await asyncio.sleep(0.5)
     return "Comando executado"
 
 async def main():
-    # Executa tarefas concorrentemente
     dados, resultado = await asyncio.gather(
         buscar_dados_api(),
         processar_comando()
     )
-    print(dados, resultado)
+    print(f"Dados: {dados}")
+    print(f"Resultado: {resultado}")
 
 asyncio.run(main())`,
-          tags: ['python', 'async', 'await', 'assíncrono']
+          tags: ['python', 'async', 'await', 'assíncrono', 'asyncio']
         },
         {
           id: 'm3l2',
           title: '3.2 Tipagem Estática (Type Hints)',
-          content: `Anotações de tipo (type hints) melhoram a legibilidade, permitem checagem estática com mypy e ajudam IDEs a fornecer autocomplete mais preciso. Use : para parâmetros e -> para tipo de retorno. O módulo typing oferece tipos genéricos.`,
+          content: `<p><strong>Type hints</strong> melhoram legibilidade, permitem checagem com mypy e ajudam IDEs com autocomplete. Use <code>: tipo</code> para parâmetros e <code>-> tipo</code> para retorno.</p>`,
           code: `from typing import List, Dict, Optional
 
 def criar_embed(
@@ -319,44 +603,41 @@ def criar_embed(
     cor: int = 0x3b82f6,
     campos: Optional[List[Dict[str, str]]] = None
 ) -> Dict[str, any]:
-    """Cria um embed do Discord com tipagem completa"""
-    embed = {
-        "title": titulo,
-        "description": descricao,
-        "color": cor
-    }
+    """Cria um embed do Discord com tipagem completa."""
+    embed = {"title": titulo, "description": descricao, "color": cor}
     if campos:
         embed["fields"] = campos
     return embed
 
-# Uso
 embed = criar_embed("Título", "Descrição")
 print(embed)`,
-          tags: ['python', 'type-hints', 'tipagem']
+          tags: ['python', 'type-hints', 'tipagem', 'mypy']
         },
         {
           id: 'm3l3',
           title: '3.3 Ambientes Virtuais e Dependências',
-          content: `Ambientes virtuais isolam as dependências de cada projeto. Use venv (built-in) ou poetry (gerenciador moderno). requirements.txt lista as bibliotecas. Sempre versionar as dependências para reproduzir o ambiente exato.`,
-          code: `# Criando ambiente virtual
+          content: `<p><strong>Ambientes virtuais</strong> isolam dependências de cada projeto. Use <code>venv</code> (built-in) ou <code>poetry</code> (moderno).</p>
+<p><strong>requirements.txt:</strong> Lista bibliotecas com versões exatas para reproduzir o ambiente.</p>`,
+          code: `# Criar ambiente virtual
 # python -m venv botenv
 # source botenv/bin/activate  (Linux/Mac)
 # botenv\\Scripts\\activate   (Windows)
 
-# Instalando dependências
+# Instalar dependências
 # pip install discord.py
 # pip install aiosqlite
 # pip install asyncpg
+# pip install python-dotenv
 
-# requirements.txt
+# requirements.txt (exemplo):
 # discord.py>=2.6.0
 # aiosqlite>=0.20.0
 # asyncpg>=0.29.0
 # python-dotenv>=1.0.0
 
-# Para instalar:
+# Instalar a partir do arquivo:
 # pip install -r requirements.txt`,
-          tags: ['python', 'venv', 'dependências']
+          tags: ['python', 'venv', 'dependências', 'requirements']
         }
       ]
     },
@@ -366,12 +647,13 @@ print(embed)`,
       title: 'Módulo 4 — discord.py 2.6+ (2026)',
       description: 'Slash commands, Cogs, Views, Buttons, Select Menus e Modals',
       difficulty: 'Intermediário',
-      duration: '5h',
+      duration: '6h',
       lessons: [
         {
           id: 'm4l1',
           title: '4.1 Criando o Bot no Developer Portal',
-          content: `Acesse discord.com/developers/applications para criar sua aplicação. Gere o token do bot, configure intents privilegiadas (message content, members, presences). Nunca compartilhe o token publicamente - use variáveis de ambiente.`,
+          content: `<p>Acesse <a href="https://discord.com/developers/applications" target="_blank" style="color:var(--accent-cyan);">discord.com/developers/applications</a> para criar sua aplicação. Gere o token, configure intents privilegiadas (message content, members, presences).</p>
+<p><strong>⚠️ NUNCA compartilhe o token!</strong> Use variáveis de ambiente com <code>python-dotenv</code>.</p>`,
           code: `import discord
 import os
 from dotenv import load_dotenv
@@ -391,40 +673,30 @@ class MeuBot(discord.Client):
 
 bot = MeuBot(intents=intents)
 bot.run(TOKEN)`,
-          tags: ['discord.py', 'bot', 'token']
+          tags: ['discord.py', 'bot', 'token', 'intents']
         },
         {
           id: 'm4l2',
           title: '4.2 Slash Commands (app_commands)',
-          content: `Comandos de barra (slash commands) são o padrão moderno do Discord. Use @bot.tree.command() para criar comandos. Sincronize com bot.tree.sync(). Suportam parâmetros tipados, autocomplete e descrições.`,
+          content: `<p><strong>Slash commands</strong> são o padrão moderno do Discord. Use <code>@bot.tree.command()</code> para criar comandos e <code>bot.tree.sync()</code> para sincronizar.</p>`,
           code: `from discord import app_commands
 
-@bot.tree.command(
-    name="ping",
-    description="Verifica a latência do bot"
-)
+@bot.tree.command(name="ping", description="Verifica latência")
 async def ping(interaction: discord.Interaction):
     latency = round(bot.latency * 1000)
-    await interaction.response.send_message(
-        f"🏓 Pong! Latência: {latency}ms"
-    )
+    await interaction.response.send_message(f"🏓 Pong! {latency}ms")
 
-@bot.tree.command(
-    name="say",
-    description="Faz o bot repetir uma mensagem"
-)
-@app_commands.describe(mensagem="O texto que o bot deve repetir")
+@bot.tree.command(name="say", description="Faz o bot repetir")
+@app_commands.describe(mensagem="O texto a repetir")
 async def say(interaction: discord.Interaction, mensagem: str):
-    await interaction.response.send_message(
-        f"📢 {mensagem}"
-    )`,
+    await interaction.response.send_message(f"📢 {mensagem}")`,
           tags: ['discord.py', 'slash-commands', 'app_commands']
         },
         {
           id: 'm4l3',
           title: '4.3 Cogs: Organização Profissional',
-          content: `Cogs permitem separar funcionalidades em módulos independentes. Cada Cog é uma classe que herda de commands.Cog. Use setup() para carregar o Cog. Essencial para bots grandes e manuteníveis.`,
-          code: `# Arquivo: cogs/moderation.py
+          content: `<p><strong>Cogs</strong> permitem separar funcionalidades em módulos independentes. Cada Cog herda de <code>commands.Cog</code>. Use <code>setup()</code> para carregar.</p>`,
+          code: `# cogs/moderation.py
 import discord
 from discord.ext import commands
 from discord import app_commands
@@ -433,17 +705,11 @@ class Moderation(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
     
-    @app_commands.command(name="kick")
+    @app_commands.command(name="kick", description="Expulsa um membro")
     @app_commands.describe(member="Membro a ser expulso")
-    async def kick(
-        self,
-        interaction: discord.Interaction,
-        member: discord.Member
-    ):
+    async def kick(self, interaction: discord.Interaction, member: discord.Member):
         await member.kick()
-        await interaction.response.send_message(
-            f"👢 {member.mention} foi expulso!"
-        )
+        await interaction.response.send_message(f"👢 {member.mention} expulso!")
 
 async def setup(bot):
     await bot.add_cog(Moderation(bot))`,
@@ -452,39 +718,21 @@ async def setup(bot):
         {
           id: 'm4l4',
           title: '4.4 Views, Buttons e Select Menus',
-          content: `Componentes interativos enriquecem a UX do bot. Views são containers para botões e selects. Use callbacks para responder a interações. Suportam timeout e desabilitação automática.`,
+          content: `<p><strong>Componentes interativos</strong> enriquecem a UX. <code>discord.ui.View</code> é container para botões e selects. Use callbacks para responder interações.</p>`,
           code: `class ConfirmView(discord.ui.View):
     def __init__(self):
         super().__init__(timeout=30)
     
-    @discord.ui.button(
-        label="Confirmar",
-        style=discord.ButtonStyle.green
-    )
-    async def confirm(
-        self,
-        interaction: discord.Interaction,
-        button: discord.ui.Button
-    ):
-        await interaction.response.send_message(
-            "✅ Ação confirmada!"
-        )
+    @discord.ui.button(label="Confirmar", style=discord.ButtonStyle.green)
+    async def confirm(self, interaction: discord.Interaction, button: discord.ui.Button):
+        await interaction.response.send_message("✅ Confirmado!")
         self.stop()
     
-    @discord.ui.button(
-        label="Cancelar",
-        style=discord.ButtonStyle.red
-    )
-    async def cancel(
-        self,
-        interaction: discord.Interaction,
-        button: discord.ui.Button
-    ):
-        await interaction.response.send_message(
-            "❌ Ação cancelada!"
-        )
+    @discord.ui.button(label="Cancelar", style=discord.ButtonStyle.red)
+    async def cancel(self, interaction: discord.Interaction, button: discord.ui.Button):
+        await interaction.response.send_message("❌ Cancelado!")
         self.stop()`,
-          tags: ['discord.py', 'views', 'buttons']
+          tags: ['discord.py', 'views', 'buttons', 'components']
         }
       ]
     },
@@ -494,12 +742,13 @@ async def setup(bot):
       title: 'Módulo 5 — Banco de Dados',
       description: 'SQLite, PostgreSQL, ORM e migrations para bots',
       difficulty: 'Intermediário-Avançado',
-      duration: '3h',
+      duration: '4h',
       lessons: [
         {
           id: 'm5l1',
           title: '5.1 SQLite Assíncrono com aiosqlite',
-          content: `SQLite é ideal para bots pequenos/médios. aiosqlite permite operações assíncronas. Crie tabelas, faça CRUD e use placeholders para prevenir SQL injection.`,
+          content: `<p><strong>SQLite</strong> é ideal para bots pequenos/médios por não precisar de servidor separado. <strong>aiosqlite</strong> permite operações assíncronas para não bloquear o event loop.</p>
+<p><strong>Placeholders (?):</strong> Previnem SQL injection. Nunca use f-strings para queries!</p>`,
           code: `import aiosqlite
 
 async def init_db():
@@ -513,6 +762,7 @@ async def init_db():
             )
         """)
         await db.commit()
+    print("✅ Banco de dados inicializado!")
 
 async def add_xp(user_id: int, amount: int):
     async with aiosqlite.connect("bot.db") as db:
@@ -521,8 +771,17 @@ async def add_xp(user_id: int, amount: int):
             "ON CONFLICT(id) DO UPDATE SET xp = xp + ?",
             (user_id, amount, amount)
         )
-        await db.commit()`,
-          tags: ['database', 'sqlite', 'aiosqlite']
+        await db.commit()
+
+async def get_user(user_id: int):
+    async with aiosqlite.connect("bot.db") as db:
+        cursor = await db.execute("SELECT * FROM users WHERE id = ?", (user_id,))
+        return await cursor.fetchone()
+
+# Uso
+import asyncio
+asyncio.run(init_db())`,
+          tags: ['database', 'sqlite', 'aiosqlite', 'async']
         }
       ]
     },
@@ -532,39 +791,26 @@ async def add_xp(user_id: int, amount: int):
       title: 'Módulo 6 — Bots Profissionais',
       description: 'Sistemas de moderação, tickets, logs e economia',
       difficulty: 'Avançado',
-      duration: '4h',
+      duration: '6h',
       lessons: [
         {
           id: 'm6l1',
           title: '6.1 Sistema de Moderação Completo',
-          content: `Crie um sistema de moderação profissional com comandos de warn, mute, kick e ban. Armazene histórico no banco de dados e envie logs para canais designados.`,
-          code: `@app_commands.command(name="warn")
-@app_commands.describe(
-    member="Membro a ser avisado",
-    reason="Motivo do aviso"
-)
-async def warn(
-    self,
-    interaction: discord.Interaction,
-    member: discord.Member,
-    reason: str = "Sem motivo especificado"
-):
-    # Salva no banco de dados
+          content: `<p>Crie um sistema profissional com comandos de warn, mute, kick e ban. Armazene histórico no banco de dados e envie logs para canais designados.</p>`,
+          code: `@app_commands.command(name="warn", description="Avisa um membro")
+@app_commands.describe(member="Membro", reason="Motivo")
+async def warn(self, interaction: discord.Interaction, member: discord.Member, reason: str = "Sem motivo"):
+    # Salvar no banco (função assíncrona)
     await add_warn(member.id, interaction.user.id, reason)
     
-    # Envia DM para o usuário
+    # Notificar o usuário via DM
     try:
-        await member.send(
-            f"⚠️ Você recebeu um aviso em {interaction.guild.name}\\n"
-            f"Motivo: {reason}"
-        )
+        await member.send(f"⚠️ Você recebeu um aviso em {interaction.guild.name}\\nMotivo: {reason}")
     except:
         pass
     
-    await interaction.response.send_message(
-        f"⚠️ {member.mention} foi avisado. Motivo: {reason}"
-    )`,
-          tags: ['discord.py', 'moderação', 'sistema']
+    await interaction.response.send_message(f"⚠️ {member.mention} foi avisado. Motivo: {reason}")`,
+          tags: ['discord.py', 'moderação', 'sistema', 'warn']
         }
       ]
     },
@@ -574,28 +820,24 @@ async def warn(
       title: 'Módulo 7 — Escalabilidade Enterprise',
       description: 'Sharding, Redis, cache e arquitetura para grandes bots',
       difficulty: 'Avançado',
-      duration: '2h',
+      duration: '3h',
       lessons: [
         {
           id: 'm7l1',
           title: '7.1 AutoShardedBot para +2500 Servidores',
-          content: `Quando seu bot ultrapassa 2500 servidores, é necessário sharding. AutoShardedBot divide automaticamente a carga entre múltiplos processos. Cada shard gerencia um subconjunto de servidores.`,
+          content: `<p>Quando seu bot ultrapassa 2.500 servidores, o Discord exige <strong>sharding</strong>. <code>AutoShardedBot</code> divide automaticamente a carga entre múltiplos processos (shards).</p>`,
           code: `from discord import AutoShardedBot
 
-bot = AutoShardedBot(
-    shard_count=4,
-    intents=intents
-)
+bot = AutoShardedBot(shard_count=4, intents=intents)
 
 @bot.event
 async def on_ready():
-    print(f"Shard {bot.shard_id} pronta")
-    print(f"Total shards: {bot.shard_count}")
+    print(f"Shard {bot.shard_id} pronta de {bot.shard_count}")
 
 @bot.event
 async def on_shard_ready(shard_id):
-    print(f"Shard {shard_id} conectada ao gateway")`,
-          tags: ['discord.py', 'sharding', 'escalabilidade']
+    print(f"✅ Shard {shard_id} conectada ao gateway")`,
+          tags: ['discord.py', 'sharding', 'escalabilidade', 'AutoShardedBot']
         }
       ]
     },
@@ -605,12 +847,12 @@ async def on_shard_ready(shard_id):
       title: 'Módulo 8 — Deploy e Produção',
       description: 'Docker, Railway, VPS e boas práticas de deploy',
       difficulty: 'Avançado',
-      duration: '2h',
+      duration: '3h',
       lessons: [
         {
           id: 'm8l1',
           title: '8.1 Dockerizando seu Bot',
-          content: `Docker garante ambiente consistente em qualquer servidor. Crie um Dockerfile otimizado com multi-stage builds. Use docker-compose para serviços auxiliares (Redis, PostgreSQL).`,
+          content: `<p><strong>Docker</strong> garante ambiente consistente em qualquer servidor. Crie um <code>Dockerfile</code> otimizado com multi-stage builds para imagens menores.</p>`,
           code: `# Dockerfile
 FROM python:3.12-slim AS builder
 WORKDIR /app
@@ -622,8 +864,11 @@ WORKDIR /app
 COPY --from=builder /root/.local /root/.local
 COPY . .
 ENV PATH=/root/.local/bin:$PATH
-CMD ["python", "main.py"]`,
-          tags: ['docker', 'deploy', 'produção']
+CMD ["python", "main.py"]
+
+# Build: docker build -t nexusbot .
+# Run: docker run -d --name bot -e DISCORD_TOKEN=xxx nexusbot`,
+          tags: ['docker', 'deploy', 'produção', 'Dockerfile']
         }
       ]
     }
@@ -631,185 +876,12 @@ CMD ["python", "main.py"]`,
 
   // ========== CHEATSHEETS DATA ==========
   const cheatsheetsData = {
-    python: `# Python Cheatsheet
-
-# Variáveis
-nome = "Bot"
-versao = 2.6
-ativo = True
-
-# Listas
-comandos = ["ping", "kick", "ban"]
-comandos.append("mute")
-comandos[0]  # "ping"
-
-# Dicionários
-config = {"prefix": "!", "owner": 123}
-config.get("prefix", "/")
-
-# Funções
-def saudacao(nome: str) -> str:
-    return f"Olá, {nome}"
-
-# Condicionais
-if ativo:
-    print("Online")
-elif versao > 2:
-    print("Atualizar")
-else:
-    print("Offline")
-
-# Loops
-for i in range(5):
-    print(i)
-
-while True:
-    break
-
-# Classes
-class Bot:
-    def __init__(self, nome):
-        self.nome = nome`,
-    async: `# AsyncIO Cheatsheet
-
-import asyncio
-
-# Corrotina
-async def fetch():
-    await asyncio.sleep(1)
-    return "data"
-
-# Executar
-asyncio.run(fetch())
-
-# Tasks concorrentes
-async def main():
-    results = await asyncio.gather(
-        fetch(),
-        fetch(),
-        fetch()
-    )
-
-# Timeout
-try:
-    result = await asyncio.wait_for(
-        fetch(),
-        timeout=5.0
-    )
-except asyncio.TimeoutError:
-    print("Timeout!")
-
-# Criar task
-task = asyncio.create_task(fetch())
-await task`,
-    discordpy: `# discord.py Cheatsheet
-
-# Slash Command
-@bot.tree.command(name="ping")
-async def ping(interaction):
-    await interaction.response.send_message("Pong!")
-
-# Cog
-class MyCog(commands.Cog):
-    def __init__(self, bot):
-        self.bot = bot
-
-# View com botão
-class MyView(discord.ui.View):
-    @discord.ui.button(label="Click")
-    async def btn(self, interaction, button):
-        await interaction.response.send_message("Clicked!")
-
-# Embed
-embed = discord.Embed(
-    title="Título",
-    description="Descrição",
-    color=0x3b82f6
-)
-embed.add_field(name="Campo", value="Valor")`,
-    sql: `# SQL Cheatsheet
-
-# Criar tabela
-CREATE TABLE users (
-    id INTEGER PRIMARY KEY,
-    name TEXT NOT NULL,
-    xp INTEGER DEFAULT 0
-);
-
-# Inserir
-INSERT INTO users (id, name) VALUES (1, 'Bot');
-
-# Selecionar
-SELECT * FROM users WHERE xp > 100;
-
-# Atualizar
-UPDATE users SET xp = xp + 10 WHERE id = 1;
-
-# Deletar
-DELETE FROM users WHERE id = 1;
-
-# Join
-SELECT u.name, w.reason
-FROM users u
-JOIN warns w ON u.id = w.user_id;`,
-    docker: `# Docker Cheatsheet
-
-# Dockerfile
-FROM python:3.12-slim
-WORKDIR /app
-COPY requirements.txt .
-RUN pip install -r requirements.txt
-COPY . .
-CMD ["python", "main.py"]
-
-# Build
-docker build -t mybot .
-
-# Run
-docker run -d --name bot \\
-  -e DISCORD_TOKEN=xxx \\
-  mybot
-
-# Docker Compose
-version: '3.8'
-services:
-  bot:
-    build: .
-    environment:
-      - DISCORD_TOKEN=xxx
-  redis:
-    image: redis:alpine`,
-    git: `# Git Cheatsheet
-
-# Inicializar
-git init
-
-# Clonar
-git clone <url>
-
-# Status
-git status
-
-# Adicionar
-git add .
-git add arquivo.py
-
-# Commit
-git commit -m "mensagem"
-
-# Push
-git push origin main
-
-# Pull
-git pull origin main
-
-# Branch
-git checkout -b feature/nova
-git checkout main
-git merge feature/nova
-
-# Log
-git log --oneline`
+    python: `# Python Cheatsheet\n\n# Variáveis\nnome = "Bot"\nversao = 2.6\n\n# Listas\ncomandos = ["ping", "kick", "ban"]\ncomandos.append("mute")\n\n# Dicionários\nconfig = {"prefix": "!", "owner": 123}\n\n# Funções\ndef saudacao(nome: str) -> str:\n    return f"Olá, {nome}"\n\n# Condicionais\nif ativo:\n    print("Online")\n\n# Loops\nfor i in range(5):\n    print(i)`,
+    async: `# AsyncIO Cheatsheet\n\nimport asyncio\n\nasync def fetch():\n    await asyncio.sleep(1)\n    return "data"\n\nasyncio.run(fetch())\n\n# Tasks concorrentes\nresults = await asyncio.gather(fetch(), fetch())`,
+    discordpy: `# discord.py Cheatsheet\n\n@bot.tree.command(name="ping")\nasync def ping(interaction):\n    await interaction.response.send_message("Pong!")\n\n# Cog\nclass MyCog(commands.Cog):\n    def __init__(self, bot):\n        self.bot = bot\n\n# Embed\nembed = discord.Embed(title="Título", color=0x3b82f6)`,
+    sql: `# SQL Cheatsheet\n\nCREATE TABLE users (id INTEGER PRIMARY KEY, name TEXT);\nINSERT INTO users VALUES (1, "Bot");\nSELECT * FROM users;\nUPDATE users SET name = "New" WHERE id = 1;\nDELETE FROM users WHERE id = 1;`,
+    docker: `# Docker Cheatsheet\n\nFROM python:3.12-slim\nWORKDIR /app\nCOPY . .\nRUN pip install -r requirements.txt\nCMD ["python", "main.py"]\n\n# Build\ndocker build -t mybot .\n# Run\ndocker run -d mybot`,
+    git: `# Git Cheatsheet\n\ngit init\ngit add .\ngit commit -m "msg"\ngit push origin main\ngit pull origin main\ngit checkout -b feature`
   };
 
   // ========== STATE ==========
@@ -824,1020 +896,287 @@ git log --oneline`
   let currentQuizQuestions = [];
   let monacoReady = false;
 
-  // ========== DOM ELEMENTS ==========
-  const $ = (sel) => document.querySelector(sel);
-  const $$ = (sel) => document.querySelectorAll(sel);
+  // ========== XP SYSTEM ==========
+  const xpSystem = {
+    xp: parseInt(localStorage.getItem('nexus_xp') || '0'),
+    level: parseInt(localStorage.getItem('nexus_level') || '1'),
+    streak: parseInt(localStorage.getItem('nexus_streak') || '0'),
+    lastLogin: localStorage.getItem('nexus_last_login') || null,
+    
+    xpPerLevel: function(level) { return Math.floor(100 * Math.pow(level, 1.5)); },
+    
+    addXP: function(amount) {
+      this.xp += amount;
+      while (this.xp >= this.xpPerLevel(this.level)) { this.xp -= this.xpPerLevel(this.level); this.level++; }
+      this.save(); this.updateUI();
+    },
+    
+    save: function() {
+      localStorage.setItem('nexus_xp', this.xp);
+      localStorage.setItem('nexus_level', this.level);
+      localStorage.setItem('nexus_streak', this.streak);
+      localStorage.setItem('nexus_last_login', new Date().toDateString());
+    },
+    
+    checkStreak: function() {
+      const today = new Date().toDateString();
+      if (this.lastLogin === today) return;
+      const yesterday = new Date(); yesterday.setDate(yesterday.getDate() - 1);
+      this.streak = (this.lastLogin === yesterday.toDateString()) ? this.streak + 1 : 1;
+      this.save();
+    },
+    
+    updateUI: function() {
+      ['xpNumber','xpNumber2','levelNumber','levelNumber2','streakNumber','streakNumber2','sidebarXP','sidebarStreak'].forEach(id => {
+        const el = document.getElementById(id); if (!el) return;
+        if (id.startsWith('xp') || id === 'sidebarXP') el.textContent = this.xp;
+        if (id.startsWith('level')) el.textContent = this.level;
+        if (id.startsWith('streak') || id === 'sidebarStreak') el.textContent = this.streak;
+      });
+    }
+  };
 
-  const appLoading = $('#app-loading');
-  const appContainer = $('#app-container');
-  const mainSidebar = $('#main-sidebar');
-  const sidebarOverlay = $('#sidebarOverlay');
-  const moduleNavContainer = $('#moduleNavContainer');
-  const sidebarNav = $('#sidebarNav');
-  const sidebarProgressPercent = $('#sidebarProgressPercent');
-  const sidebarProgressFill = $('#sidebarProgressFill');
-  const pageContainer = $('#page-container');
-  const searchModal = $('#searchModal');
-  const modalSearchInput = $('#modalSearchInput');
-  const searchResults = $('#searchResults');
-  const globalSearch = $('#globalSearch');
+  // ========== MISSIONS SYSTEM ==========
+  const missionsSystem = {
+    missions: [
+      { id: 'm1', type: 'daily', title: 'Complete 3 exercícios', xp: 50, target: 3, progress: 0, completed: false },
+      { id: 'm2', type: 'daily', title: 'Execute código no Playground', xp: 30, target: 1, progress: 0, completed: false },
+      { id: 'm3', type: 'weekly', title: 'Complete um módulo inteiro', xp: 200, target: 1, progress: 0, completed: false },
+      { id: 'm4', type: 'weekly', title: 'Crie um comando slash funcional', xp: 150, target: 1, progress: 0, completed: false },
+      { id: 'm5', type: 'secret', title: 'Encontre o easter egg na documentação', xp: 500, target: 1, progress: 0, completed: false },
+    ],
+    load: function() {
+      const saved = JSON.parse(localStorage.getItem('nexus_missions') || '{}');
+      this.missions.forEach(m => { if (saved[m.id]) { m.progress = saved[m.id].progress || 0; m.completed = saved[m.id].completed || false; } });
+    },
+    save: function() {
+      const data = {}; this.missions.forEach(m => { data[m.id] = { progress: m.progress, completed: m.completed }; });
+      localStorage.setItem('nexus_missions', JSON.stringify(data));
+    },
+    progressMission: function(missionId, amount = 1) {
+      const mission = this.missions.find(m => m.id === missionId);
+      if (mission && !mission.completed) {
+        mission.progress = Math.min(mission.progress + amount, mission.target);
+        if (mission.progress >= mission.target) { mission.completed = true; xpSystem.addXP(mission.xp); }
+        this.save(); this.renderMissions(); achievementsSystem.renderAchievements();
+      }
+    },
+    renderMissions: function() {
+      const container = document.getElementById('missionsContainer'); if (!container) return;
+      container.innerHTML = this.missions.map(m => `<div class="mission-card ${m.completed?'completed':''}"><span class="mission-type ${m.type}">${m.type}</span><h4 class="mission-title">${m.title}</h4><div class="mission-xp">⭐ +${m.xp} XP</div><div class="mission-progress"><div class="mission-progress-bar"><div class="mission-progress-fill" style="width:${(m.progress/m.target)*100}%"></div></div><small style="color:var(--text-muted);">${m.progress}/${m.target}</small></div></div>`).join('');
+    }
+  };
+
+  // ========== ACHIEVEMENTS SYSTEM ==========
+  const achievementsSystem = {
+    achievements: [
+      { id: 'a1', icon: '🤖', name: 'Primeiro Bot', rarity: 'common', unlocked: false },
+      { id: 'a2', icon: '🚀', name: 'Deploy Master', rarity: 'rare', unlocked: false },
+      { id: 'a3', icon: '⚡', name: 'Mestre Async', rarity: 'epic', unlocked: false },
+      { id: 'a4', icon: '🐳', name: 'Docker Hero', rarity: 'epic', unlocked: false },
+      { id: 'a5', icon: '📚', name: 'Estudioso', rarity: 'legendary', unlocked: false },
+    ],
+    load: function() { const saved = JSON.parse(localStorage.getItem('nexus_achievements') || '[]'); this.achievements.forEach(a => a.unlocked = saved.includes(a.id)); },
+    save: function() { localStorage.setItem('nexus_achievements', JSON.stringify(this.achievements.filter(a=>a.unlocked).map(a=>a.id))); },
+    unlock: function(id) { const a = this.achievements.find(x=>x.id===id); if (a && !a.unlocked) { a.unlocked = true; this.save(); this.renderAchievements(); } },
+    renderAchievements: function() {
+      const container = document.getElementById('achievementsContainer'); if (!container) return;
+      container.innerHTML = this.achievements.map(a => `<div class="achievement-card ${a.unlocked?'unlocked':'locked'}"><div class="achievement-icon">${a.unlocked?a.icon:'🔒'}</div><div class="achievement-name">${a.name}</div><span class="achievement-rarity ${a.rarity}">${a.rarity}</span></div>`).join('');
+    }
+  };
+
+  // ========== PROJECTS SYSTEM ==========
+  const projectsSystem = {
+    projects: [
+      { id: 'p1', icon: '🛡️', title: 'Bot de Moderação', difficulty: 'Intermediário', steps: 8, completedSteps: 0 },
+      { id: 'p2', icon: '💰', title: 'Bot de Economia', difficulty: 'Avançado', steps: 12, completedSteps: 0 },
+      { id: 'p3', icon: '🎫', title: 'Sistema de Tickets', difficulty: 'Intermediário', steps: 6, completedSteps: 0 },
+      { id: 'p4', icon: '📊', title: 'Dashboard Web', difficulty: 'Avançado', steps: 15, completedSteps: 0 },
+    ],
+    renderProjects: function() {
+      const container = document.getElementById('projectsContainer'); if (!container) return;
+      container.innerHTML = this.projects.map(p => `<div class="project-card"><div class="project-preview">${p.icon}</div><div class="project-info"><h3 class="project-title">${p.title}</h3><div class="project-meta"><span>📊 ${p.difficulty}</span><span>📝 ${p.steps} etapas</span></div><div class="mission-progress-bar"><div class="mission-progress-fill" style="width:${(p.completedSteps/p.steps)*100}%"></div></div></div></div>`).join('');
+    }
+  };
+
+  // ========== AI TUTOR ==========
+  const aiTutor = {
+    renderChat: function() { const c = document.getElementById('aiChatMessages'); if(c) c.innerHTML = '<div class="ai-message bot"><div class="ai-avatar bot">🤖</div><div class="ai-bubble">Olá! Sou a Nexus AI. Pergunte sobre Python, bots Discord ou deploy!</div></div>'; },
+    sendMessage: function() {
+      const input = document.getElementById('aiInput'), container = document.getElementById('aiChatMessages');
+      if (!input || !container) return;
+      const msg = input.value.trim(); if (!msg) return;
+      container.innerHTML += `<div class="ai-message user"><div class="ai-avatar user">👤</div><div class="ai-bubble">${msg}</div></div>`; input.value = '';
+      setTimeout(() => {
+        let r = 'Posso ajudar com Python, bots Discord, async/await, deploy e mais!';
+        if (msg.toLowerCase().includes('async')) r = '⚡ Async/Await: Use async def e await. Ex: async def fetch(): await asyncio.sleep(1)';
+        if (msg.toLowerCase().includes('deploy')) r = '🐳 Deploy com Docker: FROM python:3.12-slim, COPY, RUN pip install, CMD ["python", "bot.py"]';
+        container.innerHTML += `<div class="ai-message bot"><div class="ai-avatar bot">🤖</div><div class="ai-bubble">${r}</div></div>`; container.scrollTop = container.scrollHeight;
+      }, 500 + Math.random() * 1000);
+    }
+  };
+
+  // ========== POMODORO SYSTEM ==========
+  const pomodoroSystem = {
+    timeLeft: 25 * 60, isRunning: false, sessions: 0, interval: null,
+    start: function() { if(this.isRunning) return; this.isRunning = true; this.interval = setInterval(() => this.tick(), 1000); this.updateUI(); },
+    pause: function() { this.isRunning = false; clearInterval(this.interval); this.updateUI(); },
+    reset: function() { this.pause(); this.timeLeft = 25 * 60; this.updateUI(); },
+    tick: function() { if(this.timeLeft > 0) this.timeLeft--; else { this.pause(); this.sessions++; this.timeLeft = 5 * 60; alert('🎯 Descanso!'); } this.updateUI(); },
+    updateUI: function() { const t = document.getElementById('pomodoroTimer'); if(t) { const m = Math.floor(this.timeLeft/60), s = this.timeLeft%60; t.textContent = `${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`; } const se = document.getElementById('pomodoroSessions'); if(se) se.textContent = `Sessões: ${this.sessions}`; }
+  };
 
   // ========== UTILS ==========
-  function escapeHtml(text) {
-    const div = document.createElement('div');
-    div.textContent = text;
-    return div.innerHTML;
-  }
-
-  function formatCodeForDisplay(code) {
-    return code
-      .replace(/&/g, '&amp;')
-      .replace(/</g, '&lt;')
-      .replace(/>/g, '&gt;')
-      .replace(/(".*?")/g, '<span style="color:#86efac;">$1</span>')
-      .replace(/('#.*')/g, '<span style="color:#86efac;">$1</span>')
-      .replace(/\b(def|class|import|from|async|await|return|if|elif|else|for|while|try|except|finally|with|as|in|not|and|or|True|False|None|pass|break|continue|raise)\b/g, '<span style="color:#c084fc;">$1</span>')
-      .replace(/\b(print|len|range|int|str|float|bool|list|dict|set|tuple|type|isinstance|super|open)\b/g, '<span style="color:#67e8f9;">$1</span>')
-      .replace(/\b(self|cls)\b/g, '<span style="color:#f9a8d4;">$1</span>')
-      .replace(/#.*$/gm, '<span style="color:#64748b;">$&</span>');
-  }
-
-  function saveProgress() {
-    localStorage.setItem('nexus_progress', JSON.stringify({
-      completedLessons: Array.from(completedLessons),
-      lastModule: currentModuleId,
-      lastLesson: currentLessonId,
-      lastPage: currentPage,
-      lastUpdated: Date.now()
-    }));
-    updateProgressUI();
-  }
-
-  function updateProgressUI() {
-    const totalLessons = courseData.reduce((acc, m) => acc + m.lessons.length, 0);
-    const pct = Math.min(100, Math.floor((completedLessons.size / totalLessons) * 100));
-    if (sidebarProgressPercent) sidebarProgressPercent.textContent = `${pct}%`;
-    if (sidebarProgressFill) sidebarProgressFill.style.width = `${pct}%`;
-  }
+  const $ = (sel) => document.querySelector(sel);
+  const $$ = (sel) => document.querySelectorAll(sel);
+  function escapeHtml(text) { const d = document.createElement('div'); d.textContent = text; return d.innerHTML; }
+  function formatCodeForDisplay(code) { return escapeHtml(code); }
+  function saveProgress() { localStorage.setItem('nexus_progress', JSON.stringify({ completedLessons: Array.from(completedLessons), lastModule: currentModuleId, lastLesson: currentLessonId, lastPage: currentPage, lastUpdated: Date.now() })); updateProgressUI(); }
+  function updateProgressUI() { const total = courseData.reduce((a,m) => a + m.lessons.length, 0); const pct = Math.min(100, Math.floor((completedLessons.size / total) * 100)); const pe = document.getElementById('sidebarProgressPercent'); const pf = document.getElementById('sidebarProgressFill'); if(pe) pe.textContent = `${pct}%`; if(pf) pf.style.width = `${pct}%`; }
 
   // ========== NAVIGATION ==========
   function navigateTo(page, data = {}) {
     currentPage = page;
-
-    // Update sidebar nav
     $$('.nav-item').forEach(el => el.classList.remove('active'));
-    const navItem = $(`.nav-item[data-page="${page}"]`);
-    if (navItem) navItem.classList.add('active');
-
-    // Update pages
+    const ni = $(`.nav-item[data-page="${page}"]`); if(ni) ni.classList.add('active');
     $$('.page').forEach(el => el.classList.remove('active'));
-    const pageEl = $(`#page-${page}`);
-    if (pageEl) {
-      pageEl.classList.add('active');
-      pageEl.scrollTop = 0;
+    const pe = document.getElementById(`page-${page}`); if(pe) { pe.classList.add('active'); pe.scrollTop = 0; }
+    switch(page) {
+      case 'documentation': renderDocumentationPage(data.moduleId || currentModuleId, data.lessonId || currentLessonId); break;
+      case 'roadmap': renderRoadmapPage(); break;
+      case 'playground': initPlayground(); break;
+      case 'terminal': initTerminalPage(); break;
+      case 'tools': initToolsPage(); break;
+      case 'discord-simulator': initSimulator(); break;
+      case 'cheatsheets': renderCheatsheet('python'); break;
+      case 'quizzes': initQuiz(); break;
+      case 'missions': missionsSystem.renderMissions(); achievementsSystem.renderAchievements(); break;
+      case 'projects': projectsSystem.renderProjects(); break;
+      case 'ai-tutor': aiTutor.renderChat(); break;
+      case 'pomodoro': pomodoroSystem.updateUI(); break;
+      case 'dashboard': renderDashboard(); break;
     }
-
-    // Render specific page content
-    switch (page) {
-      case 'documentation':
-        renderDocumentationPage(data.moduleId || currentModuleId, data.lessonId || currentLessonId);
-        break;
-      case 'roadmap':
-        renderRoadmapPage();
-        break;
-      case 'playground':
-        initPlayground();
-        break;
-      case 'terminal':
-        initTerminalPage();
-        break;
-      case 'tools':
-        initToolsPage();
-        break;
-      case 'discord-simulator':
-        initSimulator();
-        break;
-      case 'cheatsheets':
-        renderCheatsheet('python');
-        break;
-      case 'quizzes':
-        initQuiz();
-        break;
-    }
-
-    // Close mobile sidebar
-    closeMobileSidebar();
-    
-    saveProgress();
+    closeMobileSidebar(); saveProgress();
   }
 
-  function navigateToLesson(moduleId, lessonId) {
-    currentModuleId = moduleId;
-    currentLessonId = lessonId;
-    navigateTo('documentation', { moduleId, lessonId });
-  }
+  function navigateToLesson(mid, lid) { currentModuleId = mid; currentLessonId = lid; navigateTo('documentation', { moduleId: mid, lessonId: lid }); }
 
-  // ========== SIDEBAR ==========
   function buildModuleNav() {
-    if (!moduleNavContainer) return;
-    moduleNavContainer.innerHTML = '';
-    
+    const c = document.getElementById('moduleNavContainer'); if(!c) return; c.innerHTML = '';
     courseData.forEach(mod => {
-      const modEl = document.createElement('div');
-      modEl.className = `nav-item ${mod.id === currentModuleId ? 'active' : ''}`;
-      modEl.innerHTML = `
-        <span class="nav-icon">${mod.icon}</span>
-        <span class="nav-label">${mod.title}</span>
-      `;
-      modEl.addEventListener('click', () => {
-        navigateToLesson(mod.id, mod.lessons[0].id);
-      });
-      moduleNavContainer.appendChild(modEl);
-
-      // Add lessons as sub-items
-      mod.lessons.forEach(lesson => {
-        const lessonEl = document.createElement('div');
-        lessonEl.className = `nav-item module-nav-item ${lesson.id === currentLessonId ? 'active' : ''}`;
-        lessonEl.style.paddingLeft = '3rem';
-        lessonEl.style.fontSize = '0.78rem';
-        lessonEl.innerHTML = `
-          <span class="nav-label">📝 ${lesson.title.split(' —')[0] || lesson.title.split('. ')[1] || lesson.title}</span>
-          ${completedLessons.has(lesson.id) ? '<span style="color:#28c840;">✓</span>' : ''}
-        `;
-        lessonEl.addEventListener('click', (e) => {
-          e.stopPropagation();
-          navigateToLesson(mod.id, lesson.id);
-        });
-        moduleNavContainer.appendChild(lessonEl);
+      const me = document.createElement('div'); me.className = `nav-item ${mod.id===currentModuleId?'active':''}`; me.innerHTML = `<span class="nav-icon">${mod.icon}</span><span class="nav-label">${mod.title}</span>`; me.addEventListener('click', () => navigateToLesson(mod.id, mod.lessons[0].id)); c.appendChild(me);
+      mod.lessons.forEach(les => {
+        const le = document.createElement('div'); le.className = `nav-item module-nav-item ${les.id===currentLessonId?'active':''}`; le.style.paddingLeft='3rem'; le.style.fontSize='0.78rem'; le.innerHTML = `<span class="nav-label">📝 ${les.title}</span>${completedLessons.has(les.id)?'<span style="color:#28c840;">✓</span>':''}`; le.addEventListener('click', (e) => { e.stopPropagation(); navigateToLesson(mod.id, les.id); }); c.appendChild(le);
       });
     });
   }
 
-  function closeMobileSidebar() {
-    mainSidebar?.classList.remove('mobile-open');
-    sidebarOverlay?.classList.remove('active');
-    document.body.style.overflow = '';
+  function closeMobileSidebar() { const s = document.getElementById('main-sidebar'); const o = document.getElementById('sidebarOverlay'); if(s) s.classList.remove('mobile-open'); if(o) o.classList.remove('active'); document.body.style.overflow = ''; }
+  function openMobileSidebar() { const s = document.getElementById('main-sidebar'); const o = document.getElementById('sidebarOverlay'); if(s) s.classList.add('mobile-open'); if(o) o.classList.add('active'); document.body.style.overflow = 'hidden'; }
+
+  function renderDocumentationPage(mid, lid) {
+    const mod = courseData.find(m => m.id === mid); if(!mod) return;
+    const les = mod.lessons.find(l => l.id === lid) || mod.lessons[0]; if(!les) return;
+    currentModuleId = mid; currentLessonId = les.id;
+    const dn = document.getElementById('docNav');
+    if(dn) { dn.innerHTML = ''; courseData.forEach(m => { const mh = document.createElement('div'); mh.className='doc-nav-item'; mh.style.fontWeight='700'; mh.style.color='var(--text-primary)'; mh.textContent = `${m.icon} ${m.title}`; mh.addEventListener('click', () => navigateToLesson(m.id, m.lessons[0].id)); dn.appendChild(mh); m.lessons.forEach(l => { const le = document.createElement('div'); le.className = `doc-nav-item ${l.id===les.id?'active':''}`; le.style.paddingLeft='2rem'; le.textContent = l.title; le.addEventListener('click', () => navigateToLesson(m.id, l.id)); dn.appendChild(le); }); }); }
+    const bc = document.getElementById('docBreadcrumbs'); if(bc) bc.innerHTML = `<span style="color:var(--accent-cyan);">${mod.title}</span> / ${les.title}`;
+    const ar = document.getElementById('docArticle');
+    if(ar) {
+      const idx = mod.lessons.findIndex(l => l.id === les.id);
+      const pr = idx > 0 ? mod.lessons[idx-1] : null;
+      const nx = idx < mod.lessons.length-1 ? mod.lessons[idx+1] : null;
+      ar.innerHTML = `<h3>📘 ${les.title}</h3><div class="prose">${les.content}</div><div class="code-block"><button class="copy-btn" onclick="window.copyLessonCode()">📋 Copiar código</button><pre style="color:#c7d2fe;white-space:pre-wrap;font-family:var(--font-mono);">${formatCodeForDisplay(les.code)}</pre></div><div style="display:flex;justify-content:space-between;margin-top:2rem;"><button class="btn-outline" ${!pr?'disabled':''} onclick="navigateToLesson('${mid}','${pr?.id||''}')">← Anterior</button><button class="btn-primary-glow" onclick="window.completeLesson('${les.id}')">${completedLessons.has(les.id)?'✅ Concluída':'Marcar concluída'}</button><button class="btn-outline" ${!nx?'disabled':''} onclick="navigateToLesson('${mid}','${nx?.id||''}')">Próxima →</button></div>`;
+      window._currentLessonCode = les.code;
+    }
+    buildModuleNav(); updateProgressUI();
   }
 
-  function openMobileSidebar() {
-    mainSidebar?.classList.add('mobile-open');
-    sidebarOverlay?.classList.add('active');
-    document.body.style.overflow = 'hidden';
-  }
+  window.copyLessonCode = function() { if(window._currentLessonCode) navigator.clipboard?.writeText(window._currentLessonCode).then(() => alert('✅ Copiado!')); };
+  window.completeLesson = function(lid) { if(completedLessons.has(lid)) completedLessons.delete(lid); else { completedLessons.add(lid); xpSystem.addXP(25); missionsSystem.progressMission('m1'); missionsSystem.progressMission('m3'); } saveProgress(); navigateToLesson(currentModuleId, currentLessonId); };
 
-  // ========== DOCUMENTATION PAGE ==========
-  function renderDocumentationPage(moduleId, lessonId) {
-    const module = courseData.find(m => m.id === moduleId);
-    if (!module) return;
-    
-    const lesson = module.lessons.find(l => l.id === lessonId) || module.lessons[0];
-    if (!lesson) return;
-
-    currentModuleId = moduleId;
-    currentLessonId = lesson.id;
-
-    // Render doc sidebar
-    const docNav = $('#docNav');
-    if (docNav) {
-      docNav.innerHTML = '';
-      courseData.forEach(mod => {
-        const modHeader = document.createElement('div');
-        modHeader.className = 'doc-nav-item';
-        modHeader.style.fontWeight = '700';
-        modHeader.style.color = 'var(--text-primary)';
-        modHeader.textContent = `${mod.icon} ${mod.title}`;
-        modHeader.addEventListener('click', () => navigateToLesson(mod.id, mod.lessons[0].id));
-        docNav.appendChild(modHeader);
-
-        mod.lessons.forEach(les => {
-          const lesEl = document.createElement('div');
-          lesEl.className = `doc-nav-item ${les.id === lessonId ? 'active' : ''}`;
-          lesEl.style.paddingLeft = '2rem';
-          lesEl.textContent = les.title;
-          lesEl.addEventListener('click', () => navigateToLesson(mod.id, les.id));
-          docNav.appendChild(lesEl);
-        });
-      });
-    }
-
-    // Render breadcrumbs
-    const breadcrumbs = $('#docBreadcrumbs');
-    if (breadcrumbs) {
-      breadcrumbs.innerHTML = `
-        <span>${module.title}</span> / ${lesson.title}
-      `;
-    }
-
-    // Render article
-    const article = $('#docArticle');
-    if (article) {
-      const lessonIndex = module.lessons.findIndex(l => l.id === lessonId);
-      const prevLesson = lessonIndex > 0 ? module.lessons[lessonIndex - 1] : null;
-      const nextLesson = lessonIndex < module.lessons.length - 1 ? module.lessons[lessonIndex + 1] : null;
-
-      article.innerHTML = `
-        <h3>📘 ${lesson.title}</h3>
-        <div class="prose">${lesson.content}</div>
-        <div class="code-block">
-          <button class="copy-btn" onclick="window.copyLessonCode()">📋 Copiar código</button>
-          <pre style="color:#c7d2fe; white-space:pre-wrap; font-family:var(--font-mono);">${formatCodeForDisplay(lesson.code)}</pre>
-        </div>
-        <div style="display:flex; align-items:center; gap:1rem; padding:1rem; background:rgba(59,130,246,0.05); border-radius:12px; margin:1.5rem 0;">
-          <span style="font-size:1.5rem;">💡</span>
-          <span style="color:var(--text-secondary); font-size:0.9rem;">
-            <strong>Dica profissional:</strong> Teste este código no <a href="#playground" style="color:var(--accent-cyan); cursor:pointer;" onclick="navigateTo('playground')">Playground interativo</a> para ver o resultado em tempo real!
-          </span>
-        </div>
-        <div style="display:flex; justify-content:space-between; margin-top:2rem;">
-          <button class="btn-outline" ${!prevLesson ? 'disabled' : ''} onclick="window.navigateDocLesson('${moduleId}', '${prevLesson?.id || ''}')">
-            ← Aula Anterior
-          </button>
-          <button class="btn-primary-glow" onclick="window.completeLesson('${lesson.id}')">
-            ${completedLessons.has(lesson.id) ? '✅ Concluída' : 'Marcar como concluída'}
-          </button>
-          <button class="btn-outline" ${!nextLesson ? 'disabled' : ''} onclick="window.navigateDocLesson('${moduleId}', '${nextLesson?.id || ''}')">
-            Próxima Aula →
-          </button>
-        </div>
-        <div style="margin-top:2rem; padding:1rem; background:rgba(0,0,0,0.2); border-radius:12px;">
-          <strong>📊 Dificuldade:</strong> ${module.difficulty} | 
-          <strong>⏱️ Duração do módulo:</strong> ${module.duration} |
-          <strong>🏷️ Tags:</strong> ${lesson.tags?.join(', ') || 'N/A'}
-        </div>
-      `;
-
-      // Store current lesson code for copy
-      window._currentLessonCode = lesson.code;
-    }
-
-    buildModuleNav();
-    updateProgressUI();
-  }
-
-  window.copyLessonCode = function() {
-    if (window._currentLessonCode) {
-      navigator.clipboard?.writeText(window._currentLessonCode);
-      alert('✅ Código copiado!');
-    }
-  };
-
-  window.navigateDocLesson = function(moduleId, lessonId) {
-    if (lessonId) navigateToLesson(moduleId, lessonId);
-  };
-
-  window.completeLesson = function(lessonId) {
-    if (completedLessons.has(lessonId)) {
-      completedLessons.delete(lessonId);
-    } else {
-      completedLessons.add(lessonId);
-    }
-    saveProgress();
-    navigateToLesson(currentModuleId, currentLessonId);
-  };
-
-  // ========== ROADMAP PAGE ==========
   function renderRoadmapPage() {
-    const container = $('#roadmapFull');
-    if (!container) return;
-
-    let html = '<div class="timeline-roadmap" style="max-width:600px;margin:0 auto;">';
-    courseData.forEach((mod, index) => {
-      const allLessonsCompleted = mod.lessons.every(l => completedLessons.has(l.id));
-      const someLessonsCompleted = mod.lessons.some(l => completedLessons.has(l.id));
-      const isActive = mod.id === currentModuleId;
-
-      html += `
-        <div class="timeline-node ${allLessonsCompleted ? 'completed' : (isActive ? 'active' : '')}">
-          <div class="node-marker">${index + 1}</div>
-          <div class="node-content">
-            <h4>${mod.icon} ${mod.title}</h4>
-            <p>${mod.description} • ${mod.difficulty} • ${mod.duration}</p>
-            <small style="color:var(--text-muted);">${mod.lessons.length} aulas</small>
-            <br>
-            <a href="#" onclick="navigateToLesson('${mod.id}', '${mod.lessons[0].id}');return false;" 
-               style="color:var(--accent-cyan); font-size:0.85rem; text-decoration:none;">
-              ${allLessonsCompleted ? '✅ Concluído' : (someLessonsCompleted ? '📖 Em andamento' : '▶ Começar')}
-            </a>
-          </div>
-        </div>
-      `;
-      if (index < courseData.length - 1) {
-        html += `<div class="timeline-connector ${allLessonsCompleted ? 'completed' : (isActive ? 'active' : '')}"></div>`;
-      }
-    });
-    html += '</div>';
-    container.innerHTML = html;
+    const c = document.getElementById('roadmapFull'); if(!c) return;
+    let h = '<div class="timeline-roadmap" style="max-width:600px;margin:0 auto;">';
+    courseData.forEach((m,i) => { const d = m.lessons.every(l => completedLessons.has(l.id)); h += `<div class="timeline-node ${d?'completed':(m.id===currentModuleId?'active':'')}"><div class="node-marker">${i+1}</div><div class="node-content"><h4>${m.icon} ${m.title}</h4><a href="#" onclick="navigateToLesson('${m.id}','${m.lessons[0].id}');return false;" style="color:var(--accent-cyan);">${d?'✅ Concluído':'▶ Começar'}</a></div></div>`; if(i < courseData.length-1) h += `<div class="timeline-connector ${d?'completed':''}"></div>`; });
+    h += '</div>'; c.innerHTML = h;
   }
 
-  // ========== PLAYGROUND ==========
-  function initPlayground() {
-    if (!monacoReady) {
-      loadMonacoEditor().then(() => setupMonacoEditor());
-    } else {
-      setupMonacoEditor();
-    }
-  }
+  function initPlayground() { if(!monacoReady) loadMonacoEditor().then(() => setupMonacoEditor()); else setupMonacoEditor(); }
+  function loadMonacoEditor() { return new Promise((resolve) => { if(typeof monaco !== 'undefined') { monacoReady = true; resolve(); return; } require.config({ paths: { vs: 'https://cdn.jsdelivr.net/npm/monaco-editor@0.45.0/min/vs' } }); require(['vs/editor/editor.main'], () => { monacoReady = true; resolve(); }); }); }
+  function setupMonacoEditor() { if(monacoEditorInstance) return; const c = document.getElementById('monacoEditor'); if(!c) return; monaco.editor.defineTheme('nexus-dark', { base: 'vs-dark', inherit: true, rules: [], colors: { 'editor.background': '#0c0e17' } }); monacoEditorInstance = monaco.editor.create(c, { value: '# Playground Python\nprint("Olá!")', language: 'python', theme: 'nexus-dark', fontSize: 14, automaticLayout: true }); document.getElementById('runCodeBtn')?.addEventListener('click', executePlaygroundCode); document.getElementById('resetCodeBtn')?.addEventListener('click', () => monacoEditorInstance?.setValue('# Resetado')); }
+  async function executePlaygroundCode() { const o = document.getElementById('outputContent'); if(!o||!monacoEditorInstance) return; o.textContent = '⏳ Executando...'; const code = monacoEditorInstance.getValue(); if(window.pyodideInstance) { try { await window.pyodideInstance.runPythonAsync('import sys\nfrom io import StringIO\nsys.stdout = StringIO()'); await window.pyodideInstance.runPythonAsync(code); o.textContent = await window.pyodideInstance.runPythonAsync('sys.stdout.getvalue()') || '(sem saída)'; xpSystem.addXP(5); missionsSystem.progressMission('m2'); } catch(e) { o.textContent = `❌ Erro: ${e.message}`; } } else { o.textContent = '⚠️ Pyodide não carregado.'; } }
 
-  function loadMonacoEditor() {
-    return new Promise((resolve) => {
-      if (typeof monaco !== 'undefined') {
-        monacoReady = true;
-        resolve();
-        return;
-      }
+  function initTerminalPage() { document.getElementById('runPythonBtn')?.addEventListener('click', executeTerminalPython); }
+  async function executeTerminalPython() { const i = document.getElementById('pythonInput'), o = document.getElementById('terminalContent'); if(!i||!o) return; const code = i.value.trim(); if(!code) { o.textContent = '⚠️ Digite código.'; return; } o.textContent = '⏳ Executando...\n'; if(window.pyodideInstance) { try { await window.pyodideInstance.runPythonAsync('import sys\nfrom io import StringIO\nsys.stdout = StringIO()'); await window.pyodideInstance.runPythonAsync(code); o.textContent = await window.pyodideInstance.runPythonAsync('sys.stdout.getvalue()') || '(sem saída)'; } catch(e) { o.textContent = `❌ Erro:\n${e.message}`; } } else { o.textContent = '⚠️ Pyodide offline.'; } }
 
-      require.config({
-        paths: { vs: 'https://cdn.jsdelivr.net/npm/monaco-editor@0.45.0/min/vs' }
-      });
+  function initToolsPage() { initPermissionCalculator(); }
+  function initPermissionCalculator() { const g = document.getElementById('permGrid'); if(!g) return; g.innerHTML = ['CREATE_INSTANT_INVITE','KICK_MEMBERS','BAN_MEMBERS','ADMINISTRATOR','SEND_MESSAGES','EMBED_LINKS'].map(p => `<label><input type="checkbox" value="${p}" onchange="calcPermissions()"> ${p}</label>`).join(''); }
 
-      require(['vs/editor/editor.main'], function() {
-        monacoReady = true;
-        resolve();
-      });
-    });
-  }
+  window.formatJSON = function() { const i = document.getElementById('jsonInput'), o = document.getElementById('jsonOutput'); if(!i||!o) return; try { o.textContent = JSON.stringify(JSON.parse(i.value), null, 2); o.style.color = '#86efac'; } catch(e) { o.textContent = `❌ ${e.message}`; o.style.color = '#ff5f57'; } };
+  window.generateEmbedJSON = function() { const o = document.getElementById('embedJSONOutput'); if(o) o.textContent = JSON.stringify({ title: "Título", description: "Descrição", color: 0x3b82f6, fields: [{ name: "Campo", value: "Valor" }] }, null, 2); };
+  window.generateTimestamp = function() { const i = document.getElementById('timestampInput'), o = document.getElementById('timestampOutput'); if(!i||!o) return; o.textContent = `<t:${Math.floor(new Date(i.value).getTime()/1000)}:F>`; };
+  window.calcPermissions = function() { const o = document.getElementById('permOutput'); if(!o) return; const map = { CREATE_INSTANT_INVITE:1, KICK_MEMBERS:2, BAN_MEMBERS:4, ADMINISTRATOR:8, SEND_MESSAGES:2048, EMBED_LINKS:16384 }; let t = 0; document.querySelectorAll('#permGrid input:checked').forEach(cb => t |= (map[cb.value]||0)); o.textContent = `Permissão: ${t}`; };
 
-  function setupMonacoEditor() {
-    if (monacoEditorInstance) return;
+  function initSimulator() { const i = document.getElementById('discordCommandInput'), s = document.getElementById('sendDiscordCommand'), m = document.getElementById('discordMessages'); if(!i||!s||!m) return; s.addEventListener('click', () => { const cmd = i.value.trim(); if(!cmd) return; m.innerHTML += `<div class="discord-message"><div class="message-avatar">👤</div><div class="message-content"><span class="message-author">Você</span><p><code>/${cmd}</code></p></div></div>`; let r = 'Comando não reconhecido.'; if(cmd==='ping') r = '🏓 Pong! 42ms'; if(cmd==='help') r = '📋 /ping, /help, /info'; m.innerHTML += `<div class="discord-message bot-message"><div class="message-avatar">🤖</div><div class="message-content"><span class="message-author">NexusBot</span><p>${r}</p></div></div>`; i.value = ''; m.scrollTop = m.scrollHeight; }); }
 
-    const container = document.getElementById('monacoEditor');
-    if (!container) return;
+  function renderCheatsheet(sheet) { const c = document.getElementById('cheatsheetContent'); if(!c) return; c.innerHTML = `<pre style="color:#c7d2fe;font-family:var(--font-mono);padding:1.5rem;background:rgba(0,0,0,0.3);border-radius:12px;">${escapeHtml(cheatsheetsData[sheet]||'N/A')}</pre>`; $$('.cheatsheet-tab').forEach(t => t.classList.toggle('active', t.dataset.sheet === sheet)); }
 
-    monaco.editor.defineTheme('nexus-dark', {
-      base: 'vs-dark',
-      inherit: true,
-      rules: [
-        { token: 'keyword', foreground: 'c084fc' },
-        { token: 'string', foreground: '86efac' },
-        { token: 'number', foreground: 'fbbf24' },
-        { token: 'type', foreground: '7dd3fc' },
-        { token: 'function', foreground: 'f9a8d4' },
-        { token: 'comment', foreground: '64748b', fontStyle: 'italic' }
-      ],
-      colors: {
-        'editor.background': '#0c0e17',
-        'editor.foreground': '#c7d2fe',
-        'editor.lineHighlightBackground': '#1a1b2e',
-        'editor.selectionBackground': '#3b82f644',
-        'editorCursor.foreground': '#3b82f6',
-        'editorLineNumber.foreground': '#4b5563',
-        'editorLineNumber.activeForeground': '#60a5fa'
-      }
-    });
-
-    monacoEditorInstance = monaco.editor.create(container, {
-      value: `# Playground Python - Discord Bots Mastery 2026
-# Experimente código Python aqui!
-
-def criar_bot(nome: str) -> dict:
-    """Simula a criação de um bot Discord"""
-    return {
-        "nome": nome,
-        "status": "online",
-        "comandos": ["ping", "info", "help"]
-    }
-
-# Teste sua função
-meu_bot = criar_bot("NexusBot")
-print(f"Bot {meu_bot['nome']} está {meu_bot['status']}")
-print(f"Comandos: {meu_bot['comandos']}")`,
-      language: 'python',
-      theme: 'nexus-dark',
-      fontSize: 14,
-      fontFamily: "'JetBrains Mono', monospace",
-      minimap: { enabled: true, scale: 1, showSlider: 'mouseover' },
-      lineNumbers: 'on',
-      renderWhitespace: 'selection',
-      tabSize: 4,
-      insertSpaces: true,
-      automaticLayout: true,
-      scrollBeyondLastLine: false,
-      padding: { top: 16, bottom: 16 },
-      suggest: { showKeywords: true, showSnippets: true }
-    });
-
-    // Run button
-    const runBtn = $('#runCodeBtn');
-    if (runBtn) {
-      runBtn.addEventListener('click', executePlaygroundCode);
-    }
-
-    // Reset button
-    const resetBtn = $('#resetCodeBtn');
-    if (resetBtn) {
-      resetBtn.addEventListener('click', () => {
-        if (monacoEditorInstance) {
-          monacoEditorInstance.setValue(`# Digite seu código Python aqui...
-print("Olá, Nexus Plataforms!")`);
-        }
-      });
-    }
-
-    // Copy button
-    const copyBtn = $('#copyCodeBtn');
-    if (copyBtn) {
-      copyBtn.addEventListener('click', () => {
-        if (monacoEditorInstance) {
-          const code = monacoEditorInstance.getValue();
-          navigator.clipboard?.writeText(code);
-          alert('✅ Código copiado!');
-        }
-      });
-    }
-
-    // Clear output
-    const clearBtn = $('#clearOutputBtn');
-    if (clearBtn) {
-      clearBtn.addEventListener('click', () => {
-        const output = $('#outputContent');
-        if (output) output.textContent = '// Output limpo. Execute seu código...';
-      });
-    }
-  }
-
-  async function executePlaygroundCode() {
-    const output = $('#outputContent');
-    if (!output) return;
-
-    if (!monacoEditorInstance) {
-      output.textContent = '// Editor não inicializado. Recarregue a página.';
-      return;
-    }
-
-    const code = monacoEditorInstance.getValue();
-    output.textContent = '⏳ Executando...';
-
-    // Try Pyodide first, fallback to simulation
-    if (window.pyodideInstance) {
-      try {
-        await window.pyodideInstance.runPythonAsync(`
-import sys
-from io import StringIO
-sys.stdout = StringIO()
-        `);
-        await window.pyodideInstance.runPythonAsync(code);
-        const result = await window.pyodideInstance.runPythonAsync('sys.stdout.getvalue()');
-        output.textContent = result || '(sem saída)';
-      } catch (e) {
-        output.textContent = `❌ Erro: ${e.message}`;
-      }
-    } else {
-      // Simulate output for common patterns
-      let simulatedOutput = '';
-      if (code.includes('print(')) {
-        const matches = code.match(/print\((.*?)\)/g);
-        if (matches) {
-          matches.forEach(m => {
-            const content = m.replace('print(', '').replace(')', '').replace(/['"]/g, '');
-            simulatedOutput += content + '\n';
-          });
-        }
-      }
-      output.textContent = simulatedOutput || '⚠️ Pyodide não carregado. Instale para execução real.\n\nSimulação: Código Python analisado.\nDica: Recarregue a página para tentar carregar o Pyodide.';
-    }
-  }
-
-  // ========== TERMINAL PAGE ==========
-  function initTerminalPage() {
-    const statusEl = $('#pyodideStatus');
-    if (statusEl && window.pyodideInstance) {
-      statusEl.textContent = '✅ Python 3.12 pronto';
-      statusEl.style.color = '#28c840';
-    }
-
-    const runBtn = $('#runPythonBtn');
-    if (runBtn) {
-      runBtn.addEventListener('click', executeTerminalPython);
-    }
-
-    const clearBtn = $('#clearTerminalBtn');
-    if (clearBtn) {
-      clearBtn.addEventListener('click', () => {
-        const output = $('#terminalContent');
-        if (output) output.textContent = '';
-      });
-    }
-  }
-
-  async function executeTerminalPython() {
-    const input = $('#pythonInput');
-    const output = $('#terminalContent');
-    if (!input || !output) return;
-
-    const code = input.value.trim();
-    if (!code) {
-      output.textContent = '⚠️ Digite algum código Python.';
-      return;
-    }
-
-    output.textContent = '⏳ Executando...\n';
-
-    if (window.pyodideInstance) {
-      try {
-        await window.pyodideInstance.runPythonAsync(`
-import sys
-from io import StringIO
-sys.stdout = StringIO()
-        `);
-        await window.pyodideInstance.runPythonAsync(code);
-        const result = await window.pyodideInstance.runPythonAsync('sys.stdout.getvalue()');
-        output.textContent = result || '(sem saída)';
-      } catch (e) {
-        output.textContent = `❌ Erro:\n${e.message}`;
-      }
-    } else {
-      output.textContent = '⚠️ Pyodide ainda não carregado. Aguarde ou recarregue a página.';
-    }
-  }
-
-  // ========== TOOLS PAGE ==========
-  function initToolsPage() {
-    initPermissionCalculator();
-  }
-
-  window.formatJSON = function() {
-    const input = $('#jsonInput');
-    const output = $('#jsonOutput');
-    if (!input || !output) return;
-    try {
-      const parsed = JSON.parse(input.value);
-      output.textContent = JSON.stringify(parsed, null, 2);
-      output.style.color = '#86efac';
-    } catch (e) {
-      output.textContent = `❌ JSON inválido: ${e.message}`;
-      output.style.color = '#ff5f57';
-    }
-  };
-
-  window.generateEmbedJSON = function() {
-    const output = $('#embedJSONOutput');
-    if (!output) return;
-    const embed = {
-      title: "Título do Embed",
-      description: "Descrição aqui",
-      color: 0x3b82f6,
-      fields: [
-        { name: "Campo 1", value: "Valor 1", inline: true },
-        { name: "Campo 2", value: "Valor 2", inline: true }
-      ],
-      footer: { text: "Nexus Plataforms" }
-    };
-    output.textContent = JSON.stringify(embed, null, 2);
-  };
-
-  window.generateTimestamp = function() {
-    const input = $('#timestampInput');
-    const output = $('#timestampOutput');
-    if (!input || !output) return;
-    const date = new Date(input.value);
-    const unix = Math.floor(date.getTime() / 1000);
-    output.textContent = `<t:${unix}:F>  →  ${date.toLocaleString('pt-BR')}\n<t:${unix}:R>  →  Tempo relativo\n<t:${unix}:D>  →  Data curta`;
-  };
-
-  function initPermissionCalculator() {
-    const permGrid = $('#permGrid');
-    if (!permGrid) return;
-    const permissions = [
-      'CREATE_INSTANT_INVITE', 'KICK_MEMBERS', 'BAN_MEMBERS',
-      'ADMINISTRATOR', 'MANAGE_CHANNELS', 'MANAGE_GUILD',
-      'SEND_MESSAGES', 'EMBED_LINKS', 'ATTACH_FILES',
-      'READ_MESSAGE_HISTORY', 'MENTION_EVERYONE', 'USE_EXTERNAL_EMOJIS'
-    ];
-    permGrid.innerHTML = permissions.map(p => `
-      <label style="display:flex;align-items:center;gap:0.5rem;color:var(--text-secondary);">
-        <input type="checkbox" value="${p}" onchange="calcPermissions()"> ${p}
-      </label>
-    `).join('');
-  }
-
-  window.calcPermissions = function() {
-    const output = $('#permOutput');
-    if (!output) return;
-    const checkboxes = $$('#permGrid input:checked');
-    let total = 0;
-    checkboxes.forEach(cb => {
-      const permMap = {
-        'CREATE_INSTANT_INVITE': 1,
-        'KICK_MEMBERS': 2,
-        'BAN_MEMBERS': 4,
-        'ADMINISTRATOR': 8,
-        'MANAGE_CHANNELS': 16,
-        'MANAGE_GUILD': 32,
-        'SEND_MESSAGES': 2048,
-        'EMBED_LINKS': 16384,
-        'ATTACH_FILES': 32768,
-        'READ_MESSAGE_HISTORY': 65536,
-        'MENTION_EVERYONE': 131072,
-        'USE_EXTERNAL_EMOJIS': 262144
-      };
-      total |= (permMap[cb.value] || 0);
-    });
-    output.textContent = `Permissão: ${total}`;
-  };
-
-  // ========== DISCORD SIMULATOR ==========
-  function initSimulator() {
-    const input = $('#discordCommandInput');
-    const sendBtn = $('#sendDiscordCommand');
-    const messagesContainer = $('#discordMessages');
-
-    if (!input || !sendBtn || !messagesContainer) return;
-
-    const addMessage = (content, isBot = true) => {
-      const msgEl = document.createElement('div');
-      msgEl.className = `discord-message ${isBot ? 'bot-message' : ''}`;
-      msgEl.innerHTML = `
-        <div class="message-avatar">${isBot ? '🤖' : '👤'}</div>
-        <div class="message-content">
-          <span class="message-author">${isBot ? 'NexusBot' : 'Você'}</span>
-          <p>${content}</p>
-        </div>
-      `;
-      messagesContainer.appendChild(msgEl);
-      messagesContainer.scrollTop = messagesContainer.scrollHeight;
-    };
-
-    const processCommand = (cmd) => {
-      const command = cmd.toLowerCase().trim();
-      if (command === 'ping') {
-        addMessage('🏓 Pong! Latência: 42ms');
-      } else if (command === 'help') {
-        addMessage('📋 Comandos disponíveis: /ping, /help, /info, /server');
-      } else if (command === 'info') {
-        addMessage('🤖 NexusBot v2.6 | Discord Bots Mastery 2026');
-      } else if (command === 'server') {
-        addMessage('📊 Servidor: Nexus Community | Membros: 1,234 | Canais: 15');
-      } else {
-        addMessage(`❌ Comando "/${command}" não reconhecido. Use /help para ver a lista.`);
-      }
-    };
-
-    sendBtn.addEventListener('click', () => {
-      const cmd = input.value.trim();
-      if (cmd) {
-        addMessage(`<code>/${cmd}</code>`, false);
-        processCommand(cmd);
-        input.value = '';
-      }
-    });
-
-    input.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter') {
-        sendBtn.click();
-      }
-    });
-  }
-
-  // ========== CHEATSHEETS ==========
-  function renderCheatsheet(sheet) {
-    const content = $('#cheatsheetContent');
-    if (!content) return;
-
-    const data = cheatsheetsData[sheet] || 'Cheatsheet não encontrado.';
-    content.innerHTML = `<pre>${escapeHtml(data)}</pre>`;
-
-    // Update tabs
-    $$('.cheatsheet-tab').forEach(tab => {
-      tab.classList.toggle('active', tab.dataset.sheet === sheet);
-    });
-  }
-
-  // ========== QUIZ ==========
   function initQuiz() {
     currentQuizQuestions = [
-      {
-        question: 'Qual biblioteca Python é usada para criar bots Discord?',
-        options: ['discord.py', 'flask', 'numpy', 'requests'],
-        correct: 0
-      },
-      {
-        question: 'O que significa "async/await" em Python?',
-        options: [
-          'Programação síncrona',
-          'Programação assíncrona não-bloqueante',
-          'Um tipo de loop',
-          'Uma estrutura de dados'
-        ],
-        correct: 1
-      },
-      {
-        question: 'Como se cria um slash command no discord.py 2.6+?',
-        options: [
-          '@bot.command()',
-          '@bot.tree.command()',
-          '@bot.slash()',
-          '@bot.create_command()'
-        ],
-        correct: 1
-      },
-      {
-        question: 'Qual banco de dados é recomendado para bots pequenos?',
-        options: ['PostgreSQL', 'MongoDB', 'SQLite', 'Oracle'],
-        correct: 2
-      },
-      {
-        question: 'O que são Cogs no discord.py?',
-        options: [
-          'Comandos de música',
-          'Módulos para organizar código',
-          'Um tipo de evento',
-          'Sistema de cache'
-        ],
-        correct: 1
-      }
+      { question: 'Qual biblioteca para bots Discord?', options: ['discord.py','flask','numpy','requests'], correct: 0 },
+      { question: 'O que é async/await?', options: ['Síncrono','Assíncrono não-bloqueante','Loop','Estrutura'], correct: 1 },
+      { question: 'Como criar slash command?', options: ['@bot.command()','@bot.tree.command()','@bot.slash()','@bot.create()'], correct: 1 },
     ];
-
-    const container = $('#quizContainer');
-    const results = $('#quizResults');
-    if (!container || !results) return;
-
-    results.style.display = 'none';
-    quizAnswers = {};
-
-    container.innerHTML = currentQuizQuestions.map((q, i) => `
-      <div class="quiz-question">
-        <h3>${i + 1}. ${q.question}</h3>
-        <div class="quiz-options">
-          ${q.options.map((opt, j) => `
-            <div class="quiz-option" data-question="${i}" data-option="${j}" onclick="selectQuizOption(${i}, ${j})">
-              ${opt}
-            </div>
-          `).join('')}
-        </div>
-      </div>
-    `).join('') + `
-      <button class="btn-primary-glow" onclick="submitQuiz()" style="margin-top:1rem;">
-        Enviar Respostas
-      </button>
-    `;
+    const c = document.getElementById('quizContainer'), r = document.getElementById('quizResults'); if(!c||!r) return; r.style.display = 'none'; quizAnswers = {};
+    c.innerHTML = currentQuizQuestions.map((q,i) => `<div class="quiz-question"><h3>${i+1}. ${q.question}</h3><div class="quiz-options">${q.options.map((o,j) => `<div class="quiz-option" onclick="selectQuizOption(${i},${j})">${o}</div>`).join('')}</div></div>`).join('') + '<button class="btn-primary-glow" onclick="submitQuiz()">Enviar</button>';
   }
 
-  window.selectQuizOption = function(questionIndex, optionIndex) {
-    quizAnswers[questionIndex] = optionIndex;
-    const questionEl = document.querySelectorAll('.quiz-question')[questionIndex];
-    if (questionEl) {
-      questionEl.querySelectorAll('.quiz-option').forEach((el, i) => {
-        el.classList.toggle('selected', i === optionIndex);
-      });
-    }
-  };
+  window.selectQuizOption = function(qi, oi) { quizAnswers[qi] = oi; document.querySelectorAll('.quiz-question')[qi]?.querySelectorAll('.quiz-option').forEach((el,i) => el.classList.toggle('selected', i===oi)); };
+  window.submitQuiz = function() { let s = 0; currentQuizQuestions.forEach((q,i) => { const el = document.querySelectorAll('.quiz-question')[i]; el?.querySelectorAll('.quiz-option').forEach((o,j) => { o.classList.remove('correct','incorrect'); if(j===q.correct) o.classList.add('correct'); if(j===quizAnswers[i] && j!==q.correct) o.classList.add('incorrect'); }); if(quizAnswers[i]===q.correct) s++; }); const r = document.getElementById('quizResults'); if(r) { r.style.display = 'block'; document.getElementById('quizScore').textContent = `${s}/${currentQuizQuestions.length}`; } xpSystem.addXP(s*10); };
 
-  window.submitQuiz = function() {
-    let score = 0;
-    const total = currentQuizQuestions.length;
+  function renderDashboard() { const c = document.getElementById('dashboardContainer'); if(!c) return; const t = courseData.reduce((a,m) => a + m.lessons.length, 0); c.innerHTML = `<div class="dashboard-grid"><div class="dashboard-card"><h3>📊 Estatísticas</h3><div class="dashboard-stat"><span class="stat-icon-large">📚</span><div class="stat-info"><div class="stat-value">${completedLessons.size}/${t}</div><div class="stat-label-dash">Aulas</div></div></div><div class="dashboard-stat"><span class="stat-icon-large">⭐</span><div class="stat-info"><div class="stat-value" style="color:var(--xp-gold);">${xpSystem.xp}</div><div class="stat-label-dash">XP</div></div></div><div class="dashboard-stat"><span class="stat-icon-large">🔥</span><div class="stat-info"><div class="stat-value" style="color:var(--streak-fire);">${xpSystem.streak}</div><div class="stat-label-dash">Streak</div></div></div></div></div>`; }
 
-    currentQuizQuestions.forEach((q, i) => {
-      const selected = quizAnswers[i];
-      const questionEl = document.querySelectorAll('.quiz-question')[i];
-      if (questionEl) {
-        questionEl.querySelectorAll('.quiz-option').forEach((el, j) => {
-          el.classList.remove('correct', 'incorrect');
-          if (j === q.correct) el.classList.add('correct');
-          if (j === selected && j !== q.correct) el.classList.add('incorrect');
-        });
-      }
-      if (selected === q.correct) score++;
-    });
+  function openSearchModal() { document.getElementById('searchModal').style.display = 'flex'; document.getElementById('modalSearchInput')?.focus(); }
+  function closeSearchModal() { document.getElementById('searchModal').style.display = 'none'; }
 
-    const results = $('#quizResults');
-    const scoreEl = $('#quizScore');
-    const feedback = $('#quizFeedback');
-    if (!results || !scoreEl || !feedback) return;
+  function performSearch(query) { const r = document.getElementById('searchResults'); if(!r) return; if(!query||query.length<2) { r.innerHTML = '<div class="search-result-item">Digite 2+ caracteres...</div>'; return; } const items = []; courseData.forEach(m => m.lessons.forEach(l => { if(l.title.toLowerCase().includes(query)||l.content.toLowerCase().includes(query)) items.push({ mid: m.id, lid: l.id, title: l.title, mod: m.title }); })); r.innerHTML = items.length ? items.map(i => `<div class="search-result-item" onclick="navigateToLesson('${i.mid}','${i.lid}');closeSearchModal();"><strong>${i.title}</strong><small>${i.mod}</small></div>`).join('') : '<div class="search-result-item">Nada encontrado.</div>'; }
 
-    results.style.display = 'block';
-    scoreEl.textContent = `${score}/${total}`;
-    feedback.textContent = score === total
-      ? '🎉 Perfeito! Você domina os conceitos!'
-      : score >= total / 2
-        ? '👍 Bom trabalho! Continue estudando.'
-        : '📚 Continue praticando e revisando as aulas.';
-  };
+  function fixHeroButtons() { document.querySelectorAll('.hero-cta-group a').forEach(btn => { const page = btn.getAttribute('data-nav') || (btn.getAttribute('href')==='#documentation'?'documentation':btn.getAttribute('href')==='#playground'?'playground':null); if(page) btn.addEventListener('click', (e) => { e.preventDefault(); navigateTo(page); }); }); }
 
-  window.retakeQuiz = function() {
-    initQuiz();
-  };
+  function animateCounters() { document.querySelectorAll('[data-counter]').forEach(c => { const target = parseInt(c.getAttribute('data-counter')); let cur = 0; const obs = new IntersectionObserver((entries) => { if(entries[0].isIntersecting) { const iv = setInterval(() => { cur += target/50; if(cur >= target) { c.textContent = target; clearInterval(iv); } else c.textContent = Math.floor(cur); }, 40); obs.unobserve(c); } }, { threshold: 0.5 }); obs.observe(c); }); }
 
-  // ========== GLOBAL SEARCH ==========
-  function openSearchModal() {
-    if (searchModal) {
-      searchModal.style.display = 'flex';
-      modalSearchInput?.focus();
-    }
-  }
-
-  function closeSearchModal() {
-    if (searchModal) {
-      searchModal.style.display = 'none';
-    }
-  }
-
-  function performSearch(query) {
-    if (!searchResults) return;
-    if (!query || query.length < 2) {
-      searchResults.innerHTML = '<div class="search-result-item">Digite pelo menos 2 caracteres...</div>';
-      return;
-    }
-
-    const results = [];
-    const q = query.toLowerCase();
-
-    courseData.forEach(mod => {
-      mod.lessons.forEach(lesson => {
-        if (
-          lesson.title.toLowerCase().includes(q) ||
-          lesson.content.toLowerCase().includes(q) ||
-          lesson.code.toLowerCase().includes(q) ||
-          lesson.tags?.some(t => t.includes(q))
-        ) {
-          results.push({
-            moduleId: mod.id,
-            lessonId: lesson.id,
-            title: lesson.title,
-            moduleTitle: mod.title,
-            snippet: lesson.content.substring(0, 100) + '...'
-          });
-        }
-      });
-    });
-
-    if (results.length === 0) {
-      searchResults.innerHTML = '<div class="search-result-item">Nenhum resultado encontrado.</div>';
-      return;
-    }
-
-    searchResults.innerHTML = results.map(r => `
-      <div class="search-result-item" onclick="navigateToLesson('${r.moduleId}', '${r.lessonId}'); closeSearchModal();">
-        <strong>${r.title}</strong>
-        <small style="color:var(--text-muted); display:block;">${r.moduleTitle}</small>
-        <span style="font-size:0.8rem; color:var(--text-tertiary);">${r.snippet}</span>
-      </div>
-    `).join('');
-  }
-
-  // ========== EVENT LISTENERS ==========
+  // ========== INIT ==========
   document.addEventListener('DOMContentLoaded', () => {
-    // Hide loading
-    setTimeout(() => {
-      appLoading?.classList.add('hidden');
-      if (appContainer) appContainer.style.opacity = '1';
-    }, 600);
-
-    // Build initial module nav
-    buildModuleNav();
-
-    // Sidebar navigation clicks
-    sidebarNav?.addEventListener('click', (e) => {
-      const navItem = e.target.closest('.nav-item');
-      if (navItem) {
-        const page = navItem.dataset.page;
-        if (page) {
-          e.preventDefault();
-          navigateTo(page);
-        }
-      }
-    });
-
-    // Mobile menu
-    $('#mobileMenuBtn')?.addEventListener('click', () => {
-      if (mainSidebar?.classList.contains('mobile-open')) {
-        closeMobileSidebar();
-      } else {
-        openMobileSidebar();
-      }
-    });
-
-    // Overlay click
-    sidebarOverlay?.addEventListener('click', closeMobileSidebar);
-
-    // Search modal
-    $('#mobileSearchBtn')?.addEventListener('click', openSearchModal);
-    $('#globalSearch')?.addEventListener('focus', openSearchModal);
-
-    // Keyboard shortcuts
-    document.addEventListener('keydown', (e) => {
-      if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
-        e.preventDefault();
-        openSearchModal();
-      }
-      if (e.key === 'Escape') {
-        closeSearchModal();
-        closeMobileSidebar();
-      }
-    });
-
-    // Search input in modal
-    modalSearchInput?.addEventListener('input', (e) => {
-      performSearch(e.target.value);
-    });
-
-    // Global search in sidebar
-    globalSearch?.addEventListener('input', (e) => {
-      performSearch(e.target.value);
-      if (!searchModal || searchModal.style.display === 'none') {
-        openSearchModal();
-      }
-    });
-
-    // Close search modal on click outside
-    searchModal?.addEventListener('click', (e) => {
-      if (e.target === searchModal) closeSearchModal();
-    });
-
-    // Cheatsheet tabs
-    $$('.cheatsheet-tab').forEach(tab => {
-      tab.addEventListener('click', () => {
-        renderCheatsheet(tab.dataset.sheet);
-      });
-    });
-
-    // Focus mode
-    $('#focusModeBtn')?.addEventListener('click', () => {
-      document.body.classList.toggle('focus-mode');
-    });
-
-    // Theme toggle (placeholder)
-    $('#themeToggleBtn')?.addEventListener('click', () => {
-      const current = document.documentElement.getAttribute('data-theme');
-      document.documentElement.setAttribute('data-theme', current === 'light' ? '' : 'light');
-    });
-
-    // Sidebar collapse
-    $('#sidebar-collapse-btn')?.addEventListener('click', () => {
-      mainSidebar?.classList.toggle('collapsed');
-    });
-
-    // Video mock click
-    $('#videoMock')?.addEventListener('click', () => {
-      alert('🎬 Video Player: Aula profissional de Discord Bots Mastery 2026.\n\nEm produção, aqui estaria o player de vídeo completo.');
-    });
-
-    // Initialize tools
-    if (currentPage === 'tools') initToolsPage();
-
-    // Restore progress
-    if (progressData.lastPage) {
-      // Optionally restore last page
-    }
-    updateProgressUI();
+    setTimeout(() => { document.getElementById('app-loading')?.classList.add('hidden'); document.getElementById('app-container').style.opacity = '1'; }, 600);
+    xpSystem.checkStreak(); xpSystem.updateUI(); missionsSystem.load(); achievementsSystem.load();
+    buildModuleNav(); fixHeroButtons(); animateCounters(); updateProgressUI();
+    document.getElementById('sidebarNav')?.addEventListener('click', (e) => { const item = e.target.closest('.nav-item'); if(item?.dataset.page) { e.preventDefault(); navigateTo(item.dataset.page); } });
+    document.getElementById('mobileMenuBtn')?.addEventListener('click', () => { document.getElementById('main-sidebar')?.classList.contains('mobile-open') ? closeMobileSidebar() : openMobileSidebar(); });
+    document.getElementById('sidebarOverlay')?.addEventListener('click', closeMobileSidebar);
+    document.getElementById('mobileSearchBtn')?.addEventListener('click', openSearchModal);
+    document.getElementById('globalSearch')?.addEventListener('focus', openSearchModal);
+    document.getElementById('modalSearchInput')?.addEventListener('input', (e) => performSearch(e.target.value));
+    document.getElementById('globalSearch')?.addEventListener('input', (e) => { performSearch(e.target.value); openSearchModal(); });
+    document.getElementById('searchModal')?.addEventListener('click', (e) => { if(e.target === document.getElementById('searchModal')) closeSearchModal(); });
+    document.addEventListener('keydown', (e) => { if((e.metaKey||e.ctrlKey)&&e.key==='k') { e.preventDefault(); openSearchModal(); } if(e.key==='Escape') { closeSearchModal(); closeMobileSidebar(); } });
+    $$('.cheatsheet-tab').forEach(t => t.addEventListener('click', () => renderCheatsheet(t.dataset.sheet)));
+    document.getElementById('focusModeBtn')?.addEventListener('click', () => document.body.classList.toggle('focus-mode'));
+    document.getElementById('themeToggleBtn')?.addEventListener('click', () => { document.documentElement.setAttribute('data-theme', document.documentElement.getAttribute('data-theme')==='light'?'':'light'); });
+    document.getElementById('sidebar-collapse-btn')?.addEventListener('click', () => document.getElementById('main-sidebar')?.classList.toggle('collapsed'));
+    document.getElementById('videoMock')?.addEventListener('click', () => alert('🎬 Video Player'));
   });
 
-  // ========== PYODIDE INITIALIZATION ==========
-  async function initPyodide() {
-    if (typeof loadPyodide === 'undefined') {
-      console.log('Pyodide não disponível. Aguardando...');
-      return;
-    }
-    try {
-      const statusEl = $('#pyodideStatus');
-      if (statusEl) statusEl.textContent = '⏳ Carregando Python...';
-      
-      window.pyodideInstance = await loadPyodide({
-        indexURL: 'https://cdn.jsdelivr.net/pyodide/v0.25.0/full/'
-      });
-      
-      if (statusEl) {
-        statusEl.textContent = '✅ Python 3.12 pronto';
-        statusEl.style.color = '#28c840';
-      }
-      console.log('Pyodide inicializado com sucesso');
-    } catch (e) {
-      console.error('Falha ao carregar Pyodide:', e);
-      const statusEl = $('#pyodideStatus');
-      if (statusEl) {
-        statusEl.textContent = '⚠️ Python offline (modo simulação)';
-        statusEl.style.color = '#febc2e';
-      }
-    }
-  }
+  async function initPyodide() { if(typeof loadPyodide==='undefined') return; try { window.pyodideInstance = await loadPyodide({ indexURL: 'https://cdn.jsdelivr.net/pyodide/v0.25.0/full/' }); const s = document.getElementById('pyodideStatus'); if(s) { s.textContent = '✅ Python 3.12 pronto'; s.style.color = '#28c840'; } } catch(e) { console.error(e); } }
+  if(typeof loadPyodide !== 'undefined') initPyodide(); else window.addEventListener('load', () => setTimeout(initPyodide, 1000));
 
-  // Try to load Pyodide
-  if (typeof loadPyodide !== 'undefined') {
-    initPyodide();
-  } else {
-    window.addEventListener('load', () => {
-      setTimeout(initPyodide, 1000);
-    });
-  }
+  // Expose globals
+  window.navigateTo = navigateTo; window.navigateToLesson = navigateToLesson; window.closeSearchModal = closeSearchModal;
+  window.formatJSON = window.formatJSON; window.generateEmbedJSON = window.generateEmbedJSON; window.generateTimestamp = window.generateTimestamp;
+  window.calcPermissions = window.calcPermissions; window.selectQuizOption = window.selectQuizOption; window.submitQuiz = window.submitQuiz;
+  window.completeLesson = window.completeLesson; window.copyLessonCode = window.copyLessonCode; window.retakeQuiz = () => initQuiz();
+  window.xpSystem = xpSystem; window.missionsSystem = missionsSystem; window.achievementsSystem = achievementsSystem;
+  window.projectsSystem = projectsSystem; window.aiTutor = aiTutor; window.pomodoroSystem = pomodoroSystem;
 
-  // ========== EXPOSE GLOBALS ==========
-  window.navigateTo = navigateTo;
-  window.navigateToLesson = navigateToLesson;
-  window.closeSearchModal = closeSearchModal;
-  window.formatJSON = window.formatJSON;
-  window.generateEmbedJSON = window.generateEmbedJSON;
-  window.generateTimestamp = window.generateTimestamp;
-  window.calcPermissions = window.calcPermissions;
-  window.selectQuizOption = window.selectQuizOption;
-  window.submitQuiz = window.submitQuiz;
-  window.retakeQuiz = window.retakeQuiz;
-  window.completeLesson = window.completeLesson;
-  window.navigateDocLesson = window.navigateDocLesson;
-  window.copyLessonCode = window.copyLessonCode;
-  window.closeMobileSidebar = closeMobileSidebar;
-
-  // Initial load
-  updateProgressUI();
-  console.log('🚀 Discord Bots Mastery 2026 - Nexus Plataforms');
-  console.log('📚 Plataforma educacional premium inicializada');
-  console.log('💡 Dica: Pressione ⌘K ou Ctrl+K para buscar em todo o curso');
+  console.log('🚀 Discord Bots Mastery 2026 - Pronto!');
 })();

@@ -2,18 +2,16 @@
 <html lang="pt-BR" dir="ltr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Discord Bots Mastery 2026 | Em Desenvolvimento — Nexus Plataforms</title>
-  <meta name="description" content="Plataforma educacional premium para criação de bots Discord com Python. Em breve: módulos interativos, laboratórios práticos e IA tutora.">
+  <title>404 · Em Desenvolvimento | Discord Bots Mastery 2026</title>
+  <meta name="description" content="Página em construção — Curso completo de bots Discord com Python. Em breve: módulos premium, IA tutora e laboratórios práticos.">
   <meta name="robots" content="noindex, nofollow">
   <meta name="theme-color" content="#0a0b14">
   
-  <!-- Google Fonts + Ícones simples (sistema) -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   
   <style>
-    /* ========== RESET + VARIÁVEIS (premium/cyber clean) ========== */
     * {
       margin: 0;
       padding: 0;
@@ -21,680 +19,456 @@
     }
 
     :root {
-      --bg-deep: #03050a;
-      --bg-primary: #080b14;
-      --bg-surface: #0f1322;
-      --bg-card: #151b2c;
-      --glass-bg: rgba(15, 19, 34, 0.75);
-      --glass-border: rgba(59, 130, 246, 0.2);
+      --bg-deep: #02040a;
+      --bg-surface: #0a0e1a;
+      --bg-card: #111827;
+      --glass-border: rgba(59, 130, 246, 0.25);
       --accent-blue: #3b82f6;
       --accent-purple: #8b5cf6;
       --accent-cyan: #06b6d4;
       --text-primary: #eef2ff;
-      --text-secondary: #c7d2fe;
-      --text-muted: #64748b;
-      --gradient-text: linear-gradient(135deg, #60a5fa, #a78bfa, #22d3ee);
-      --gradient-hero: linear-gradient(135deg, #3b82f6, #8b5cf6);
-      --shadow-glow: 0 8px 32px rgba(59, 130, 246, 0.25);
-      --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+      --text-secondary: #cbd5e1;
+      --text-muted: #6b7280;
+      --glow-blue: 0 0 18px rgba(59,130,246,0.4);
+      --font-sans: 'Inter', system-ui, sans-serif;
       --font-mono: 'JetBrains Mono', monospace;
-      --radius-xl: 28px;
-      --radius-md: 18px;
-      --radius-sm: 12px;
     }
 
     body {
-      background: var(--bg-deep);
+      background: radial-gradient(circle at 10% 20%, #03050b, #000000);
       font-family: var(--font-sans);
       color: var(--text-primary);
+      min-height: 100vh;
       overflow-x: hidden;
-      line-height: 1.5;
-      -webkit-font-smoothing: antialiased;
+      position: relative;
     }
 
-    /* ========== BACKGROUND ORBITAL ========== */
-    .bg-aurora {
+    /* grade de fundo estilo "matrix/code" */
+    .bg-grid {
       position: fixed;
       inset: 0;
+      background-image: 
+        linear-gradient(rgba(59,130,246,0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(59,130,246,0.08) 1px, transparent 1px);
+      background-size: 48px 48px;
       z-index: 0;
-      overflow: hidden;
       pointer-events: none;
     }
-    .aurora-1, .aurora-2, .aurora-3 {
-      position: absolute;
-      border-radius: 50%;
-      filter: blur(90px);
-      opacity: 0.5;
-      animation: drift 24s infinite alternate ease-in-out;
-    }
-    .aurora-1 {
+
+    .glow-orb {
+      position: fixed;
       width: 70vw;
       height: 70vw;
-      background: radial-gradient(circle, rgba(59,130,246,0.25), transparent);
-      top: -20vh;
-      left: -20vw;
-    }
-    .aurora-2 {
-      width: 80vh;
-      height: 80vh;
-      background: radial-gradient(circle, rgba(139,92,246,0.2), transparent);
-      bottom: -30vh;
-      right: -10vw;
-      animation-duration: 28s;
-    }
-    .aurora-3 {
-      width: 60vh;
-      height: 60vh;
-      background: radial-gradient(circle, rgba(6,182,212,0.2), transparent);
-      top: 40%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      filter: blur(100px);
-      animation: pulseGlow 6s infinite alternate;
-    }
-    @keyframes drift {
-      0% { transform: translate(0, 0) rotate(0deg); }
-      100% { transform: translate(5%, 8%) rotate(8deg); }
-    }
-    @keyframes pulseGlow {
-      0% { opacity: 0.2; transform: translate(-50%, -50%) scale(1);}
-      100% { opacity: 0.5; transform: translate(-50%, -50%) scale(1.3);}
-    }
-
-    /* ========== LOADING + OVERLAY ========== */
-    #loader {
-      position: fixed;
-      inset: 0;
-      background: #03050a;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      z-index: 1000;
-      transition: opacity 0.6s ease, visibility 0.6s;
-    }
-    #loader.hide-loader {
-      opacity: 0;
-      visibility: hidden;
-      pointer-events: none;
-    }
-    .loader-hex {
-      width: 54px;
-      height: 54px;
-      border: 3px solid rgba(59,130,246,0.15);
-      border-top: 3px solid var(--accent-blue);
+      background: radial-gradient(circle, rgba(59,130,246,0.15), transparent 70%);
+      top: -20%;
+      right: -20%;
       border-radius: 50%;
-      animation: spin 0.8s linear infinite;
-      box-shadow: 0 0 15px rgba(59,130,246,0.4);
+      filter: blur(80px);
+      z-index: 0;
+      pointer-events: none;
+      animation: floatOrb 20s infinite alternate;
     }
-    @keyframes spin { to { transform: rotate(360deg); } }
 
-    /* ========== MAIN WRAPPER ========== */
-    .dev-wrapper {
+    @keyframes floatOrb {
+      0% { transform: translate(0, 0) scale(1); opacity: 0.5; }
+      100% { transform: translate(-4%, 6%) scale(1.1); opacity: 0.8; }
+    }
+
+    .container-404 {
       position: relative;
       z-index: 2;
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 2rem 2rem 4rem;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
-      backdrop-filter: blur(2px);
+      justify-content: center;
     }
 
-    /* ========== HEADER / NAV (clean) ========== */
-    .glass-nav {
+    /* header simplificado */
+    .nexus-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 1.2rem 2rem;
-      background: rgba(8, 11, 20, 0.7);
-      backdrop-filter: blur(16px);
-      border-bottom: 1px solid rgba(59,130,246,0.15);
       flex-wrap: wrap;
       gap: 1rem;
+      margin-bottom: 3rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid rgba(59,130,246,0.2);
     }
-    .logo-area {
+
+    .logo {
       display: flex;
       align-items: center;
-      gap: 0.75rem;
+      gap: 0.6rem;
     }
-    .nexus-symbol {
+
+    .logo-icon {
       font-size: 2rem;
       font-weight: 800;
-      background: var(--gradient-text);
+      background: linear-gradient(135deg, #60a5fa, #c084fc);
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
-      text-shadow: 0 0 6px rgba(59,130,246,0.4);
     }
-    .logo-text h1 {
-      font-size: 1.4rem;
+
+    .logo-text span:first-child {
       font-weight: 800;
-      letter-spacing: -0.3px;
+      font-size: 1.2rem;
     }
-    .logo-text p {
+    .logo-text small {
       font-size: 0.7rem;
       color: var(--text-muted);
-      letter-spacing: 0.5px;
+      display: block;
     }
-    .dev-badge {
-      background: rgba(239, 68, 68, 0.15);
-      border: 1px solid rgba(239,68,68,0.4);
-      padding: 0.4rem 1rem;
-      border-radius: 40px;
+
+    .status-badge {
+      background: rgba(239, 68, 68, 0.12);
+      border: 1px solid rgba(239,68,68,0.35);
+      padding: 0.4rem 1.2rem;
+      border-radius: 100px;
       font-size: 0.8rem;
       font-weight: 600;
       color: #f87171;
-    }
-    .status-chip {
-      background: rgba(59,130,246,0.1);
-      border-radius: 100px;
-      padding: 0.5rem 1.2rem;
-      font-size: 0.8rem;
-      font-weight: 500;
-      color: var(--accent-cyan);
-      border: 1px solid rgba(6,182,212,0.3);
+      backdrop-filter: blur(4px);
     }
 
-    /* ========== HERO EM CONSTRUÇÃO ========== */
-    .hero-dev {
-      max-width: 1300px;
-      margin: 2rem auto;
-      padding: 2rem 2rem 4rem;
+    /* area 404 + informação */
+    .hero-404 {
       display: flex;
       flex-wrap: wrap;
       gap: 3rem;
       align-items: center;
       justify-content: space-between;
+      margin: 2rem 0 3rem;
     }
-    .dev-content {
-      flex: 1;
-      min-width: 280px;
+
+    .error-code {
+      flex: 1.2;
+      min-width: 260px;
     }
-    .progress-ring {
-      background: var(--bg-card);
-      border-radius: var(--radius-xl);
-      padding: 2rem;
-      text-align: center;
-      max-width: 380px;
-      margin-left: auto;
-      border: 1px solid var(--glass-border);
-      backdrop-filter: blur(8px);
-      background: rgba(21, 27, 44, 0.6);
-    }
-    .badge-warning {
-      display: inline-block;
-      background: rgba(245,158,11,0.12);
-      padding: 0.2rem 1rem;
-      border-radius: 30px;
-      font-size: 0.75rem;
-      font-weight: 600;
-      color: #fbbf24;
-      margin-bottom: 1.5rem;
-    }
-    .dev-title {
-      font-size: 3.2rem;
+
+    .code-number {
+      font-size: 8rem;
       font-weight: 900;
-      line-height: 1.2;
-      margin-bottom: 1rem;
-    }
-    .gradient-text {
-      background: var(--gradient-text);
+      font-family: var(--font-mono);
+      background: linear-gradient(135deg, #3b82f6, #8b5cf6, #22d3ee);
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
+      letter-spacing: -6px;
+      line-height: 1;
+      text-shadow: 0 0 30px rgba(59,130,246,0.3);
     }
-    .dev-desc {
-      font-size: 1.1rem;
-      color: var(--text-secondary);
-      max-width: 550px;
-      margin: 1.2rem 0 2rem;
-      border-left: 3px solid var(--accent-blue);
-      padding-left: 1.2rem;
-    }
-    .launch-stats {
-      display: flex;
-      gap: 2rem;
-      margin: 1.5rem 0;
-    }
-    .stat-pill {
-      background: rgba(255,255,255,0.02);
-      border-radius: 60px;
-      padding: 0.4rem 1rem;
-    }
-    .stat-pill span {
-      font-weight: 800;
-      font-size: 1.3rem;
-      color: var(--accent-cyan);
-    }
-    /* botão glow */
-    .btn-glow {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.6rem;
-      background: var(--gradient-hero);
-      padding: 0.9rem 2rem;
-      border-radius: 50px;
-      font-weight: 700;
-      text-decoration: none;
-      color: white;
-      transition: 0.2s;
-      box-shadow: 0 0 14px rgba(59,130,246,0.3);
-      border: none;
-      cursor: pointer;
-    }
-    .btn-glow:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 12px 30px rgba(59,130,246,0.5);
-    }
-    .btn-outline-light {
-      background: transparent;
-      border: 1px solid var(--accent-blue);
-      color: var(--accent-blue);
-      box-shadow: none;
-    }
-    .btn-outline-light:hover {
-      background: rgba(59,130,246,0.1);
-      transform: translateY(-2px);
-    }
-    /* circle progress */
-    .circular-progress {
-      position: relative;
-      width: 150px;
-      height: 150px;
-      margin: 0 auto 1.2rem;
-    }
-    svg circle {
-      fill: none;
-      stroke-width: 10;
-      stroke-linecap: round;
-    }
-    .circle-bg {
-      stroke: rgba(59,130,246,0.1);
-    }
-    .circle-progress {
-      stroke: url(#gradCircle);
-      stroke-dasharray: 440;
-      stroke-dashoffset: 330;
-      transition: stroke-dashoffset 1s ease;
-    }
-    .percent-text {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+
+    .error-code h2 {
       font-size: 2rem;
-      font-weight: 800;
+      margin-top: 0.5rem;
+      font-weight: 700;
+    }
+
+    .error-message {
+      color: var(--text-secondary);
+      font-size: 1.1rem;
+      max-width: 500px;
+      border-left: 3px solid var(--accent-cyan);
+      padding-left: 1.2rem;
+      margin: 1rem 0 1.8rem;
+    }
+
+    .info-grid {
+      background: rgba(15, 23, 42, 0.6);
+      backdrop-filter: blur(12px);
+      border-radius: 32px;
+      border: 1px solid var(--glass-border);
+      padding: 1.8rem;
+      flex: 0.9;
+      min-width: 280px;
+      box-shadow: 0 20px 35px -12px rgba(0,0,0,0.5);
+    }
+
+    .info-grid h3 {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 1.3rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .dev-stats {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .stat-line {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.6rem 0;
+      border-bottom: 1px dashed rgba(59,130,246,0.2);
+    }
+    .stat-label {
+      font-weight: 500;
+      color: var(--text-muted);
+    }
+    .stat-value {
+      font-weight: 700;
       font-family: var(--font-mono);
       color: var(--accent-cyan);
     }
-    .module-highlight {
-      background: rgba(0,0,0,0.3);
-      border-radius: var(--radius-md);
-      padding: 1.2rem;
-      margin-top: 1rem;
-    }
-    .module-list {
-      display: flex;
-      flex-direction: column;
-      gap: 0.6rem;
-    }
-    .module-item {
-      display: flex;
-      align-items: center;
-      gap: 0.7rem;
-      font-size: 0.85rem;
-      color: var(--text-secondary);
-    }
-    .status-dot {
-      width: 8px;
+    .progress-track {
+      background: #1e293b;
+      border-radius: 20px;
       height: 8px;
-      border-radius: 10px;
-      background: #f97316;
+      overflow: hidden;
+      margin: 0.5rem 0;
     }
-    .status-dot.done { background: #22c55e; box-shadow: 0 0 6px #22c55e; }
-    .status-dot.wip { background: #3b82f6; }
+    .progress-fill {
+      width: 68%;
+      height: 100%;
+      background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+      border-radius: 20px;
+      box-shadow: 0 0 8px #3b82f6;
+    }
 
-    /* ========== ROADMAP PREVIEW ========== */
-    .roadmap-preview {
-      background: rgba(8, 11, 20, 0.6);
-      backdrop-filter: blur(10px);
-      border-top: 1px solid rgba(59,130,246,0.2);
-      border-bottom: 1px solid rgba(59,130,246,0.2);
-      padding: 3rem 2rem;
-    }
-    .section-title {
-      text-align: center;
-      font-size: 2rem;
-      font-weight: 800;
-      margin-bottom: 2rem;
-    }
-    .roadmap-grid {
+    /* botões duplos */
+    .action-buttons {
       display: flex;
+      gap: 1rem;
       flex-wrap: wrap;
-      justify-content: center;
-      gap: 1.2rem;
-      max-width: 1100px;
-      margin: 0 auto;
+      margin-top: 1.5rem;
     }
-    .roadmap-card {
-      background: var(--bg-surface);
-      border-radius: var(--radius-md);
-      padding: 1.5rem;
-      width: 260px;
-      border: 1px solid rgba(59,130,246,0.2);
+    .btn-primary {
+      background: linear-gradient(105deg, #3b82f6, #7c3aed);
+      border: none;
+      padding: 0.8rem 1.5rem;
+      border-radius: 60px;
+      font-weight: 700;
+      color: white;
+      cursor: pointer;
+      transition: 0.2s;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: var(--font-sans);
+    }
+    .btn-outline {
+      background: transparent;
+      border: 1px solid var(--accent-blue);
+      padding: 0.8rem 1.5rem;
+      border-radius: 60px;
+      color: var(--accent-blue);
+      font-weight: 600;
+      cursor: pointer;
       transition: 0.2s;
     }
-    .roadmap-card:hover {
-      border-color: var(--accent-cyan);
-      transform: translateY(-6px);
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 22px rgba(59,130,246,0.4);
     }
-    .card-icon {
-      font-size: 2.3rem;
-      margin-bottom: 1rem;
-    }
-    .roadmap-card h3 {
-      font-size: 1.2rem;
-      margin-bottom: 0.5rem;
-    }
-    .roadmap-card p {
-      font-size: 0.8rem;
-      color: var(--text-muted);
-    }
-    .badge-progress {
-      display: inline-block;
-      background: #0f1322;
-      padding: 0.2rem 0.6rem;
-      border-radius: 30px;
-      font-size: 0.7rem;
-      margin-top: 0.8rem;
-      font-weight: 600;
+    .btn-outline:hover {
+      background: rgba(59,130,246,0.1);
+      border-color: #60a5fa;
     }
 
-    /* ========== FEATURES / BENEFITS ========== */
-    .features-zone {
-      padding: 4rem 2rem;
-      max-width: 1200px;
-      margin: 0 auto;
+    /* roadmap cards pequenos */
+    .modules-preview {
+      margin-top: 4rem;
     }
-    .grid-features {
+    .section-title {
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      letter-spacing: -0.3px;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .cards-mini {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 2rem;
-      margin-top: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
     }
-    .feature-item {
-      background: rgba(21, 27, 44, 0.5);
-      backdrop-filter: blur(4px);
-      border-radius: 24px;
-      padding: 1.8rem;
-      text-align: center;
-      border: 1px solid rgba(59,130,246,0.15);
+    .module-card {
+      background: rgba(17, 24, 39, 0.6);
+      border-radius: 20px;
+      padding: 1.2rem;
+      border: 1px solid rgba(59,130,246,0.2);
       transition: all 0.2s;
     }
-    .feature-icon {
-      font-size: 2.5rem;
+    .module-card:hover {
+      border-color: var(--accent-cyan);
+      transform: translateY(-4px);
     }
-    .feature-item h3 {
-      margin: 1rem 0 0.5rem;
+    .mod-icon {
+      font-size: 1.8rem;
+      margin-bottom: 0.6rem;
     }
-
-    /* ========== NEWSLETTER / ALERTA ========== */
-    .waitlist-area {
-      background: linear-gradient(145deg, #0b0f1a, #05080f);
-      border-radius: 60px;
-      margin: 2rem auto 3rem;
-      max-width: 800px;
-      padding: 2.5rem;
-      text-align: center;
-      border: 1px solid rgba(59,130,246,0.3);
+    .module-card h4 {
+      font-size: 1rem;
+      margin-bottom: 0.3rem;
     }
-    .waitlist-title {
-      font-size: 1.6rem;
-      font-weight: 700;
-    }
-    .inline-form {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 0.8rem;
-      margin-top: 1.2rem;
-    }
-    .inline-form input {
-      background: #0f1322;
-      border: 1px solid var(--glass-border);
-      padding: 0.8rem 1.2rem;
-      border-radius: 60px;
-      width: 260px;
-      color: white;
-      font-family: inherit;
-    }
-    .inline-form input:focus {
-      outline: none;
-      border-color: var(--accent-blue);
+    .pill-status {
+      font-size: 0.7rem;
+      background: #0f172a;
+      padding: 0.2rem 0.6rem;
+      border-radius: 40px;
+      color: #86efac;
     }
 
-    /* ========== FOOTER ========== */
-    .footer-dev {
-      margin-top: 2rem;
-      padding: 2rem;
+    footer {
+      margin-top: 5rem;
       text-align: center;
-      border-top: 1px solid rgba(59,130,246,0.1);
       font-size: 0.8rem;
       color: var(--text-muted);
+      border-top: 1px solid rgba(59,130,246,0.15);
+      padding-top: 2rem;
     }
 
-    /* ========== RESPONSIVE ========== */
-    @media (max-width: 860px) {
-      .hero-dev { flex-direction: column; text-align: center; }
-      .dev-desc { margin-left: auto; margin-right: auto; text-align: center; border-left: none; padding-left: 0; border-top: 2px solid var(--accent-blue); padding-top: 1rem;}
-      .launch-stats { justify-content: center; }
-      .dev-title { font-size: 2.4rem; }
-      .glass-nav { padding: 1rem; }
-    }
-    @media (max-width: 560px) {
-      .roadmap-grid { flex-direction: column; align-items: center; }
-      .waitlist-area { padding: 1.5rem; border-radius: 32px; }
+    @media (max-width: 780px) {
+      .hero-404 { flex-direction: column; }
+      .code-number { font-size: 5rem; letter-spacing: -2px; }
+      .container-404 { padding: 1.5rem; }
     }
   </style>
 </head>
 <body>
+<div class="bg-grid"></div>
+<div class="glow-orb"></div>
 
-<div id="loader">
-  <div class="loader-hex"></div>
-</div>
-
-<div class="bg-aurora">
-  <div class="aurora-1"></div>
-  <div class="aurora-2"></div>
-  <div class="aurora-3"></div>
-</div>
-
-<div class="dev-wrapper">
-  
-  <!-- Navegação premium -->
-  <nav class="glass-nav">
-    <div class="logo-area">
-      <div class="nexus-symbol">⬡</div>
+<div class="container-404">
+  <div class="nexus-header">
+    <div class="logo">
+      <div class="logo-icon">⬡</div>
       <div class="logo-text">
-        <h1>Nexus Plataforms</h1>
-        <p>Discord Bots Mastery 2026</p>
+        <span>Nexus Plataforms</span>
+        <small>Discord Bots Mastery 2026</small>
       </div>
     </div>
-    <div class="dev-badge">
-      🚧 EM DESENVOLVIMENTO ATIVO
+    <div class="status-badge">
+      🛠️ build · preview em desenvolvimento
     </div>
-    <div class="status-chip">
-      🔄 versão alpha · preview exclusivo
-    </div>
-  </nav>
+  </div>
 
-  <!-- Hero principal + indicador de progresso geral -->
-  <div class="hero-dev">
-    <div class="dev-content">
-      <div class="badge-warning">
-        🧪 Plataforma educacional em construção
+  <div class="hero-404">
+    <div class="error-code">
+      <div class="code-number">404</div>
+      <h2>🌀 página em construção</h2>
+      <div class="error-message">
+        A rota que você procura ainda está sendo criada. Nossa plataforma de ensino de bots Discord com Python está em fase avançada de desenvolvimento — em breve você terá acesso completo.
       </div>
-      <h1 class="dev-title">
-        Domine <span class="gradient-text">Discord Bots</span> com<br>Python do zero ao expert
-      </h1>
-      <p class="dev-desc">
-        Estamos preparando a experiência definitiva para criar bots de alto desempenho, 
-        arquitetura assíncrona, slash commands, banco de dados, deploy e gamificação. 
-        Em breve você terá acesso a laboratórios reais, IA tutora e projetos de portfólio.
-      </p>
-      <div class="launch-stats">
-        <div class="stat-pill">📘 <span>40+</span> aulas planejadas</div>
-        <div class="stat-pill">🤖 <span>12+</span> projetos práticos</div>
-        <div class="stat-pill">⚡ <span>100%</span> hands-on</div>
-      </div>
-      <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-        <a href="#" class="btn-glow" id="notifyMeBtn">📬 Avise-me no lançamento</a>
-        <a href="#" class="btn-glow btn-outline-light" id="previewRoadmapBtn">🗺️ Ver roadmap técnico</a>
+      <div class="action-buttons">
+        <button class="btn-primary" id="notifyMeBtn">
+          📬 Receber notificação
+        </button>
+        <button class="btn-outline" id="roadmapModalBtn">
+          🗺️ Ver roadmap técnico
+        </button>
       </div>
     </div>
-    <div class="progress-ring">
-      <div class="circular-progress">
-        <svg width="150" height="150" viewBox="0 0 160 160">
-          <defs>
-            <linearGradient id="gradCircle" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#3b82f6" />
-              <stop offset="100%" stop-color="#8b5cf6" />
-            </linearGradient>
-          </defs>
-          <circle class="circle-bg" cx="80" cy="80" r="70"></circle>
-          <circle class="circle-progress" cx="80" cy="80" r="70" transform="rotate(-90 80 80)" stroke="url(#gradCircle)" stroke-dasharray="440" stroke-dashoffset="132"></circle>
-        </svg>
-        <div class="percent-text">70%</div>
-      </div>
-      <p style="font-weight: 600;">Plataforma em construção ativa</p>
-      <div class="module-highlight">
-        <div class="module-list">
-          <div class="module-item"><span class="status-dot done"></span> Fundamentos Python + Async</div>
-          <div class="module-item"><span class="status-dot done"></span> discord.py 2.x (Slash Commands)</div>
-          <div class="module-item"><span class="status-dot wip"></span> Banco de dados / PostgreSQL</div>
-          <div class="module-item"><span class="status-dot wip"></span> Deploy com Docker + Railway</div>
-        </div>
+
+    <div class="info-grid">
+      <h3>📊 status da construção</h3>
+      <div class="dev-stats">
+        <div class="stat-line"><span class="stat-label">Progresso geral da plataforma</span><span class="stat-value">68%</span></div>
+        <div class="progress-track"><div class="progress-fill" style="width: 68%;"></div></div>
+        <div class="stat-line"><span class="stat-label">Módulos prontos</span><span class="stat-value">4/12</span></div>
+        <div class="stat-line"><span class="stat-label">Laboratórios interativos</span><span class="stat-value">3 (em breve +7)</span></div>
+        <div class="stat-line"><span class="stat-label">IA Tutora</span><span class="stat-value">fase de treinamento</span></div>
+        <div class="stat-line"><span class="stat-label">Lançamento estimado</span><span class="stat-value">Q3 2026</span></div>
       </div>
     </div>
   </div>
 
-  <!-- Roadmap / conteudo esperado -->
-  <div class="roadmap-preview">
-    <h2 class="section-title">📌 Jornada do desenvolvedor (próximos módulos)</h2>
-    <div class="roadmap-grid">
-      <div class="roadmap-card"><div class="card-icon">🐍</div><h3>Python Moderno</h3><p>Variáveis, estruturas, OOP, type hints e async/await.</p><span class="badge-progress">90% concluído</span></div>
-      <div class="roadmap-card"><div class="card-icon">🤖</div><h3>discord.py Avançado</h3><p>Comandos híbridos, modals, views, componentes interativos.</p><span class="badge-progress">80% estruturado</span></div>
-      <div class="roadmap-card"><div class="card-icon">🗄️</div><h3>Banco de Dados</h3><p>SQLite, PostgreSQL, integração com painéis administrativos.</p><span class="badge-progress">65% em andamento</span></div>
-      <div class="roadmap-card"><div class="card-icon">☁️</div><h3>Deploy Profissional</h3><p>Docker, Railway, Variáveis de ambiente, logs, uptime.</p><span class="badge-progress">50% em desenvolvimento</span></div>
-      <div class="roadmap-card"><div class="card-icon">🎓</div><h3>Projeto Final</h3><p>Bot de economia completo com ranking e comandos globais.</p><span class="badge-progress">planejamento</span></div>
+  <!-- prévia de módulos que virão (estilo 404 informativo) -->
+  <div class="modules-preview">
+    <div class="section-title">
+      <span>🧩</span> conteúdo que chegará em breve
     </div>
+    <div class="cards-mini">
+      <div class="module-card">
+        <div class="mod-icon">🐍</div>
+        <h4>Python 360°</h4>
+        <p style="font-size:0.75rem; color:#9ca3af;">Fundamentos, OOP, type hints, generators</p>
+        <span class="pill-status">95% preparado</span>
+      </div>
+      <div class="module-card">
+        <div class="mod-icon">🤖</div>
+        <h4>discord.py avançado</h4>
+        <p style="font-size:0.75rem; color:#9ca3af;">Slash commands, modals, views, cogs</p>
+        <span class="pill-status">85%</span>
+      </div>
+      <div class="module-card">
+        <div class="mod-icon">🗄️</div>
+        <h4>Banco de Dados</h4>
+        <p style="font-size:0.75rem; color:#9ca3af;">SQLite, PostgreSQL, cache com Redis</p>
+        <span class="pill-status">60%</span>
+      </div>
+      <div class="module-card">
+        <div class="mod-icon">🚀</div>
+        <h4>Deploy & Escalabilidade</h4>
+        <p style="font-size:0.75rem; color:#9ca3af;">Docker, Railway, monitoramento</p>
+        <span class="pill-status">45%</span>
+      </div>
+    </div>
+    <p style="margin-top: 1.5rem; font-size: 0.8rem; color: #60a5fa; border-left: 2px solid #3b82f6; padding-left: 1rem;">🔧 Este é um ambiente de preview — em breve todas as aulas, laboratórios e desafios estarão ativos.</p>
   </div>
 
-  <!-- Features diferenciais da plataforma -->
-  <div class="features-zone">
-    <h2 class="section-title">✨ O que torna a Nexus Platform única?</h2>
-    <div class="grid-features">
-      <div class="feature-item"><div class="feature-icon">🧪</div><h3>Laboratórios interativos</h3><p>Ambiente real de teste de comandos e simulação do Discord.</p></div>
-      <div class="feature-item"><div class="feature-icon">🤖</div><h3>IA Tutora integrada</h3><p>Suporte inteligente para dúvidas e correção de código.</p></div>
-      <div class="feature-item"><div class="feature-icon">🏆</div><h3>Gamificação / XP</h3><p>Missões, conquistas, ranking de alunos e certificados.</p></div>
-      <div class="feature-item"><div class="feature-icon">💻</div><h3>Playground Python</h3><p>Editor online com execução real, sem instalação.</p></div>
-    </div>
-  </div>
-
-  <!-- call to action waitlist mock -->
-  <div class="waitlist-area">
-    <div class="waitlist-title">📢 Receba aviso de lançamento</div>
-    <p style="color:var(--text-secondary); margin: 0.5rem 0 1rem;">Seja o primeiro a acessar a plataforma + bônus exclusivo para os primeiros alunos.</p>
-    <div class="inline-form">
-      <input type="email" placeholder="seu melhor e-mail" id="notifyEmail">
-      <button class="btn-glow" id="submitNotify" style="padding:0.8rem 1.8rem;">Notificar-me</button>
-    </div>
-    <small style="display:block; margin-top: 1rem;">🔒 sem spam, apenas novidades do curso.</small>
-  </div>
-
-  <footer class="footer-dev">
-    <p>⬡ Nexus Plataforms — preparando a próxima geração de criadores de bots Discord com Python 2026</p>
-    <p style="margin-top: 0.5rem;">© 2026 · desenvolvimento ativo · preview exclusivo</p>
+  <footer>
+    <p>⬡ Nexus Plataforms — preparando a maior experiência de criação de bots Discord com Python moderno.</p>
+    <p style="margin-top: 0.4rem;">© 2026 · desenvolvimento ativo | código 404 ≠ erro, é evolução</p>
   </footer>
 </div>
 
 <script>
-  // ==================== LOADER OCULTAÇÃO + SIMULAÇÃO DE PROGRESSO INTERATIVA ====================
-  window.addEventListener('load', () => {
-    const loader = document.getElementById('loader');
-    setTimeout(() => {
-      if (loader) loader.classList.add('hide-loader');
-    }, 800);
-  });
-
-  // Pequenos feedbacks e interações (demo de "notify" com alert)
+  // Simular notificação + interações amigáveis
   const notifyBtn = document.getElementById('notifyMeBtn');
-  const submitNotify = document.getElementById('submitNotify');
-  const emailInput = document.getElementById('notifyEmail');
-  
-  function handleNotify(emailValue = null) {
-    let email = emailValue;
-    if (!email) {
-      email = emailInput ? emailInput.value.trim() : '';
-    }
+  const roadmapBtn = document.getElementById('roadmapModalBtn');
+
+  function showNotifyDialog() {
+    let email = prompt("📧 Informe seu e-mail para receber novidades do curso 'Discord Bots Mastery 2026':");
     if (email && email.includes('@') && email.includes('.')) {
-      alert(`✅ Obrigado! Assim que o curso Discord Bots Mastery 2026 for lançado, enviaremos novidades para ${email}.`);
-      if (emailInput) emailInput.value = '';
-    } else {
-      alert('✨ Por favor, insira um e-mail válido para receber a novidade.');
+      alert(`✅ Obrigado! Assim que a plataforma for lançada, enviaremos acesso antecipado para ${email}.`);
+    } else if (email && email !== "") {
+      alert("❌ Por favor, insira um e-mail válido (exemplo@dominio.com).");
     }
   }
-  
+
   if (notifyBtn) {
     notifyBtn.addEventListener('click', (e) => {
       e.preventDefault();
-      handleNotify('preview@nexusplataforms.com');  // simula interesse
-    });
-  }
-  if (submitNotify) {
-    submitNotify.addEventListener('click', (e) => {
-      e.preventDefault();
-      handleNotify();
-    });
-  }
-  
-  // Botão "Ver roadmap técnico" - exibe os próximos conteúdos com um modal simples 
-  const roadmapBtn = document.getElementById('previewRoadmapBtn');
-  if (roadmapBtn) {
-    roadmapBtn.addEventListener('click', (e) => {
-      e.preventDefault();
-      alert(`🗺️ Roadmap técnico detalhado (previsão):\n\n✅ Módulo 1: Lógica + Python (100% planejado)\n✅ Módulo 2: discord.py & Slash Commands (90%)\n🔄 Módulo 3: Bancos de dados & Cache (65%)\n🔄 Módulo 4: Deploy e escalabilidade (50%)\n🌟 Módulo 5: Bot avançado + Painel Web (em arquitetura)\n🎯 Data estimada do início do curso: Q3 2026.`);
+      showNotifyDialog();
     });
   }
 
-  // ========== Efeito interativo no círculo de progresso (já está em 70%, mas anima ao carregar) ==========
-  const progressCircle = document.querySelector('.circle-progress');
-  if (progressCircle) {
-    // já possui offset pré-definido 132 (440 - 308 = 132 -> 70%)
-    // apenas pequena animação na entrada
-    setTimeout(() => {
-      progressCircle.style.transition = 'stroke-dashoffset 1.2s cubic-bezier(0.2, 0.9, 0.4, 1.1)';
-      progressCircle.setAttribute('stroke-dashoffset', '132');
-    }, 200);
+  // Simula exibição de roadmap detalhado
+  if (roadmapBtn) {
+    roadmapBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      alert(`🗺️ ROADMAP COMPLETO (em construção):\n\n✅ Módulo 1: Lógica + Python (100%)\n✅ Módulo 2: discord.py básico e slash commands (90%)\n🔄 Módulo 3: programação assíncrona e tasks (75%)\n🔄 Módulo 4: integração com APIs e webhooks (50%)\n⏳ Módulo 5: banco de dados relacional (SQL, modelos)\n⏳ Módulo 6: sistemas de economia e leveling\n⏳ Módulo 7: deploy profissional Docker + Railway\n⏳ Módulo 8: Bot com dashboard e comandos globais\n\n🎯 Previsão do primeiro release: Outubro 2026.`);
+    });
   }
-  
-  // Simulação de contador de percentual de conclusão do curso "em produção" - melhoria visual
-  const percentElem = document.querySelector('.percent-text');
-  if (percentElem) {
-    let current = 0;
-    const target = 70;
-    const step = () => {
-      if (current < target) {
-        current++;
-        percentElem.innerText = current + '%';
-        requestAnimationFrame(step);
-      } else {
-        percentElem.innerText = '70%';
+
+  // Efeito dinâmico no progresso (ajuste visual)
+  const progressFill = document.querySelector('.progress-fill');
+  if (progressFill) {
+    let width = 0;
+    const targetWidth = 68;
+    const animateProgress = () => {
+      if (width < targetWidth) {
+        width++;
+        progressFill.style.width = width + '%';
+        requestAnimationFrame(animateProgress);
       }
     };
-    setTimeout(() => { step(); }, 500);
+    setTimeout(animateProgress, 300);
   }
-  
-  // Pequenos detalhes extras: no console mostramos que a plataforma está sendo construída
-  console.log('🚀 Nexus Plataforms | Discord Bots Mastery 2026 — Em desenvolvimento. Prepare-se para a maior experiência Python para bots!');
+
+  // Mini console Easter egg
+  console.log("%c⬡ Nexus Plataforms | Discord Bots Mastery 2026\n404 ≠ erro, é uma página de desenvolvimento ativo. Em breve você dominará bots com Python!", "color: #3b82f6; font-size: 12px; font-family: monospace;");
 </script>
+
+<!-- pequeno modal simulando notificação já incluso, sem bibliotecas externas, apenas JS nativo -->
 </body>
 </html>

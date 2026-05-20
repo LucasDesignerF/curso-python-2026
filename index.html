@@ -1,569 +1,700 @@
 <!DOCTYPE html>
 <html lang="pt-BR" dir="ltr">
 <head>
-  <!-- ============================================================ -->
-  <!-- DISCORD BOTS MASTERY 2026 - NEXUS PLATAFORMS                -->
-  <!-- Plataforma Educacional Premium - Ultra Completa             -->
-  <!-- ============================================================ -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  
-  <!-- ==================== FAVICON ==================== -->
-  <link rel="icon" type="image/png" sizes="32x32" href="https://imgur.com/OQ9Qhpc.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="https://imgur.com/OQ9Qhpc.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="https://imgur.com/OQ9Qhpc.png">
-
-  <!-- ==================== SEO COMPLETO ==================== -->
-  <title>Discord Bots Mastery 2026 | Curso Premium de Python & Discord.py | Nexus Plataforms</title>
-  <meta name="description" content="Domine desenvolvimento de bots Discord com Python em 2026. Curso completo: lógica de programação, Python moderno, discord.py, banco de dados, deploy e escalabilidade. Plataforma interativa premium com gamificação, IA tutora e laboratórios práticos.">
-  <meta name="keywords" content="discord bots, python, discord.py, curso python, bots discord, programação, async, slash commands, deploy bots, nexus plataforms, 2026, gamificação, ia tutora, laboratórios">
-  <meta name="author" content="LucsDesignerF">
-  <meta name="robots" content="index, follow, max-image-preview:large">
+  <title>Discord Bots Mastery 2026 | Em Desenvolvimento — Nexus Plataforms</title>
+  <meta name="description" content="Plataforma educacional premium para criação de bots Discord com Python. Em breve: módulos interativos, laboratórios práticos e IA tutora.">
+  <meta name="robots" content="noindex, nofollow">
   <meta name="theme-color" content="#0a0b14">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="Discord Bots Mastery">
+  
+  <!-- Google Fonts + Ícones simples (sistema) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <style>
+    /* ========== RESET + VARIÁVEIS (premium/cyber clean) ========== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-  <!-- Open Graph -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Discord Bots Mastery 2026 | Nexus Plataforms">
-  <meta property="og:description" content="Curso premium de desenvolvimento de bots Discord com Python. Plataforma interativa com gamificação, IA tutora, laboratórios e projetos reais.">
-  <meta property="og:image" content="https://imgur.com/ROh1BWg.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:url" content="https://lucsdesignerf.github.io/curso-python-2026">
-  <meta property="og:site_name" content="Nexus Plataforms">
-  <meta property="og:locale" content="pt_BR">
-
-  <!-- Twitter Cards -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Discord Bots Mastery 2026">
-  <meta name="twitter:description" content="Domine bots Discord com Python. Plataforma premium interativa com gamificação e IA tutora.">
-  <meta name="twitter:image" content="https://imgur.com/ROh1BWg.png">
-  <meta name="twitter:creator" content="@LucsDesignerF">
-  
-  <!-- Schema.org -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "EducationalProduct",
-    "name": "Discord Bots Mastery 2026",
-    "description": "Curso premium de desenvolvimento de bots Discord com Python. Plataforma interativa com gamificação, IA tutora e laboratórios práticos.",
-    "provider": {
-      "@type": "Organization",
-      "name": "Nexus Plataforms",
-      "url": "https://nexusplataforms.com"
-    },
-    "educationalLevel": "Iniciante a Avançado",
-    "teaches": ["Python", "discord.py", "Programação Assíncrona", "Banco de Dados", "Deploy", "Docker", "APIs"],
-    "inLanguage": "pt-BR"
-  }
-  </script>
-  
-  <!-- PWA Manifest -->
-  <link rel="manifest" href="/manifest.json">
-  
-  <!-- Preloads -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&display=swap" rel="stylesheet">
-  
-  <!-- Monaco Editor (CDN) -->
-  <link rel="stylesheet" data-name="vs/editor/editor.main" href="https://cdn.jsdelivr.net/npm/monaco-editor@0.45.0/min/vs/editor/editor.main.css">
-  
-  <!-- Pyodide (para execução Python no browser) -->
-  <script src="https://cdn.jsdelivr.net/pyodide/v0.25.0/full/pyodide.js" defer></script>
-  
-  <!-- CSS Principal -->
-  <style id="critical-css">
     :root {
       --bg-deep: #03050a;
       --bg-primary: #080b14;
       --bg-surface: #0f1322;
       --bg-card: #151b2c;
-      --glass: rgba(15, 19, 34, 0.8);
-      --border-subtle: rgba(59, 130, 246, 0.12);
-      --border-active: rgba(59, 130, 246, 0.4);
+      --glass-bg: rgba(15, 19, 34, 0.75);
+      --glass-border: rgba(59, 130, 246, 0.2);
       --accent-blue: #3b82f6;
       --accent-purple: #8b5cf6;
       --accent-cyan: #06b6d4;
       --text-primary: #eef2ff;
       --text-secondary: #c7d2fe;
       --text-muted: #64748b;
+      --gradient-text: linear-gradient(135deg, #60a5fa, #a78bfa, #22d3ee);
+      --gradient-hero: linear-gradient(135deg, #3b82f6, #8b5cf6);
+      --shadow-glow: 0 8px 32px rgba(59, 130, 246, 0.25);
       --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
-      --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
-      --shadow-glow: 0 8px 32px rgba(59, 130, 246, 0.15);
-      --transition-smooth: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-      --radius-lg: 24px;
-      --radius-md: 16px;
+      --font-mono: 'JetBrains Mono', monospace;
+      --radius-xl: 28px;
+      --radius-md: 18px;
       --radius-sm: 12px;
-      --xp-gold: #fbbf24;
-      --streak-fire: #ef4444;
     }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    html { scroll-behavior: smooth; font-size: 16px; }
+
     body {
-      font-family: var(--font-sans);
       background: var(--bg-deep);
+      font-family: var(--font-sans);
       color: var(--text-primary);
       overflow-x: hidden;
-      line-height: 1.6;
+      line-height: 1.5;
       -webkit-font-smoothing: antialiased;
     }
-    #app-loading {
-      position: fixed; inset: 0; background: var(--bg-deep);
-      display: flex; align-items: center; justify-content: center;
-      z-index: 99999; transition: opacity 0.5s ease;
+
+    /* ========== BACKGROUND ORBITAL ========== */
+    .bg-aurora {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      overflow: hidden;
+      pointer-events: none;
     }
-    #app-loading.hidden { opacity: 0; pointer-events: none; }
-    .loading-spinner {
-      width: 50px; height: 50px;
-      border: 3px solid rgba(59, 130, 246, 0.2);
-      border-top-color: var(--accent-blue);
-      border-radius: 50%; animation: spin 0.8s linear infinite;
+    .aurora-1, .aurora-2, .aurora-3 {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(90px);
+      opacity: 0.5;
+      animation: drift 24s infinite alternate ease-in-out;
+    }
+    .aurora-1 {
+      width: 70vw;
+      height: 70vw;
+      background: radial-gradient(circle, rgba(59,130,246,0.25), transparent);
+      top: -20vh;
+      left: -20vw;
+    }
+    .aurora-2 {
+      width: 80vh;
+      height: 80vh;
+      background: radial-gradient(circle, rgba(139,92,246,0.2), transparent);
+      bottom: -30vh;
+      right: -10vw;
+      animation-duration: 28s;
+    }
+    .aurora-3 {
+      width: 60vh;
+      height: 60vh;
+      background: radial-gradient(circle, rgba(6,182,212,0.2), transparent);
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      filter: blur(100px);
+      animation: pulseGlow 6s infinite alternate;
+    }
+    @keyframes drift {
+      0% { transform: translate(0, 0) rotate(0deg); }
+      100% { transform: translate(5%, 8%) rotate(8deg); }
+    }
+    @keyframes pulseGlow {
+      0% { opacity: 0.2; transform: translate(-50%, -50%) scale(1);}
+      100% { opacity: 0.5; transform: translate(-50%, -50%) scale(1.3);}
+    }
+
+    /* ========== LOADING + OVERLAY ========== */
+    #loader {
+      position: fixed;
+      inset: 0;
+      background: #03050a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      transition: opacity 0.6s ease, visibility 0.6s;
+    }
+    #loader.hide-loader {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+    .loader-hex {
+      width: 54px;
+      height: 54px;
+      border: 3px solid rgba(59,130,246,0.15);
+      border-top: 3px solid var(--accent-blue);
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+      box-shadow: 0 0 15px rgba(59,130,246,0.4);
     }
     @keyframes spin { to { transform: rotate(360deg); } }
-    ::-webkit-scrollbar { width: 6px; height: 6px; }
-    ::-webkit-scrollbar-track { background: var(--bg-deep); }
-    ::-webkit-scrollbar-thumb { background: var(--accent-blue); border-radius: 10px; }
-    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
+
+    /* ========== MAIN WRAPPER ========== */
+    .dev-wrapper {
+      position: relative;
+      z-index: 2;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      backdrop-filter: blur(2px);
+    }
+
+    /* ========== HEADER / NAV (clean) ========== */
+    .glass-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2rem 2rem;
+      background: rgba(8, 11, 20, 0.7);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(59,130,246,0.15);
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .nexus-symbol {
+      font-size: 2rem;
+      font-weight: 800;
+      background: var(--gradient-text);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      text-shadow: 0 0 6px rgba(59,130,246,0.4);
+    }
+    .logo-text h1 {
+      font-size: 1.4rem;
+      font-weight: 800;
+      letter-spacing: -0.3px;
+    }
+    .logo-text p {
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      letter-spacing: 0.5px;
+    }
+    .dev-badge {
+      background: rgba(239, 68, 68, 0.15);
+      border: 1px solid rgba(239,68,68,0.4);
+      padding: 0.4rem 1rem;
+      border-radius: 40px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #f87171;
+    }
+    .status-chip {
+      background: rgba(59,130,246,0.1);
+      border-radius: 100px;
+      padding: 0.5rem 1.2rem;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--accent-cyan);
+      border: 1px solid rgba(6,182,212,0.3);
+    }
+
+    /* ========== HERO EM CONSTRUÇÃO ========== */
+    .hero-dev {
+      max-width: 1300px;
+      margin: 2rem auto;
+      padding: 2rem 2rem 4rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 3rem;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .dev-content {
+      flex: 1;
+      min-width: 280px;
+    }
+    .progress-ring {
+      background: var(--bg-card);
+      border-radius: var(--radius-xl);
+      padding: 2rem;
+      text-align: center;
+      max-width: 380px;
+      margin-left: auto;
+      border: 1px solid var(--glass-border);
+      backdrop-filter: blur(8px);
+      background: rgba(21, 27, 44, 0.6);
+    }
+    .badge-warning {
+      display: inline-block;
+      background: rgba(245,158,11,0.12);
+      padding: 0.2rem 1rem;
+      border-radius: 30px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #fbbf24;
+      margin-bottom: 1.5rem;
+    }
+    .dev-title {
+      font-size: 3.2rem;
+      font-weight: 900;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+    .gradient-text {
+      background: var(--gradient-text);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .dev-desc {
+      font-size: 1.1rem;
+      color: var(--text-secondary);
+      max-width: 550px;
+      margin: 1.2rem 0 2rem;
+      border-left: 3px solid var(--accent-blue);
+      padding-left: 1.2rem;
+    }
+    .launch-stats {
+      display: flex;
+      gap: 2rem;
+      margin: 1.5rem 0;
+    }
+    .stat-pill {
+      background: rgba(255,255,255,0.02);
+      border-radius: 60px;
+      padding: 0.4rem 1rem;
+    }
+    .stat-pill span {
+      font-weight: 800;
+      font-size: 1.3rem;
+      color: var(--accent-cyan);
+    }
+    /* botão glow */
+    .btn-glow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: var(--gradient-hero);
+      padding: 0.9rem 2rem;
+      border-radius: 50px;
+      font-weight: 700;
+      text-decoration: none;
+      color: white;
+      transition: 0.2s;
+      box-shadow: 0 0 14px rgba(59,130,246,0.3);
+      border: none;
+      cursor: pointer;
+    }
+    .btn-glow:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 30px rgba(59,130,246,0.5);
+    }
+    .btn-outline-light {
+      background: transparent;
+      border: 1px solid var(--accent-blue);
+      color: var(--accent-blue);
+      box-shadow: none;
+    }
+    .btn-outline-light:hover {
+      background: rgba(59,130,246,0.1);
+      transform: translateY(-2px);
+    }
+    /* circle progress */
+    .circular-progress {
+      position: relative;
+      width: 150px;
+      height: 150px;
+      margin: 0 auto 1.2rem;
+    }
+    svg circle {
+      fill: none;
+      stroke-width: 10;
+      stroke-linecap: round;
+    }
+    .circle-bg {
+      stroke: rgba(59,130,246,0.1);
+    }
+    .circle-progress {
+      stroke: url(#gradCircle);
+      stroke-dasharray: 440;
+      stroke-dashoffset: 330;
+      transition: stroke-dashoffset 1s ease;
+    }
+    .percent-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 2rem;
+      font-weight: 800;
+      font-family: var(--font-mono);
+      color: var(--accent-cyan);
+    }
+    .module-highlight {
+      background: rgba(0,0,0,0.3);
+      border-radius: var(--radius-md);
+      padding: 1.2rem;
+      margin-top: 1rem;
+    }
+    .module-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+    .module-item {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+    }
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 10px;
+      background: #f97316;
+    }
+    .status-dot.done { background: #22c55e; box-shadow: 0 0 6px #22c55e; }
+    .status-dot.wip { background: #3b82f6; }
+
+    /* ========== ROADMAP PREVIEW ========== */
+    .roadmap-preview {
+      background: rgba(8, 11, 20, 0.6);
+      backdrop-filter: blur(10px);
+      border-top: 1px solid rgba(59,130,246,0.2);
+      border-bottom: 1px solid rgba(59,130,246,0.2);
+      padding: 3rem 2rem;
+    }
+    .section-title {
+      text-align: center;
+      font-size: 2rem;
+      font-weight: 800;
+      margin-bottom: 2rem;
+    }
+    .roadmap-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.2rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .roadmap-card {
+      background: var(--bg-surface);
+      border-radius: var(--radius-md);
+      padding: 1.5rem;
+      width: 260px;
+      border: 1px solid rgba(59,130,246,0.2);
+      transition: 0.2s;
+    }
+    .roadmap-card:hover {
+      border-color: var(--accent-cyan);
+      transform: translateY(-6px);
+    }
+    .card-icon {
+      font-size: 2.3rem;
+      margin-bottom: 1rem;
+    }
+    .roadmap-card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+    .roadmap-card p {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+    .badge-progress {
+      display: inline-block;
+      background: #0f1322;
+      padding: 0.2rem 0.6rem;
+      border-radius: 30px;
+      font-size: 0.7rem;
+      margin-top: 0.8rem;
+      font-weight: 600;
+    }
+
+    /* ========== FEATURES / BENEFITS ========== */
+    .features-zone {
+      padding: 4rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .grid-features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .feature-item {
+      background: rgba(21, 27, 44, 0.5);
+      backdrop-filter: blur(4px);
+      border-radius: 24px;
+      padding: 1.8rem;
+      text-align: center;
+      border: 1px solid rgba(59,130,246,0.15);
+      transition: all 0.2s;
+    }
+    .feature-icon {
+      font-size: 2.5rem;
+    }
+    .feature-item h3 {
+      margin: 1rem 0 0.5rem;
+    }
+
+    /* ========== NEWSLETTER / ALERTA ========== */
+    .waitlist-area {
+      background: linear-gradient(145deg, #0b0f1a, #05080f);
+      border-radius: 60px;
+      margin: 2rem auto 3rem;
+      max-width: 800px;
+      padding: 2.5rem;
+      text-align: center;
+      border: 1px solid rgba(59,130,246,0.3);
+    }
+    .waitlist-title {
+      font-size: 1.6rem;
+      font-weight: 700;
+    }
+    .inline-form {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.8rem;
+      margin-top: 1.2rem;
+    }
+    .inline-form input {
+      background: #0f1322;
+      border: 1px solid var(--glass-border);
+      padding: 0.8rem 1.2rem;
+      border-radius: 60px;
+      width: 260px;
+      color: white;
+      font-family: inherit;
+    }
+    .inline-form input:focus {
+      outline: none;
+      border-color: var(--accent-blue);
+    }
+
+    /* ========== FOOTER ========== */
+    .footer-dev {
+      margin-top: 2rem;
+      padding: 2rem;
+      text-align: center;
+      border-top: 1px solid rgba(59,130,246,0.1);
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    /* ========== RESPONSIVE ========== */
+    @media (max-width: 860px) {
+      .hero-dev { flex-direction: column; text-align: center; }
+      .dev-desc { margin-left: auto; margin-right: auto; text-align: center; border-left: none; padding-left: 0; border-top: 2px solid var(--accent-blue); padding-top: 1rem;}
+      .launch-stats { justify-content: center; }
+      .dev-title { font-size: 2.4rem; }
+      .glass-nav { padding: 1rem; }
+    }
+    @media (max-width: 560px) {
+      .roadmap-grid { flex-direction: column; align-items: center; }
+      .waitlist-area { padding: 1.5rem; border-radius: 32px; }
+    }
   </style>
-  
-  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- ==================== LOADING SCREEN ==================== -->
-  <div id="app-loading">
-    <div class="loading-spinner"></div>
-  </div>
 
-  <!-- ==================== PARTICLES BACKGROUND ==================== -->
-  <div class="particles-bg" id="particlesBg"></div>
-  <div class="aurora-bg"></div>
+<div id="loader">
+  <div class="loader-hex"></div>
+</div>
 
-  <!-- ==================== CONTAINER PRINCIPAL ==================== -->
-  <div id="app-container" style="display: flex; height: 100vh; opacity: 0; transition: opacity 0.4s ease; position: relative; z-index: 1;">
-    
-    <!-- ==================== SIDEBAR AVANÇADA ==================== -->
-    <aside id="main-sidebar" class="sidebar-advanced">
-      <div class="sidebar-header">
-        <div class="brand-section">
-          <span class="brand-icon">⬡</span>
-          <div class="brand-info">
-            <span class="brand-name">Nexus Plataforms</span>
-            <span class="brand-tagline">Discord Bots Mastery 2026</span>
-          </div>
-        </div>
-        <button id="sidebar-collapse-btn" class="icon-btn" aria-label="Colapsar sidebar">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18"/></svg>
-        </button>
+<div class="bg-aurora">
+  <div class="aurora-1"></div>
+  <div class="aurora-2"></div>
+  <div class="aurora-3"></div>
+</div>
+
+<div class="dev-wrapper">
+  
+  <!-- Navegação premium -->
+  <nav class="glass-nav">
+    <div class="logo-area">
+      <div class="nexus-symbol">⬡</div>
+      <div class="logo-text">
+        <h1>Nexus Plataforms</h1>
+        <p>Discord Bots Mastery 2026</p>
       </div>
-      
-      <div class="global-search-wrapper">
-        <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
-        <input type="text" id="globalSearch" class="global-search-input" placeholder="Buscar em todo o curso..." autocomplete="off">
-        <kbd class="search-shortcut">⌘K</kbd>
+    </div>
+    <div class="dev-badge">
+      🚧 EM DESENVOLVIMENTO ATIVO
+    </div>
+    <div class="status-chip">
+      🔄 versão alpha · preview exclusivo
+    </div>
+  </nav>
+
+  <!-- Hero principal + indicador de progresso geral -->
+  <div class="hero-dev">
+    <div class="dev-content">
+      <div class="badge-warning">
+        🧪 Plataforma educacional em construção
       </div>
-      
-      <nav class="sidebar-nav" id="sidebarNav">
-        <div class="nav-section">
-          <span class="nav-section-title">📚 CONTEÚDO</span>
-          <a href="#home" class="nav-item active" data-page="home">
-            <span class="nav-icon">🏠</span><span class="nav-label">Home</span><span class="nav-badge">Novo</span>
-          </a>
-          <a href="#dashboard" class="nav-item" data-page="dashboard">
-            <span class="nav-icon">📊</span><span class="nav-label">Dashboard</span>
-          </a>
-          <a href="#missions" class="nav-item" data-page="missions">
-            <span class="nav-icon">🎯</span><span class="nav-label">Missões</span>
-          </a>
-          <a href="#roadmap" class="nav-item" data-page="roadmap">
-            <span class="nav-icon">🗺️</span><span class="nav-label">Roadmap</span>
-          </a>
-          <a href="#documentation" class="nav-item" data-page="documentation">
-            <span class="nav-icon">📖</span><span class="nav-label">Documentação</span>
-          </a>
-          <a href="#playground" class="nav-item" data-page="playground">
-            <span class="nav-icon">💻</span><span class="nav-label">Playground</span>
-          </a>
-          <a href="#terminal" class="nav-item" data-page="terminal">
-            <span class="nav-icon">🐍</span><span class="nav-label">Terminal Python</span>
-          </a>
-        </div>
-        
-        <div class="nav-section">
-          <span class="nav-section-title">🎮 GAMIFICAÇÃO</span>
-          <a href="#labs" class="nav-item" data-page="labs">
-            <span class="nav-icon">🧪</span><span class="nav-label">Laboratórios</span>
-          </a>
-          <a href="#projects" class="nav-item" data-page="projects">
-            <span class="nav-icon">🏗️</span><span class="nav-label">Projetos</span>
-          </a>
-          <a href="#ai-tutor" class="nav-item" data-page="ai-tutor">
-            <span class="nav-icon">🤖</span><span class="nav-label">IA Tutora</span>
-          </a>
-          <a href="#pomodoro" class="nav-item" data-page="pomodoro">
-            <span class="nav-icon">🍅</span><span class="nav-label">Modo Foco</span>
-          </a>
-        </div>
-        
-        <div class="nav-section">
-          <span class="nav-section-title">🎓 CURSO</span>
-          <div id="moduleNavContainer"></div>
-        </div>
-        
-        <div class="nav-section">
-          <span class="nav-section-title">🛠️ FERRAMENTAS</span>
-          <a href="#tools" class="nav-item" data-page="tools">
-            <span class="nav-icon">🧰</span><span class="nav-label">Dev Tools</span>
-          </a>
-          <a href="#discord-simulator" class="nav-item" data-page="discord-simulator">
-            <span class="nav-icon">🤖</span><span class="nav-label">Simulador Discord</span>
-          </a>
-          <a href="#cheatsheets" class="nav-item" data-page="cheatsheets">
-            <span class="nav-icon">📋</span><span class="nav-label">Cheatsheets</span>
-          </a>
-          <a href="#quizzes" class="nav-item" data-page="quizzes">
-            <span class="nav-icon">🧪</span><span class="nav-label">Quizzes</span>
-          </a>
-          <a href="#certificate" class="nav-item" data-page="certificate">
-            <span class="nav-icon">📜</span><span class="nav-label">Certificado</span>
-          </a>
-        </div>
-      </nav>
-      
-      <div class="sidebar-progress">
-        <div class="progress-info">
-          <span class="progress-label">Progresso do Curso</span>
-          <span class="progress-value" id="sidebarProgressPercent">24%</span>
-        </div>
-        <div class="progress-track-mini">
-          <div class="progress-fill-mini" id="sidebarProgressFill" style="width: 24%;"></div>
-        </div>
-        <div style="display:flex; justify-content:space-between; margin-top:0.5rem; font-size:0.75rem; color:var(--text-muted);">
-          <span>⭐ <span id="sidebarXP">0</span> XP</span>
-          <span>🔥 <span id="sidebarStreak">0</span> dias</span>
-        </div>
-        <small class="progress-hint">Continue de onde parou</small>
+      <h1 class="dev-title">
+        Domine <span class="gradient-text">Discord Bots</span> com<br>Python do zero ao expert
+      </h1>
+      <p class="dev-desc">
+        Estamos preparando a experiência definitiva para criar bots de alto desempenho, 
+        arquitetura assíncrona, slash commands, banco de dados, deploy e gamificação. 
+        Em breve você terá acesso a laboratórios reais, IA tutora e projetos de portfólio.
+      </p>
+      <div class="launch-stats">
+        <div class="stat-pill">📘 <span>40+</span> aulas planejadas</div>
+        <div class="stat-pill">🤖 <span>12+</span> projetos práticos</div>
+        <div class="stat-pill">⚡ <span>100%</span> hands-on</div>
       </div>
-      
-      <div class="sidebar-footer">
-        <button id="focusModeBtn" class="icon-btn" title="Modo Foco">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg>
-        </button>
-        <button id="themeToggleBtn" class="icon-btn" title="Alternar tema">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
-        </button>
+      <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+        <a href="#" class="btn-glow" id="notifyMeBtn">📬 Avise-me no lançamento</a>
+        <a href="#" class="btn-glow btn-outline-light" id="previewRoadmapBtn">🗺️ Ver roadmap técnico</a>
       </div>
-    </aside>
-
-    <div id="sidebarOverlay" class="sidebar-overlay"></div>
-
-    <!-- ==================== CONTEÚDO PRINCIPAL ==================== -->
-    <main id="main-content" class="main-content-area">
-      
-      <header class="mobile-header">
-        <button id="mobileMenuBtn" class="icon-btn" aria-label="Menu">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
-        </button>
-        <span class="mobile-brand">Discord Bots Mastery 2026</span>
-        <button id="mobileSearchBtn" class="icon-btn" aria-label="Buscar">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
-        </button>
-      </header>
-
-      <div id="page-container" class="page-container">
-        
-        <!-- ========== HOME PAGE ========== -->
-        <section id="page-home" class="page active">
-          <div class="hero-section">
-            <div class="hero-bg-glow"></div>
-            <div class="hero-content">
-              <div class="hero-badge"><span class="pulse-dot"></span> Lançamento 2026</div>
-              <h1 class="hero-title">Domine <span class="gradient-text">Discord Bots</span><br>com <span class="gradient-text-2">Python Moderno</span></h1>
-              <p class="hero-subtitle">De zero a profissional: aprenda lógica de programação, Python assíncrono, discord.py, bancos de dados, escalabilidade e deploy. Plataforma interativa premium com gamificação, IA tutora e laboratórios práticos.</p>
-              <div class="hero-cta-group">
-                <a href="#documentation" class="btn-primary-glow" data-nav="documentation">Começar Agora <span class="arrow">→</span></a>
-                <a href="#playground" class="btn-outline-glow" data-nav="playground">Experimentar Grátis</a>
-              </div>
-              <div class="hero-stats">
-                <div class="stat-item"><span class="stat-number" data-counter="40">0</span><span class="stat-label">Aulas</span></div>
-                <div class="stat-item"><span class="stat-number" data-counter="8">0</span><span class="stat-label">Módulos</span></div>
-                <div class="stat-item"><span class="stat-number" data-counter="100">0</span><span class="stat-label">Exercícios</span></div>
-                <div class="stat-item"><span class="stat-number" data-counter="24">0</span><span class="stat-label">Horas</span></div>
-              </div>
-            </div>
-            <div class="hero-code-preview glass-card">
-              <div class="code-preview-header">
-                <div class="window-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
-                <span class="code-filename">bot.py</span>
-              </div>
-              <div class="code-preview-body">
-                <pre><code><span class="code-keyword">import</span> discord
-<span class="code-keyword">from</span> discord <span class="code-keyword">import</span> app_commands
-
-<span class="code-keyword">class</span> <span class="code-class">NexusBot</span>(discord.Client):
-    <span class="code-keyword">async def</span> <span class="code-function">on_ready</span>(<span class="code-param">self</span>):
-        <span class="code-builtin">print</span>(<span class="code-string">f"🤖 {self.user} online!"</span>)
-
-<span class="code-param">bot</span> = NexusBot(<span class="code-param">intents</span>=discord.Intents.<span class="code-function">all</span>())
-<span class="code-param">bot</span>.run(<span class="code-string">'TOKEN'</span>)</code></pre>
-              </div>
-            </div>
-          </div>
-
-          <div class="benefits-section">
-            <h2 class="section-title">Por que esta plataforma?</h2>
-            <div class="benefits-grid">
-              <div class="benefit-card glass-card"><span class="benefit-icon">🎯</span><h3>Foco em Resultado</h3><p>Crie bots reais e profissionais.</p></div>
-              <div class="benefit-card glass-card"><span class="benefit-icon">⚡</span><h3>Python Assíncrono</h3><p>Domine async/await para bots escaláveis.</p></div>
-              <div class="benefit-card glass-card"><span class="benefit-icon">🛡️</span><h3>Nível Enterprise</h3><p>Arquitetura limpa e deploy profissional.</p></div>
-              <div class="benefit-card glass-card"><span class="benefit-icon">🎮</span><h3>Gamificado</h3><p>Missões, conquistas, ranking e IA tutora.</p></div>
-            </div>
-          </div>
-
-          <div class="roadmap-preview-section">
-            <h2 class="section-title">Jornada de Aprendizado</h2>
-            <div class="timeline-roadmap">
-              <div class="timeline-node completed"><div class="node-marker">1</div><div class="node-content"><h4>Fundamentos Python</h4><p>Variáveis, loops, funções, OOP</p></div></div>
-              <div class="timeline-connector completed"></div>
-              <div class="timeline-node completed"><div class="node-marker">2</div><div class="node-content"><h4>Python Moderno</h4><p>Async/Await, Type Hints</p></div></div>
-              <div class="timeline-connector active"></div>
-              <div class="timeline-node active"><div class="node-marker">3</div><div class="node-content"><h4>discord.py 2026</h4><p>Slash Commands, Cogs</p></div></div>
-              <div class="timeline-connector"></div>
-              <div class="timeline-node"><div class="node-marker">4</div><div class="node-content"><h4>Banco de Dados</h4><p>SQLite, PostgreSQL</p></div></div>
-              <div class="timeline-connector"></div>
-              <div class="timeline-node"><div class="node-marker">5</div><div class="node-content"><h4>Deploy & Cloud</h4><p>Docker, Railway</p></div></div>
-            </div>
-          </div>
-
-          <div class="faq-section">
-            <h2 class="section-title">FAQ</h2>
-            <div class="faq-grid">
-              <details class="faq-item glass-card"><summary>Preciso saber programar?</summary><p>Não! Começamos do zero absoluto.</p></details>
-              <details class="faq-item glass-card"><summary>É atualizado para 2026?</summary><p>Sim! Python 3.12+ e discord.py 2.6+.</p></details>
-              <details class="faq-item glass-card"><summary>Como funciona o Playground?</summary><p>Execute Python diretamente no navegador!</p></details>
-              <details class="faq-item glass-card"><summary>Tem certificado?</summary><p>Sim! Certificado digital com QR Code.</p></details>
-            </div>
-          </div>
-        </section>
-
-        <!-- ========== DASHBOARD PAGE ========== -->
-        <section id="page-dashboard" class="page">
-          <div class="page-header"><h2>📊 Meu Dashboard</h2></div>
-          <div class="missions-header">
-            <div class="xp-display"><div class="xp-number" id="xpNumber">0</div><div class="xp-label">XP Total</div></div>
-            <div class="level-display"><div class="level-number" id="levelNumber">1</div><div class="xp-label">Nível</div></div>
-            <div class="streak-display"><div class="streak-number" id="streakNumber">0</div><div class="xp-label">🔥 Streak</div></div>
-          </div>
-          <div id="dashboardContainer"></div>
-        </section>
-
-        <!-- ========== MISSÕES PAGE ========== -->
-        <section id="page-missions" class="page">
-          <div class="missions-page">
-            <div class="missions-header">
-              <div class="xp-display"><div class="xp-number" id="xpNumber2">0</div><div class="xp-label">XP Total</div></div>
-              <div class="level-display"><div class="level-number" id="levelNumber2">1</div><div class="xp-label">Nível</div></div>
-              <div class="streak-display"><div class="streak-number" id="streakNumber2">0</div><div class="xp-label">🔥 Streak</div></div>
-            </div>
-            <h3 style="margin-bottom:1rem;">🎯 Missões Ativas</h3>
-            <div class="missions-grid" id="missionsContainer"></div>
-            <h3 style="margin:2rem 0 1rem;">🏆 Conquistas</h3>
-            <div class="achievements-grid" id="achievementsContainer"></div>
-          </div>
-        </section>
-
-        <!-- ========== ROADMAP PAGE ========== -->
-        <section id="page-roadmap" class="page">
-          <div class="page-header"><h2>🗺️ Roadmap de Aprendizado</h2><p>Acompanhe sua jornada de desenvolvedor</p></div>
-          <div class="roadmap-full" id="roadmapFull"></div>
-        </section>
-
-        <!-- ========== DOCUMENTATION PAGE ========== -->
-        <section id="page-documentation" class="page">
-          <div class="doc-layout">
-            <aside class="doc-sidebar" id="docSidebar">
-              <div class="doc-sidebar-header"><h3>📚 Índice</h3></div>
-              <nav class="doc-nav" id="docNav"></nav>
-            </aside>
-            <div class="doc-content" id="docContent">
-              <div class="doc-breadcrumbs" id="docBreadcrumbs"></div>
-              <div class="doc-article" id="docArticle"></div>
-            </div>
-          </div>
-        </section>
-
-        <!-- ========== PLAYGROUND PAGE ========== -->
-        <section id="page-playground" class="page">
-          <div class="playground-layout">
-            <div class="playground-header">
-              <h2>💻 Playground Interativo</h2>
-              <div class="playground-actions">
-                <button id="runCodeBtn" class="btn-primary-glow">▶ Executar</button>
-                <button id="resetCodeBtn" class="btn-outline">↺ Resetar</button>
-                <button id="copyCodeBtn" class="btn-outline">📋 Copiar</button>
-              </div>
-            </div>
-            <div class="playground-editor-container"><div id="monacoEditor" class="monaco-editor-container"></div></div>
-            <div class="playground-output" id="playgroundOutput">
-              <div class="output-header"><span>📤 Output</span><button id="clearOutputBtn" class="btn-sm">Limpar</button></div>
-              <pre id="outputContent" class="output-content">// Execute seu código Python aqui...</pre>
-            </div>
-          </div>
-        </section>
-
-        <!-- ========== TERMINAL PYTHON PAGE ========== -->
-        <section id="page-terminal" class="page">
-          <div class="terminal-layout">
-            <div class="terminal-header"><h2>🐍 Terminal Python Interativo</h2><p>Execute Python no navegador com Pyodide</p></div>
-            <div class="terminal-container">
-              <div class="terminal-input-area"><textarea id="pythonInput" class="python-textarea" placeholder="Digite seu código Python aqui...&#10;&#10;print('Olá, Discord!')&#10;for i in range(5):&#10;    print(f'Bot {i}')" spellcheck="false"></textarea></div>
-              <div class="terminal-controls">
-                <button id="runPythonBtn" class="btn-primary-glow">▶ Executar Python</button>
-                <button id="clearTerminalBtn" class="btn-outline">Limpar</button>
-                <span class="terminal-status" id="pyodideStatus">Carregando Python...</span>
-              </div>
-              <div class="terminal-output"><div class="output-header"><span>📤 Console Output</span></div><pre id="terminalContent" class="terminal-content">Python 3.12 pronto.</pre></div>
-            </div>
-          </div>
-        </section>
-
-        <!-- ========== LABS PAGE ========== -->
-        <section id="page-labs" class="page">
-          <div class="page-header"><h2>🧪 Laboratórios Práticos</h2><p>Ambientes reais de desenvolvimento</p></div>
-          <div class="labs-grid">
-            <div class="lab-card" onclick="alert('🔬 Laboratório de APIs REST - Em breve!')"><div class="lab-icon">🌐</div><div class="lab-title">API Lab</div><div class="lab-desc">Crie e teste APIs REST</div><span class="lab-difficulty medium">Intermediário</span></div>
-            <div class="lab-card" onclick="alert('🐳 Laboratório de Docker - Em breve!')"><div class="lab-icon">🐳</div><div class="lab-title">Docker Lab</div><div class="lab-desc">Containerize aplicações</div><span class="lab-difficulty hard">Avançado</span></div>
-            <div class="lab-card" onclick="alert('🔐 Laboratório de Segurança - Em breve!')"><div class="lab-icon">🔐</div><div class="lab-title">Security Lab</div><div class="lab-desc">Proteja seus bots</div><span class="lab-difficulty hard">Avançado</span></div>
-            <div class="lab-card" onclick="alert('🤖 Laboratório Discord.py - Em breve!')"><div class="lab-icon">🤖</div><div class="lab-title">Discord.py Lab</div><div class="lab-desc">Testes reais com bots</div><span class="lab-difficulty easy">Iniciante</span></div>
-            <div class="lab-card" onclick="alert('🗄️ Laboratório de Banco de Dados - Em breve!')"><div class="lab-icon">🗄️</div><div class="lab-title">Database Lab</div><div class="lab-desc">SQLite e PostgreSQL</div><span class="lab-difficulty medium">Intermediário</span></div>
-            <div class="lab-card" onclick="alert('☁️ Laboratório de Deploy - Em breve!')"><div class="lab-icon">☁️</div><div class="lab-title">Deploy Lab</div><div class="lab-desc">Deploy em produção</div><span class="lab-difficulty hard">Avançado</span></div>
-          </div>
-        </section>
-
-        <!-- ========== PROJECTS PAGE ========== -->
-        <section id="page-projects" class="page">
-          <div class="page-header"><h2>🏗️ Build Projects</h2><p>Projetos reais para seu portfólio</p></div>
-          <div class="projects-grid" id="projectsContainer"></div>
-        </section>
-
-        <!-- ========== AI TUTOR PAGE ========== -->
-        <section id="page-ai-tutor" class="page">
-          <div class="page-header"><h2>🤖 Nexus AI Tutor</h2><p>Sua inteligência artificial educacional</p></div>
-          <div class="ai-tutor-container">
-            <div class="ai-chat-messages" id="aiChatMessages"></div>
-            <div class="ai-input-area">
-              <input type="text" class="ai-input" id="aiInput" placeholder="Pergunte sobre Python, bots, erros..." onkeypress="if(event.key==='Enter')aiTutor.sendMessage()">
-              <button class="ai-send-btn" onclick="aiTutor.sendMessage()">Enviar</button>
-            </div>
-          </div>
-        </section>
-
-        <!-- ========== POMODORO PAGE ========== -->
-        <section id="page-pomodoro" class="page">
-          <div class="pomodoro-container">
-            <h2>🍅 Modo Foco</h2>
-            <div class="pomodoro-timer" id="pomodoroTimer">25:00</div>
-            <div class="pomodoro-controls">
-              <button class="pomodoro-btn active" onclick="pomodoroSystem.start()">▶ Iniciar</button>
-              <button class="pomodoro-btn" onclick="pomodoroSystem.pause()">⏸ Pausar</button>
-              <button class="pomodoro-btn" onclick="pomodoroSystem.reset()">↺ Resetar</button>
-            </div>
-            <div class="pomodoro-sessions" id="pomodoroSessions">Sessões: 0</div>
-          </div>
-        </section>
-
-        <!-- ========== TOOLS PAGE ========== -->
-        <section id="page-tools" class="page">
-          <div class="page-header"><h2>🧰 Ferramentas para Desenvolvedores</h2></div>
-          <div class="tools-grid" id="toolsGrid">
-            <div class="tool-card glass-card"><h3>📋 JSON Formatter</h3><textarea id="jsonInput" placeholder='{"key": "value"}' class="tool-textarea"></textarea><button onclick="formatJSON()" class="btn-primary-glow">Formatar</button><pre id="jsonOutput" class="tool-output"></pre></div>
-            <div class="tool-card glass-card"><h3>🎨 Embed Builder</h3><div class="embed-preview" id="embedPreview"></div><button onclick="generateEmbedJSON()" class="btn-primary-glow">Gerar JSON</button><pre id="embedJSONOutput" class="tool-output"></pre></div>
-            <div class="tool-card glass-card"><h3>⏰ Timestamp</h3><input type="datetime-local" id="timestampInput" class="tool-input"><button onclick="generateTimestamp()" class="btn-primary-glow">Gerar</button><pre id="timestampOutput" class="tool-output"></pre></div>
-            <div class="tool-card glass-card"><h3>🔐 Permissions</h3><div class="perm-grid" id="permGrid"></div><pre id="permOutput" class="tool-output"></pre></div>
-          </div>
-        </section>
-
-        <!-- ========== DISCORD SIMULATOR PAGE ========== -->
-        <section id="page-discord-simulator" class="page">
-          <div class="simulator-layout">
-            <div class="page-header"><h2>🤖 Simulador de Discord</h2><p>Teste comandos em ambiente visual</p></div>
-            <div class="discord-mock" id="discordMock">
-              <div class="discord-sidebar-mock"><div class="discord-server-icon active"></div><div class="discord-server-icon"></div><div class="discord-server-icon"></div></div>
-              <div class="discord-chat-area">
-                <div class="discord-chat-header"><span># 🤖 comandos-do-bot</span></div>
-                <div class="discord-messages" id="discordMessages"><div class="discord-message bot-message"><div class="message-avatar">🤖</div><div class="message-content"><span class="message-author">NexusBot</span><p>Olá! Digite <code>/ping</code> para testar.</p></div></div></div>
-                <div class="discord-input-bar"><span class="input-prefix">/</span><input type="text" id="discordCommandInput" placeholder="Digite um comando..." class="discord-command-input"><button id="sendDiscordCommand" class="btn-send">Enviar</button></div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- ========== CHEATSHEETS PAGE ========== -->
-        <section id="page-cheatsheets" class="page">
-          <div class="page-header"><h2>📋 Cheatsheets</h2></div>
-          <div class="cheatsheet-tabs">
-            <button class="cheatsheet-tab active" data-sheet="python">Python</button>
-            <button class="cheatsheet-tab" data-sheet="async">AsyncIO</button>
-            <button class="cheatsheet-tab" data-sheet="discordpy">discord.py</button>
-            <button class="cheatsheet-tab" data-sheet="sql">SQL</button>
-            <button class="cheatsheet-tab" data-sheet="docker">Docker</button>
-            <button class="cheatsheet-tab" data-sheet="git">Git</button>
-          </div>
-          <div class="cheatsheet-content" id="cheatsheetContent"></div>
-        </section>
-
-        <!-- ========== QUIZZES PAGE ========== -->
-        <section id="page-quizzes" class="page">
-          <div class="page-header"><h2>🧪 Quizzes Interativos</h2></div>
-          <div class="quiz-container" id="quizContainer"></div>
-          <div class="quiz-results" id="quizResults" style="display:none;"><h3>Resultado</h3><div class="quiz-score" id="quizScore"></div><div class="quiz-feedback" id="quizFeedback"></div><button onclick="retakeQuiz()" class="btn-primary-glow">Refazer Quiz</button></div>
-        </section>
-
-        <!-- ========== CERTIFICATE PAGE ========== -->
-        <section id="page-certificate" class="page">
-          <div class="page-header" style="text-align:center;"><h2>📜 Certificado</h2></div>
-          <div class="certificate-preview">
-            <div class="certificate-logo">⬡</div>
-            <div class="certificate-title">Discord Bots Mastery 2026</div>
-            <p style="color:var(--text-secondary);">Certificamos que</p>
-            <div class="certificate-name">[Seu Nome]</div>
-            <p style="color:var(--text-secondary);">concluiu com excelência o curso completo de desenvolvimento de bots Discord com Python moderno.</p>
-            <div class="certificate-id">ID: NEXUS-2026-0001</div>
-            <div class="certificate-qr">QR Code</div>
-            <p style="font-size:0.8rem;color:var(--text-muted);margin-top:1rem;">Nexus Plataforms © 2026</p>
-          </div>
-        </section>
-
-      </div><!-- /page-container -->
-    </main><!-- /main-content -->
-  </div><!-- /app-container -->
-
-  <!-- ==================== MODALS ==================== -->
-  <div id="searchModal" class="modal-overlay" style="display:none;">
-    <div class="modal-content search-modal-content">
-      <input type="text" id="modalSearchInput" class="modal-search-input" placeholder="Pesquisar aulas, comandos, código..." autofocus>
-      <div class="search-results" id="searchResults"></div>
+    </div>
+    <div class="progress-ring">
+      <div class="circular-progress">
+        <svg width="150" height="150" viewBox="0 0 160 160">
+          <defs>
+            <linearGradient id="gradCircle" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#3b82f6" />
+              <stop offset="100%" stop-color="#8b5cf6" />
+            </linearGradient>
+          </defs>
+          <circle class="circle-bg" cx="80" cy="80" r="70"></circle>
+          <circle class="circle-progress" cx="80" cy="80" r="70" transform="rotate(-90 80 80)" stroke="url(#gradCircle)" stroke-dasharray="440" stroke-dashoffset="132"></circle>
+        </svg>
+        <div class="percent-text">70%</div>
+      </div>
+      <p style="font-weight: 600;">Plataforma em construção ativa</p>
+      <div class="module-highlight">
+        <div class="module-list">
+          <div class="module-item"><span class="status-dot done"></span> Fundamentos Python + Async</div>
+          <div class="module-item"><span class="status-dot done"></span> discord.py 2.x (Slash Commands)</div>
+          <div class="module-item"><span class="status-dot wip"></span> Banco de dados / PostgreSQL</div>
+          <div class="module-item"><span class="status-dot wip"></span> Deploy com Docker + Railway</div>
+        </div>
+      </div>
     </div>
   </div>
 
-  <!-- ==================== SCRIPTS ==================== -->
-  <script src="https://cdn.jsdelivr.net/npm/monaco-editor@0.45.0/min/vs/loader.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-  <script src="script.js" defer></script>
+  <!-- Roadmap / conteudo esperado -->
+  <div class="roadmap-preview">
+    <h2 class="section-title">📌 Jornada do desenvolvedor (próximos módulos)</h2>
+    <div class="roadmap-grid">
+      <div class="roadmap-card"><div class="card-icon">🐍</div><h3>Python Moderno</h3><p>Variáveis, estruturas, OOP, type hints e async/await.</p><span class="badge-progress">90% concluído</span></div>
+      <div class="roadmap-card"><div class="card-icon">🤖</div><h3>discord.py Avançado</h3><p>Comandos híbridos, modals, views, componentes interativos.</p><span class="badge-progress">80% estruturado</span></div>
+      <div class="roadmap-card"><div class="card-icon">🗄️</div><h3>Banco de Dados</h3><p>SQLite, PostgreSQL, integração com painéis administrativos.</p><span class="badge-progress">65% em andamento</span></div>
+      <div class="roadmap-card"><div class="card-icon">☁️</div><h3>Deploy Profissional</h3><p>Docker, Railway, Variáveis de ambiente, logs, uptime.</p><span class="badge-progress">50% em desenvolvimento</span></div>
+      <div class="roadmap-card"><div class="card-icon">🎓</div><h3>Projeto Final</h3><p>Bot de economia completo com ranking e comandos globais.</p><span class="badge-progress">planejamento</span></div>
+    </div>
+  </div>
+
+  <!-- Features diferenciais da plataforma -->
+  <div class="features-zone">
+    <h2 class="section-title">✨ O que torna a Nexus Platform única?</h2>
+    <div class="grid-features">
+      <div class="feature-item"><div class="feature-icon">🧪</div><h3>Laboratórios interativos</h3><p>Ambiente real de teste de comandos e simulação do Discord.</p></div>
+      <div class="feature-item"><div class="feature-icon">🤖</div><h3>IA Tutora integrada</h3><p>Suporte inteligente para dúvidas e correção de código.</p></div>
+      <div class="feature-item"><div class="feature-icon">🏆</div><h3>Gamificação / XP</h3><p>Missões, conquistas, ranking de alunos e certificados.</p></div>
+      <div class="feature-item"><div class="feature-icon">💻</div><h3>Playground Python</h3><p>Editor online com execução real, sem instalação.</p></div>
+    </div>
+  </div>
+
+  <!-- call to action waitlist mock -->
+  <div class="waitlist-area">
+    <div class="waitlist-title">📢 Receba aviso de lançamento</div>
+    <p style="color:var(--text-secondary); margin: 0.5rem 0 1rem;">Seja o primeiro a acessar a plataforma + bônus exclusivo para os primeiros alunos.</p>
+    <div class="inline-form">
+      <input type="email" placeholder="seu melhor e-mail" id="notifyEmail">
+      <button class="btn-glow" id="submitNotify" style="padding:0.8rem 1.8rem;">Notificar-me</button>
+    </div>
+    <small style="display:block; margin-top: 1rem;">🔒 sem spam, apenas novidades do curso.</small>
+  </div>
+
+  <footer class="footer-dev">
+    <p>⬡ Nexus Plataforms — preparando a próxima geração de criadores de bots Discord com Python 2026</p>
+    <p style="margin-top: 0.5rem;">© 2026 · desenvolvimento ativo · preview exclusivo</p>
+  </footer>
+</div>
+
+<script>
+  // ==================== LOADER OCULTAÇÃO + SIMULAÇÃO DE PROGRESSO INTERATIVA ====================
+  window.addEventListener('load', () => {
+    const loader = document.getElementById('loader');
+    setTimeout(() => {
+      if (loader) loader.classList.add('hide-loader');
+    }, 800);
+  });
+
+  // Pequenos feedbacks e interações (demo de "notify" com alert)
+  const notifyBtn = document.getElementById('notifyMeBtn');
+  const submitNotify = document.getElementById('submitNotify');
+  const emailInput = document.getElementById('notifyEmail');
   
-  <script>
-    window.addEventListener('load', function() {
-      setTimeout(function() {
-        const loading = document.getElementById('app-loading');
-        if (loading) loading.classList.add('hidden');
-        const container = document.getElementById('app-container');
-        if (container) container.style.opacity = '1';
-      }, 800);
+  function handleNotify(emailValue = null) {
+    let email = emailValue;
+    if (!email) {
+      email = emailInput ? emailInput.value.trim() : '';
+    }
+    if (email && email.includes('@') && email.includes('.')) {
+      alert(`✅ Obrigado! Assim que o curso Discord Bots Mastery 2026 for lançado, enviaremos novidades para ${email}.`);
+      if (emailInput) emailInput.value = '';
+    } else {
+      alert('✨ Por favor, insira um e-mail válido para receber a novidade.');
+    }
+  }
+  
+  if (notifyBtn) {
+    notifyBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      handleNotify('preview@nexusplataforms.com');  // simula interesse
     });
-  </script>
+  }
+  if (submitNotify) {
+    submitNotify.addEventListener('click', (e) => {
+      e.preventDefault();
+      handleNotify();
+    });
+  }
+  
+  // Botão "Ver roadmap técnico" - exibe os próximos conteúdos com um modal simples 
+  const roadmapBtn = document.getElementById('previewRoadmapBtn');
+  if (roadmapBtn) {
+    roadmapBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      alert(`🗺️ Roadmap técnico detalhado (previsão):\n\n✅ Módulo 1: Lógica + Python (100% planejado)\n✅ Módulo 2: discord.py & Slash Commands (90%)\n🔄 Módulo 3: Bancos de dados & Cache (65%)\n🔄 Módulo 4: Deploy e escalabilidade (50%)\n🌟 Módulo 5: Bot avançado + Painel Web (em arquitetura)\n🎯 Data estimada do início do curso: Q3 2026.`);
+    });
+  }
+
+  // ========== Efeito interativo no círculo de progresso (já está em 70%, mas anima ao carregar) ==========
+  const progressCircle = document.querySelector('.circle-progress');
+  if (progressCircle) {
+    // já possui offset pré-definido 132 (440 - 308 = 132 -> 70%)
+    // apenas pequena animação na entrada
+    setTimeout(() => {
+      progressCircle.style.transition = 'stroke-dashoffset 1.2s cubic-bezier(0.2, 0.9, 0.4, 1.1)';
+      progressCircle.setAttribute('stroke-dashoffset', '132');
+    }, 200);
+  }
+  
+  // Simulação de contador de percentual de conclusão do curso "em produção" - melhoria visual
+  const percentElem = document.querySelector('.percent-text');
+  if (percentElem) {
+    let current = 0;
+    const target = 70;
+    const step = () => {
+      if (current < target) {
+        current++;
+        percentElem.innerText = current + '%';
+        requestAnimationFrame(step);
+      } else {
+        percentElem.innerText = '70%';
+      }
+    };
+    setTimeout(() => { step(); }, 500);
+  }
+  
+  // Pequenos detalhes extras: no console mostramos que a plataforma está sendo construída
+  console.log('🚀 Nexus Plataforms | Discord Bots Mastery 2026 — Em desenvolvimento. Prepare-se para a maior experiência Python para bots!');
+</script>
 </body>
 </html>
